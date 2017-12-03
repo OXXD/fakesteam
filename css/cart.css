@@ -1,0 +1,51 @@
+#page_background {
+    min-height: 1000px;
+    background: url(../img/colored_body_top2.png) no-repeat center top #1b2838;
+}
+
+.page_header {
+    height: 200px;
+    background: url(../img/cluster_bg_2.png) no-repeat bottom center;
+    margin-bottom: -30px;
+}
+
+.breadcrumbs {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #556F7E;
+}
+
+.breadcrumbs a {
+    color: #8F98A0;
+}
+
+.breadcrumbs a:hover {
+    color: #fff;
+}
+
+.page_header h2 {
+    font-weight: 300;
+    color: #fff;
+    font-size: 34px;
+}
+
+.page_content {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.leftcol {
+    width: 620px;
+    height: 460px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.rightcol {
+    width: 320px;
+    height: 900px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+

@@ -1,5 +1,5 @@
 #footer {
-    /* height: 250px; */
+    height: 150px;
     background: linear-gradient(to top, #0D141C, #121B27);
     font-size: 12px;
     padding: 20px 0px 50px;
@@ -58,4 +58,12 @@ a:hover {
 
 .footer-links img {
     vertical-align: bottom;
+}
+
+.footer-text a {
+    color:#C6D4DF;
+}
+
+.footer-content a:hover {
+    color: #fff;
 }

@@ -26,6 +26,15 @@ dt {
     color: #fff;
 } */
 
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
+
 img {
     vertical-align: middle;
 }

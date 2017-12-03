@@ -1,0 +1,131 @@
+/* #store_header {
+    font-size: 12px;
+    color: #D9DADD;
+} */
+
+#store_header_main {
+    position: relative;
+    height: 66px;
+    color: #D9DADD;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
+#cart {
+    height: 20px;
+    width: 100px;
+    font-size: 12px;
+    /* background: linear-gradient(to top, #7FA325,#708E1F); */
+    background: url(../img/store_header/background_cart.jpg) -34px 30px;
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    text-align: center;
+    border-radius: 1px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+#cart:hover {
+    background: linear-gradient(to right bottom,#84A927, #91BA2C);
+    color: #111;
+}
+
+#store_nav {
+    width: 100%;
+    height: 35px;
+    margin-top: 3px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    background: #367095;
+    position: absolute;
+    top:25px;
+    border-radius: 1px;
+    font-weight: 300;
+}
+
+#store_nav ul {
+    display: flex;
+}
+#store_nav ul li {
+    /* width: 70px; */
+    padding:0px 15px 0px;
+    line-height: 35px;
+    text-align: center;
+    /* border-right: 1px solid #2B5673; */
+    border-right: 1px solid rgba( 16, 21, 25, 0.3);
+    cursor: pointer;
+}
+
+#store_nav ul li:hover {
+    background: linear-gradient(to right bottom, #E3EAEF,#C2D0DA);
+    color: #000;
+    text-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.25 );
+}
+
+
+#store_nav ul li:first-child {
+    /* width: 90px; */
+}
+
+#store_nav ul li span {
+    width: 19px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    background: url(../img/store_header/btn_arrow_down_padded_white.png) no-repeat center;
+}
+
+#store_nav.fixed {
+    position: fixed;
+    top: 0px;
+    width: 960px;
+    z-index: 100;
+}
+
+#store_search {
+    /* width: 230px; */
+    height: 32px;
+    padding: 4px 3px 0px;
+}
+
+
+.searchbox {
+    height: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0px 20px 0px;
+    border-radius: 3px;
+    position: relative;
+    background: #306180;
+}
+
+.searchbox:hover {
+    border: 1px solid #4c9acc;
+}
+
+.searchbox input {
+    border: none;
+    outline: none;
+    height: 25px;
+    width: 170px;
+    background: transparent;
+    color: #111;
+    font-style: italic;
+    padding:0px 10px 0px 0px;
+    position: relative;
+    right: 10px;
+    font-size: 13px;
+}
+
+.searchbox a {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
