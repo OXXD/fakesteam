@@ -33,7 +33,7 @@ a:hover {
 }
 
 #cart:hover {
-    background: linear-gradient(to right bottom,#84A927, #91BA2C);
+    background: linear-gradient(to right bottom, #84A927, #91BA2C);
     color: #111;
 }
 
@@ -46,17 +46,19 @@ a:hover {
     justify-content: space-between;
     background: #367095;
     position: absolute;
-    top:25px;
+    top: 25px;
     border-radius: 1px;
     font-weight: 300;
 }
 
 #store_nav ul {
     display: flex;
+    position: relative;
 }
+
 #store_nav ul li {
     /* width: 70px; */
-    padding:0px 15px 0px;
+    padding: 0px 15px 0px;
     line-height: 35px;
     text-align: center;
     /* border-right: 1px solid #2B5673; */
@@ -64,12 +66,52 @@ a:hover {
     cursor: pointer;
 }
 
-#store_nav ul li:hover {
-    background: linear-gradient(to right bottom, #E3EAEF,#C2D0DA);
-    color: #000;
-    text-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.25 );
+#store_nav ul div.dropdown {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    padding: 0px;
+    border: none;
+    display: none;
 }
 
+#store_nav ul div.dropdown ul {
+    flex-direction: column;
+    z-index: 100;
+    background: #CDD9E1;
+    box-shadow: 0 0 12px #000;
+}
+
+#store_nav ul div.dropdown ul li {
+    margin: 2px 5px;
+    border: none;
+    padding: 0px 10px;
+    text-align: left;
+    line-height: 28px;
+}
+
+#store_nav ul div.dropdown ul a {
+    color: #000;
+}
+
+#store_nav ul div.dropdown ul li:hover {
+    background: #212D3D;
+}
+
+#store_nav ul div.dropdown ul li:hover a {
+    background: #212D3D;
+    color: #fff;
+}
+
+#store_nav ul li:nth-child(2) div.dropdown {
+    left: 101px;
+}
+
+#store_nav ul li:hover {
+    background: linear-gradient(to right bottom, #E3EAEF, #C2D0DA);
+    color: #000;
+    text-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.25);
+}
 
 #store_nav ul li:first-child {
     /* width: 90px; */
@@ -96,7 +138,6 @@ a:hover {
     padding: 4px 3px 0px;
 }
 
-
 .searchbox {
     height: 25px;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -118,10 +159,10 @@ a:hover {
     background: transparent;
     color: #111;
     font-style: italic;
-    padding:0px 10px 0px 0px;
+    padding: 0px 10px 0px 0px;
     position: relative;
     right: 10px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .searchbox a {

@@ -19,6 +19,8 @@ dt {
     list-style: none;
     padding: 0;
     font-family: "Microsoft Yahei";
+    font-size: 12px;
+    color: #c6d4df;
 }
 
 
@@ -33,7 +35,6 @@ a {
 a:hover {
     color: inherit;
 }
-
 
 img {
     vertical-align: middle;
@@ -56,4 +57,9 @@ img {
 div.main {
     width: 960px;
     margin: 0px auto;
+}
+
+div.rule {
+    border-top: 1px solid #194660;
+    margin: 15px 0px;
 }

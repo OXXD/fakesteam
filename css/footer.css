@@ -10,11 +10,11 @@
     /* border: 1px solid #000; */
 }
 
-a {
+.footer-content a {
     color: #C6D4DF;
 }
 
-.rule {
+hr.rule {
     background: #56707F;
     margin: 5px 0px 10px;
     height: 1px;
@@ -52,7 +52,7 @@ a {
     width: 570px;
 }
 
-a:hover {
+.footer-content a:hover {
     color: #fff;
 }
 
@@ -61,7 +61,7 @@ a:hover {
 }
 
 .footer-text a {
-    color:#C6D4DF;
+    color: #C6D4DF;
 }
 
 .footer-content a:hover {

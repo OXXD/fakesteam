@@ -278,7 +278,7 @@ BindStoreTooltip( $('[data-store-tooltip]') );
 							<div class="store_header_btn_caps store_header_btn_leftcap"></div>
 							<div class="store_header_btn_caps store_header_btn_rightcap"></div>
 							<a id="cart_link" class="store_header_btn_content" href="http://store.steampowered.com/cart/?snr=1_8_4__12">
-								购物车								(<span id="cart_item_count_value">1</span>)
+								购物车								(<span id="cart_item_count_value">15</span>)
 							</a>
 						</div>
 									</div>
@@ -309,14 +309,14 @@ BindStoreTooltip( $('[data-store-tooltip]') );
 							</div>
 						
 
-															<div class="tab  flyout_tab " id="genre_tab" data-flyout="genre_flyout" data-flyout-align="left" data-flyout-valign="bottom">
+															<div class="tab  flyout_tab" id="genre_tab" data-flyout="genre_flyout" data-flyout-align="left" data-flyout-valign="bottom">
 									<span class="pulldown">
 										<a class="pulldown_desktop" href="http://store.steampowered.com/games/?snr=1_8_4__12">游戏</a>
 										<a class="pulldown_mobile" href="http://store.steampowered.com/cart/#">游戏</a>
 										<span></span>
 									</span>
 								</div>
-								<div class="popup_block_new flyout_tab_flyout responsive_slidedown" id="genre_flyout" style="display: none;">
+								<div class="popup_block_new flyout_tab_flyout responsive_slidedown" id="genre_flyout" style="visibility: visible; top: 42px; left: 104.844px; display: none; opacity: 0.0954915;">
 									<div class="popup_body popup_menu">
 																																											<a class="popup_menu_item" href="http://store.steampowered.com/genre/Free%20to%20Play/?snr=1_8_4__12">
 													免费游玩												</a>
@@ -529,7 +529,7 @@ BindStoreTooltip( $('[data-store-tooltip]') );
 
 									if( $J('#searchform').length > 0 )
 					{
-						EnableSearchSuggestions( $J('#searchform')[0].elements['term'], '1_8_4_', 'CN', 'schinese', '0', '0', '3764028' );
+						EnableSearchSuggestions( $J('#searchform')[0].elements['term'], '1_8_4_', 'CN', 'schinese', '0', '0', '3778223' );
 					}
 				
 
@@ -537,12 +537,12 @@ BindStoreTooltip( $('[data-store-tooltip]') );
 		</script>
 	<script type="text/javascript">
 	var g_AccountID = 0;
-	var g_sessionID = "7ac58329ea45b6bcdc8c005f";
-	var g_ServerTime = 1512125955;
+	var g_sessionID = "656edefdc01ead62efaa8831";
+	var g_ServerTime = 1512476054;
 
 	$J( InitMiniprofileHovers );
 
-			GDynamicStore.Init( 0, true, "" );
+			GDynamicStore.Init( 0, false, "" );
 		GStoreItemData.SetCurrencyFormatter( function( nValueInCents, bWholeUnitsOnly ) { var fmt = function( nValueInCents, bWholeUnitsOnly ) {	var format = v_numberformat( nValueInCents / 100, bWholeUnitsOnly ? 0 : 2, ".", ",");format = format.replace( ".00", '' ); return format; };var strNegativeSymbol = '';return strNegativeSymbol + "\u00a5 " + fmt( nValueInCents, bWholeUnitsOnly );} );
 		GStoreItemData.SetCurrencyMinPriceIncrement( 100 );
 	</script>
@@ -556,19 +556,6 @@ BindStoreTooltip( $('[data-store-tooltip]') );
 
 	<div class="page_content">
 
-					<div class="leftcol cart_status_message_area">
-									<div class="cart_status_message_ctn">
-							<div class="cart_status_message_left"></div>
-							<div class="cart_status_message">
-								您的物品已添加！							</div>
-							<div class="cart_status_message_right"></div>
-													<div class="cart_status_message_arrow_holder">
-								<div class="cart_status_message_arrow"></div>
-							</div>
-											</div>
-					<div style="clear: left;"></div>
-				
-							</div>
 				<div style="clear: left;"></div>
 
 		
@@ -578,9 +565,9 @@ BindStoreTooltip( $('[data-store-tooltip]') );
 				<form name="remove_line_item" action="http://store.steampowered.com/cart/" method="POST">
 					<input type="hidden" name="snr" value="1_8_4__cart-remove">
 					<input type="hidden" name="action" value="remove_line_item">
-					<input type="hidden" name="sessionid" value="7ac58329ea45b6bcdc8c005f">
+					<input type="hidden" name="sessionid" value="656edefdc01ead62efaa8831">
 					<input type="hidden" id="line_item_to_remove_gid" name="lineitem_gid" value="-1">
-					<input type="hidden" name="cart" value="2159903377420551904">
+					<input type="hidden" name="cart" value="2159903658791575178">
 									</form>
 
 				<div class="cart_item_list">
@@ -588,7 +575,32 @@ BindStoreTooltip( $('[data-store-tooltip]') );
 																																																							
 					
 					
-																	<div class="cart_row even app_impression_tracked" id="cart_row_2159903377420551908" data-ds-packageid="124923" data-ds-appid="292030,378649,378648" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;sub&quot;,&quot;id&quot;:124923,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+																	<div class="cart_row even app_impression_tracked" id="cart_row_2159903658791594204" data-ds-appid="292030" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:292030,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price ">
+																				<div class="price">¥ 127</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791594204&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/app/292030?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120.jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span>									</div>
+									<a href="http://store.steampowered.com/app/292030?snr=1_8_4__501">The Witcher 3: Wild Hunt</a><br>
+																												<span class="cart_item_desc_ext">已在您的购物车中<sup>1</sup></span><br>
+																																			</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row odd app_impression_tracked" id="cart_row_2159903658791593935" data-ds-packageid="124923" data-ds-appid="292030,378649,378648" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;sub&quot;,&quot;id&quot;:124923,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
 							<div class="cart_item">
 								
 								<div class="cart_item_price_container">
@@ -596,16 +608,341 @@ BindStoreTooltip( $('[data-store-tooltip]') );
 									
 									<div class="cart_item_price ">
 																				<div class="price">¥ 158</div>
-																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903377420551908&#39;)">移除</a>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791593935&#39;)">移除</a>
 																			</div>
 
 								</div>
 								
-								<div class="cart_item_img "><a href="http://store.steampowered.com/sub/124923?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120.jpg" border="0"></a></div>
+								<div class="cart_item_img "><a href="http://store.steampowered.com/sub/124923?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(1).jpg" border="0"></a></div>
 								<div class="cart_item_desc">
 									<div class="cart_item_platform">
 										<span class="platform_img win"></span>									</div>
 									<a href="http://store.steampowered.com/sub/124923?snr=1_8_4__501">The Witcher 3: Wild Hunt - Game of the Year Edition</a><br>
+																																												</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row even app_impression_tracked" id="cart_row_2159903658791589535" data-ds-packageid="164610" data-ds-appid="306130,582880,592670" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;sub&quot;,&quot;id&quot;:164610,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price with_discount">
+																					<div class="original_price price">¥ 299</div>
+																				<div class="price">¥ 149</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791589535&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/sub/164610?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(2).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span><span class="platform_img mac"></span>									</div>
+									<a href="http://store.steampowered.com/sub/164610?snr=1_8_4__501">The Elder Scrolls Online - Morrowind - Digital Collector's Edition</a><br>
+																																												</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row odd app_impression_tracked" id="cart_row_2159903658791589192" data-ds-packageid="151935" data-ds-appid="582880,592670" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;sub&quot;,&quot;id&quot;:151935,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price with_discount">
+																					<div class="original_price price">¥ 199</div>
+																				<div class="price">¥ 99</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791589192&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/sub/151935?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(3).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span><span class="platform_img mac"></span>									</div>
+									<a href="http://store.steampowered.com/sub/151935?snr=1_8_4__501">The Elder Scrolls Online - Morrowind - Digital Collector's Edition Upgrade</a><br>
+																												<span class="cart_item_desc_ext">所有游戏已在您的购物车中<sup>1</sup></span><br>
+																																			</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row even app_impression_tracked" id="cart_row_2159903658791586726" data-ds-appid="582160" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:582160,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price ">
+																				<div class="price">¥ 368</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791586726&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/app/582160?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(4).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span>									</div>
+									<a href="http://store.steampowered.com/app/582160?snr=1_8_4__501">Assassin's Creed Origins - Gold Edition</a><br>
+																												<span class="cart_item_desc_ext">已在您的购物车中<sup>1</sup></span><br>
+																																			</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row odd" id="cart_row_2159903658791586535" data-ds-appid="582160" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:582160,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price ">
+																				<div class="price">¥ 288</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791586535&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/app/582160?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(4).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span>									</div>
+									<a href="http://store.steampowered.com/app/582160?snr=1_8_4__501">Assassin's Creed Origins - Deluxe Edition</a><br>
+																												<span class="cart_item_desc_ext">已在您的购物车中<sup>1</sup></span><br>
+																																			</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row even" id="cart_row_2159903658791586299" data-ds-appid="582160" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:582160,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price ">
+																				<div class="price">¥ 248</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791586299&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/app/582160?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(4).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span>									</div>
+									<a href="http://store.steampowered.com/app/582160?snr=1_8_4__501">Assassin's Creed Origins</a><br>
+																												<span class="cart_item_desc_ext">已在您的购物车中<sup>1</sup></span><br>
+																																			</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row odd" id="cart_row_2159903658791584476" data-ds-appid="289070" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:289070,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price ">
+																				<div class="price">¥ 199</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791584476&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/app/289070?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(5).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span><span class="platform_img mac"></span><span class="platform_img linux"></span>									</div>
+									<a href="http://store.steampowered.com/app/289070?snr=1_8_4__501">Sid Meier's Civilization VI</a><br>
+																																												</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row even" id="cart_row_2159903658791582199" data-ds-appid="645402" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:645402,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price ">
+																				<div class="price">¥ 99</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791582199&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/app/645402?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(6).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span>									</div>
+									<a href="http://store.steampowered.com/app/645402?snr=1_8_4__501">Sid Meier's Civilization VI: Rise and Fall</a><br>
+																			<span class="cart_item_desc_ext">2018年2月9日‎上市</span><br>
+																																												</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row odd ds" id="cart_row_2159903658791577578" data-ds-bundleid="755" data-ds-bundle-data="{&quot;m_nDiscountPct&quot;:&quot;10&quot;,&quot;m_bMustPurchaseAsSet&quot;:0,&quot;m_rgItems&quot;:[{&quot;m_nPackageID&quot;:701,&quot;m_rgIncludedAppIDs&quot;:[13540],&quot;m_bPackageDiscounted&quot;:false,&quot;m_nBasePriceInCents&quot;:4800,&quot;m_nFinalPriceInCents&quot;:4800,&quot;m_nFinalPriceWithBundleDiscount&quot;:4300},{&quot;m_nPackageID&quot;:702,&quot;m_rgIncludedAppIDs&quot;:[15120],&quot;m_bPackageDiscounted&quot;:false,&quot;m_nBasePriceInCents&quot;:4800,&quot;m_nFinalPriceInCents&quot;:4800,&quot;m_nFinalPriceWithBundleDiscount&quot;:4300},{&quot;m_nPackageID&quot;:732,&quot;m_rgIncludedAppIDs&quot;:[15000],&quot;m_bPackageDiscounted&quot;:false,&quot;m_nBasePriceInCents&quot;:2000,&quot;m_nFinalPriceInCents&quot;:2000,&quot;m_nFinalPriceWithBundleDiscount&quot;:1800},{&quot;m_nPackageID&quot;:1013,&quot;m_rgIncludedAppIDs&quot;:[19830],&quot;m_bPackageDiscounted&quot;:false,&quot;m_nBasePriceInCents&quot;:2000,&quot;m_nFinalPriceInCents&quot;:2000,&quot;m_nFinalPriceWithBundleDiscount&quot;:1800},{&quot;m_nPackageID&quot;:88521,&quot;m_rgIncludedAppIDs&quot;:[359550],&quot;m_bPackageDiscounted&quot;:false,&quot;m_nBasePriceInCents&quot;:16800,&quot;m_nFinalPriceInCents&quot;:16800,&quot;m_nFinalPriceWithBundleDiscount&quot;:15100}],&quot;m_bIsCommercial&quot;:false,&quot;m_bRestrictGifting&quot;:true}" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;bundle&quot;,&quot;id&quot;:&quot;755&quot;,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price with_discount">
+																					<div class="original_price price">¥ 122.40</div>
+																				<div class="price">¥ 122</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791577578&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/bundle/755/Rainbow_Six_Bundle/?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(7).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span>									</div>
+									<a href="http://store.steampowered.com/bundle/755/Rainbow_Six_Bundle/?snr=1_8_4__501">Rainbow Six Bundle</a><br>
+																																												</div>
+								<div style="clear: left"></div>
+							</div>
+
+															<p class="package_contents">
+									包含 4 件物品：									<a href="http://store.steampowered.com/app/13540/Tom_Clancys_Rainbow_Six_Vegas/">Tom Clancy's Rainbow Six® Vegas</a>, <a href="http://store.steampowered.com/app/15120/Tom_Clancys_Rainbow_Six_Vegas_2/">Tom Clancy's Rainbow Six® Vegas 2</a>, <a href="http://store.steampowered.com/app/15000/Tom_Clancys_Rainbow_Six_Lockdown/">Tom Clancy's Rainbow Six Lockdown™</a>, <a href="http://store.steampowered.com/app/19830/Tom_Clancys_Rainbow_Six_3_Gold/">Tom Clancy's Rainbow Six® 3 Gold</a>								</p>
+							
+													</div>
+																	<div class="cart_row even" id="cart_row_2159903658791577315" data-ds-appid="359550" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:359550,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price ">
+																				<div class="price">¥ 288</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791577315&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/app/359550?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(8).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span>									</div>
+									<a href="http://store.steampowered.com/app/359550?snr=1_8_4__501">Tom Clancy's Rainbow Six Siege - Year 2 Gold Edition</a><br>
+																												<span class="cart_item_desc_ext">已在您的购物车中<sup>1</sup></span><br>
+																																			</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row odd" id="cart_row_2159903658791577035" data-ds-appid="359550" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:359550,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price ">
+																				<div class="price">¥ 168</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791577035&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/app/359550?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(8).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span>									</div>
+									<a href="http://store.steampowered.com/app/359550?snr=1_8_4__501">Tom Clancy's Rainbow Six Siege</a><br>
+																												<span class="cart_item_desc_ext">已在您的购物车中<sup>1</sup></span><br>
+																																			</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row even" id="cart_row_2159903658791576600" data-ds-appid="359550" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:359550,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price ">
+																				<div class="price">¥ 55</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791576600&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/app/359550?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(8).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span>									</div>
+									<a href="http://store.steampowered.com/app/359550?snr=1_8_4__501">Rainbow Six Siege: Starter Edition</a><br>
+																												<span class="cart_item_desc_ext">已在您的购物车中<sup>1</sup></span><br>
+																																			</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row odd" id="cart_row_2159903658791575338" data-ds-appid="271590" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:271590,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price ">
+																				<div class="price">¥ 189</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791575338&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/app/271590?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(9).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span>									</div>
+									<a href="http://store.steampowered.com/app/271590?snr=1_8_4__501">Grand Theft Auto V</a><br>
+																																												</div>
+								<div style="clear: left"></div>
+							</div>
+
+							
+													</div>
+																	<div class="cart_row even" id="cart_row_2159903658791575182" data-ds-appid="578080" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:578080,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+							<div class="cart_item">
+								
+								<div class="cart_item_price_container">
+
+									
+									<div class="cart_item_price ">
+																				<div class="price">¥ 98</div>
+																					<a class="remove_link" href="javascript:removeFromCart(&#39;2159903658791575182&#39;)">移除</a>
+																			</div>
+
+								</div>
+								
+								<div class="cart_item_img "><a href="http://store.steampowered.com/app/578080?snr=1_8_4__501"><img src="./购物车_files/capsule_sm_120(10).jpg" border="0"></a></div>
+								<div class="cart_item_desc">
+									<div class="cart_item_platform">
+										<span class="platform_img win"></span>									</div>
+									<a href="http://store.steampowered.com/app/578080?snr=1_8_4__501">PLAYERUNKNOWN'S BATTLEGROUNDS</a><br>
 																																												</div>
 								<div style="clear: left"></div>
 							</div>
@@ -620,7 +957,7 @@ BindStoreTooltip( $('[data-store-tooltip]') );
 					<div class="cart_totals_area">
 												<div id="cart_price_total_text" class="cart_total_row">
 							<div id="cart_price_total" class="price">
-								¥ 158							</div>
+								¥ 2,655							</div>
 							小计						</div>
 					</div>
 
@@ -630,17 +967,21 @@ BindStoreTooltip( $('[data-store-tooltip]') );
 
 
 					
-																																																			<div class="cart_bodycopy">为自己购买还是作为礼物购买？ 选择一项以继续付款。</div>
-																				
+																<div class="cart_bodycopy highlight cart_blockpurchase">
+							<div class="cart_bodycopy_highlight"><sup>1</sup></div>
+							<div class="cart_bodycopy_highlight_desc">您拥有的礼包似乎与购物车中的物品重复。您在付款前需要先将购物车中的多余礼包移除。</div>
+							<div style="clear: left;"></div>
+						</div>
+																																									<div class="cart_bodycopy">因为《Rainbow Six Bundle》的内容是为您的帐户个性化定制的，所以无法作为礼物购买。</div>
+																									
 					<div class="cart_checkout_buttons">
-																					<a href="https://store.steampowered.com/checkout/?purchasetype=gift&amp;snr=1_8_4__503" class="btnv6_green_white_innerfade btn_medium continue">
+																					<span class="btnv6_green_white_innerfade btn_medium btn_disabled continue">
+									<span>作为礼物购买</span>
+											</span>
+																						<span class="btnv6_green_white_innerfade btn_medium btn_disabled continue">
 								<span>
-								作为礼物购买									</span>
-								</a>
-																						<a id="btn_purchase_self" href="https://store.steampowered.com/checkout/?purchasetype=self&amp;snr=1_8_4__503" class="btnv6_green_white_innerfade btn_medium continue">
-								<span>
-								为自己购买									</span>
-								</a>
+								为自己购买											</span>
+							</span>
 													
 						<div style="clear: right;"></div>
 					</div>
@@ -688,109 +1029,61 @@ BindStoreTooltip( $('[data-store-tooltip]') );
 							
 	<div class="dailydeal_ctn">
 
-		<div class="dailydeal_cap" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:434650,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
-			<a href="http://store.steampowered.com/app/434650/Lost_Castle/?snr=1_8_4__43">
+		<div class="dailydeal_cap" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:535230,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+			<a href="http://store.steampowered.com/app/535230/Domina/?snr=1_8_4__43">
 				<img src="./购物车_files/header_292x136.jpg">
 			</a>
 		</div>
 
-					<div class="discount_block daily_deal_discount discount_block_large"> <div class="discount_pct">-42%</div><div class="discount_prices"><div class="discount_original_price">¥ 33</div><div class="discount_final_price">¥ 19</div></div></div>				<div class="dailydeal_desc">
+					<div class="discount_block daily_deal_discount discount_block_large"> <div class="discount_pct">-50%</div><div class="discount_prices"><div class="discount_original_price">¥ 36</div><div class="discount_final_price">¥ 18</div></div></div>				<div class="dailydeal_desc">
 			<div>今日特惠！</div>
 
-			<div class="dailydeal_countdown timer ttip" id="dailydeal_timer" data-store-tooltip="此优惠的剩余时间">30:43:11</div>
+			<div class="dailydeal_countdown timer ttip" id="dailydeal_timer" data-store-tooltip="此优惠的剩余时间">29:45:39</div>
 		</div>
 	</div>
 
 
 <script type="text/javascript">
 $J( function() {
-	InitDailyDealTimer( 'dailydeal_timer', 1512237600 );
+	InitDailyDealTimer( 'dailydeal_timer', 1512583200 );
 } );
 </script>			
 							<h2>焦点</h2>
 				
 <div class="spotlight_block">
 	<div class="spotlight_scroll_ctn home_block	" id="spotlight_scroll">
-					<div class="home_area_spotlight underlined_links" id="spotlight_0" style="" data-ds-appid="306130">
-									<div class="spotlight_img">
-												<a href="http://store.steampowered.com/app/306130/The_Elder_Scrolls_Online_Tamriel_Unlimited/?snr=1_8_4__40">
-														<img src="./购物车_files/spotlight_image_english.jpg" alt="#label_free_weekend" border="0">
-													</a>
-										</div>
-
-											<div class="spotlight_content">
-															<h2>免费周末试玩</h2>
-																						<div class="spotlight_body">特惠于周四上午 10 点止（太平洋时间）。</div>
-																						<div class="spotlight_body spotlight_price price">
-									<div class="discount_block discount_block_spotlight discount_block_large"> <div class="discount_pct">-51%</div><div class="discount_prices"><div class="discount_original_price">¥ 79</div><div class="discount_final_price">¥ 39</div></div></div>								</div>
-													</div>
-												</div>
-								<div class="home_area_spotlight underlined_links" id="spotlight_1" style="display: none;">
+					<div class="home_area_spotlight underlined_links" id="spotlight_0" style="">
 							</div>
-								<div class="home_area_spotlight underlined_links" id="spotlight_2" style="display: none;">
-									<div class="spotlight_img">
-												<a href="http://store.steampowered.com/sale/nicalisweekend/?snr=1_8_4__40_2">
-														<img src="./购物车_files/spotlight_image_schinese.jpg" alt="#spotlight_weekend_deal" border="0">
-													</a>
-										</div>
-
-											<div class="spotlight_content">
-															<h2>周末特惠</h2>
-																						<div class="spotlight_body">特惠于周一上午 10 点止（太平洋时间）。</div>
-																				</div>
-												</div>
-								<div class="home_area_spotlight underlined_links" id="spotlight_3" style="display: none;">
-									<div class="spotlight_img">
-												<a href="http://store.steampowered.com/sale/theclassicsreturn/?snr=1_8_4__40_3">
-														<img src="./购物车_files/spotlight_image_schinese(1).jpg" alt="#spotlight_weekend_deal" border="0">
-													</a>
-										</div>
-
-											<div class="spotlight_content">
-															<h2>周末特惠</h2>
-																						<div class="spotlight_body">特惠于周一上午 10 点止（太平洋时间）。</div>
-																				</div>
-												</div>
 						</div>
-			<div class="slider_ctn spotlight">
-			<div class="slider_left disabled" id="spotlight_scroll_prev" onclick="javascript:PrevSpotlight( 4 );">
-                <span></span>
-			</div>
-			<div class="slider_right" id="spotlight_scroll_next" onclick="javascript:NextSpotlight( 4 );">
-                <span></span>
-			</div>
-			<div class="slider slider_text">
-				正在显示第 <span id="spotlight_scroll_count_cur">1</span> / <span id="spotlight_scroll_count_total">4</span> 个			</div>
-		</div>
 	</div>			
 							<h2>为您推荐</h2>
 
 				<div class="recommended_grid">
 										
-							<a href="http://store.steampowered.com/app/20920/The_Witcher_2_Assassins_of_Kings_Enhanced_Edition/" class="special special_img_ctn ds_collapse_flag" data-ds-appid="20920" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:20920,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
-								<img src="./购物车_files/capsule_sm_120(1).jpg">
+							<a href="http://store.steampowered.com/app/433850/H1Z1/" class="special special_img_ctn ds_collapse_flag" data-ds-appid="433850" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:433850,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+								<img src="./购物车_files/capsule_sm_120(11).jpg">
 								<div class="special_discount"><div class="discount_block discount_block_inline no_discount"> <div class="discount_prices"><div class="discount_final_price">¥ 68</div></div></div></div>
 							</a>
 
 
 											
-							<a href="http://store.steampowered.com/app/20900/The_Witcher_Enhanced_Edition_Directors_Cut/" class="special special_img_ctn ds_collapse_flag" data-ds-appid="20900" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:20900,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
-								<img src="./购物车_files/capsule_sm_120(2).jpg">
-								<div class="special_discount"><div class="discount_block discount_block_inline no_discount"> <div class="discount_prices"><div class="discount_final_price">¥ 36</div></div></div></div>
+							<a href="http://store.steampowered.com/app/506540/Last_Man_Standing/" class="special special_img_ctn ds_collapse_flag" data-ds-appid="506540" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:506540,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+								<img src="./购物车_files/capsule_sm_120(12).jpg">
+								<div class="special_discount"><div class="discount_block discount_block_inline no_discount"> <div class="discount_prices"><div class="discount_final_price">免费游玩</div></div></div></div>
 							</a>
 
 
 											
-							<a href="http://store.steampowered.com/app/39500/Gothic_3/" class="special special_img_ctn ds_collapse_flag" data-ds-appid="39500" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:39500,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
-								<img src="./购物车_files/capsule_sm_120(3).jpg">
-								<div class="special_discount"><div class="discount_block discount_block_inline no_discount"> <div class="discount_prices"><div class="discount_final_price">¥ 36</div></div></div></div>
+							<a href="http://store.steampowered.com/app/671510/DESOLATE/" class="special special_img_ctn ds_collapse_flag" data-ds-appid="671510" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:671510,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+								<img src="./购物车_files/capsule_sm_120(13).jpg">
+								<div class="special_discount"><div class="discount_block empty discount_block_inline"></div></div>
 							</a>
 
 
 											
-							<a href="http://store.steampowered.com/app/204030/Fable__The_Lost_Chapters/" class="special special_img_ctn ds_collapse_flag" data-ds-appid="204030" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:204030,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
-								<img src="./购物车_files/capsule_sm_120(4).jpg">
-								<div class="special_discount"><div class="discount_block discount_block_inline no_discount"> <div class="discount_prices"><div class="discount_final_price">¥ 36</div></div></div></div>
+							<a href="http://store.steampowered.com/app/316390/sZoneOnline/" class="special special_img_ctn ds_collapse_flag" data-ds-appid="316390" onmouseover="GameHover( this, event, &#39;global_hover&#39;, {&quot;type&quot;:&quot;app&quot;,&quot;id&quot;:316390,&quot;public&quot;:1,&quot;v6&quot;:1} );" onmouseout="HideGameHover( this, event, &#39;global_hover&#39; )">
+								<img src="./购物车_files/capsule_sm_120(14).jpg">
+								<div class="special_discount"><div class="discount_block discount_block_inline no_discount"> <div class="discount_prices"><div class="discount_final_price">Free to Play</div></div></div></div>
 							</a>
 
 
@@ -941,48 +1234,10 @@ $J( function() {
 
 </div>	<!-- responsive_page_frame -->
 
-<div class="miniprofile_hover" style="display: none;"><div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div><div class="miniprofile_hover_inner shadow_content"></div><div class="hover_arrow left miniprofile_arrow"><div class="miniprofile_arrow_inner"></div></div><div class="hover_arrow right miniprofile_arrow"><div class="miniprofile_arrow_inner"></div></div></div><div class="hover game_hover" id="global_hover" style="display: none; left: 0; top: 0;">
+<div class="miniprofile_hover" style="display: none;"><div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div><div class="miniprofile_hover_inner shadow_content"></div><div class="hover_arrow left miniprofile_arrow"><div class="miniprofile_arrow_inner"></div></div><div class="hover_arrow right miniprofile_arrow"><div class="miniprofile_arrow_inner"></div></div></div><div class="hover game_hover" id="global_hover" style="left: 812.5px; top: 354px; display: none; opacity: 0.252271;">
 			<div class="game_hover_box hover_box">
 				<div class="content" id="global_hover_content">
-				<div id="hover_app_434650" style="display: none;">
-	<div class="hover_top_area" style="display: none;">
-	</div>
-	<h4>Lost Castle</h4>
-				<div class="hover_release"> 发行于: 2016年8月31日 </div>
-				
-			<div class="hover_screenshots">
-					<div class="screenshot" style="background-image: url( http://cdn.steamstatic.com.8686c.com/steam/apps/434650/ss_1a95c4a621020bd1b3e3f70771114bbe5a2fd9be.600x338.jpg?t=1512063802  )">
-
-			</div>
-					<div class="screenshot" style="background-image: url( http://cdn.steamstatic.com.8686c.com/steam/apps/434650/ss_63cd12ce2084d2d055a8cfee5d062db9c0ff2b5d.600x338.jpg?t=1512063802  )">
-
-			</div>
-					<div class="screenshot" style="background-image: url( http://cdn.steamstatic.com.8686c.com/steam/apps/434650/ss_48ececfc72fc5c1e4b1fbb5f418b8576ca4c8954.600x338.jpg?t=1512063802  )">
-
-			</div>
-					<div class="screenshot" style="background-image: url( http://cdn.steamstatic.com.8686c.com/steam/apps/434650/ss_2955911c1c5fecd573750fff0aee987bbb155889.600x338.jpg?t=1512063802  )">
-
-			</div>
-				</div>
-	
-	<div class="hover_body">
-						<div class="hover_review_summary">
-			<div class="title">总体用户评测：</div>
-			<span class="game_review_summary positive">特别好评</span>
-						(8,183 篇评测)
-					</div>
-								<div style="clear: left;"></div>
-	</div>
-			<div class="hover_body">
-			用户标签：			<div class="hover_tag_row">
-				<div class="app_tag">动作</div><div class="app_tag">冒险</div><div class="app_tag">角色扮演</div><div class="app_tag">多人</div><div class="app_tag">类Rogue</div><div class="app_tag">独立</div><div class="app_tag">合作</div><div class="app_tag">单机合作</div><div class="app_tag">二維</div><div class="app_tag">带状卷轴动作</div><div class="app_tag">迷宫探索</div><div class="app_tag">轻度Rogue</div><div class="app_tag">重玩价值</div><div class="app_tag">砍杀</div><div class="app_tag">困难</div><div class="app_tag">横向卷轴</div><div class="app_tag">寻宝</div><div class="app_tag">裸露</div>			</div>
-		</div>
-		
-	
-	
-
-
-</div><div id="hover_sub_124923" style="display: none;">
+				<div id="hover_sub_124923" style="">
 	<div class="hover_top_area" style="display: none;">
 	</div>
 	<h4>The Witcher 3: Wild Hunt - Game of the Year Edition</h4>
@@ -1008,8 +1263,46 @@ $J( function() {
 	
 
 
+</div><div id="hover_app_292030" style="display: none;">
+	<div class="hover_top_area" style="display: none;">
+	</div>
+	<h4>The Witcher® 3: Wild Hunt</h4>
+				<div class="hover_release"> 发行于: 2015年5月18日 </div>
+				
+			<div class="hover_screenshots">
+					<div class="screenshot" style="background-image: url( http://cdn.edgecast.steamstatic.com/steam/apps/292030/ss_107600c1337accc09104f7a8aa7f275f23cad096.600x338.jpg?t=1509077015  )">
+
+			</div>
+					<div class="screenshot" style="background-image: url( http://cdn.edgecast.steamstatic.com/steam/apps/292030/ss_eda99e7f705a113d04ab2a7a36068f3e7b343d17.600x338.jpg?t=1509077015  )">
+
+			</div>
+					<div class="screenshot" style="background-image: url( http://cdn.edgecast.steamstatic.com/steam/apps/292030/ss_b74d60ee215337d765e4d20c8ca6710ae2362cc2.600x338.jpg?t=1509077015  )">
+
+			</div>
+					<div class="screenshot" style="background-image: url( http://cdn.edgecast.steamstatic.com/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.600x338.jpg?t=1509077015  )">
+
+			</div>
+				</div>
+	
+	<div class="hover_body">
+						<div class="hover_review_summary">
+			<div class="title">总体用户评测：</div>
+			<span class="game_review_summary positive">好评如潮</span>
+						(122,416 篇评测)
+					</div>
+								<div style="clear: left;"></div>
+	</div>
+			<div class="hover_body">
+			用户标签：			<div class="hover_tag_row">
+				<div class="app_tag">开放世界</div><div class="app_tag">角色扮演</div><div class="app_tag">剧情丰富</div><div class="app_tag">氛围</div><div class="app_tag">成人</div><div class="app_tag">奇幻</div><div class="app_tag">冒险</div><div class="app_tag">选择取向</div><div class="app_tag">单人</div><div class="app_tag">第三人称视角</div><div class="app_tag">裸露</div><div class="app_tag">好评原声音乐</div><div class="app_tag">动作</div><div class="app_tag">中世纪</div><div class="app_tag">黑暗奇幻</div><div class="app_tag">多结局</div><div class="app_tag">动作角色扮演</div><div class="app_tag">魔法</div><div class="app_tag">黑暗</div><div class="app_tag">沙盒</div>			</div>
+		</div>
+		
+	
+	
+
+
 </div></div>
 			</div>
 			<div class="hover_arrow_left"></div>
-			<div class="hover_arrow_right"></div>
+			<div class="hover_arrow_right" style="display: none;"></div>
 		</div></body></html>
