@@ -87,12 +87,13 @@ a:hover {
     border: none;
     padding: 0px 10px;
     text-align: left;
-    line-height: 28px;
+    line-height: 25px;
 }
 
-#store_nav ul div.dropdown ul a {
+#store_nav ul div.dropdown ul li a {
     color: #000;
 }
+
 
 #store_nav ul div.dropdown ul li:hover {
     background: #212D3D;
@@ -102,6 +103,27 @@ a:hover {
     background: #212D3D;
     color: #fff;
 }
+
+#store_nav ul div.dropdown ul li.type{
+    border-top: 1px solid #fff;
+    line-height: 20px;
+    cursor: default;
+}
+
+#store_nav ul div.dropdown ul li.type:hover {
+    background: none;
+}
+
+#store_nav ul div.dropdown ul li.type a {
+    font-size: 12px;
+    color: #4D99C8;
+    background: none;
+    cursor: default;
+}
+#store_nav ul div.dropdown ul li.type a:hover {
+    background: none;
+}
+
 
 #store_nav ul li:nth-child(2) div.dropdown {
     left: 101px;

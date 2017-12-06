@@ -21,15 +21,12 @@
         // };
         // JQuery 实现尝试
 
-        $("#store_nav>ul>li").mouseover(function(e) {
-            if (e.target.nodeName == "LI") {
-                var $tar = $(e.target);
-                $tar.children(".dropdown").css("display", "block");
-            }
+        $("#store_nav>ul>li").mouseover(function() {
+                $(this).children(".dropdown").css("display", "block");
         }).mouseleave(function() {
             // console.log(this);
             // console.log($(this).children(".dropdown"));
-            $(this).children(".dropdown[style]").css("display", "none");
+            $(this).children(".dropdown").css("display", "none");
         });
     });
 })();
