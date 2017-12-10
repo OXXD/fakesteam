@@ -45,6 +45,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     background: #367095;
+    /* background: rgba(54, 112, 149, 0.8); */
     position: absolute;
     top: 25px;
     border-radius: 1px;
@@ -94,7 +95,6 @@ a:hover {
     color: #000;
 }
 
-
 #store_nav ul div.dropdown ul li:hover {
     background: #212D3D;
 }
@@ -104,7 +104,7 @@ a:hover {
     color: #fff;
 }
 
-#store_nav ul div.dropdown ul li.type{
+#store_nav ul div.dropdown ul li.type {
     border-top: 1px solid #fff;
     line-height: 20px;
     cursor: default;
@@ -120,16 +120,16 @@ a:hover {
     background: none;
     cursor: default;
 }
+
 #store_nav ul div.dropdown ul li.type a:hover {
     background: none;
 }
 
-
-#store_nav ul li:nth-child(2) div.dropdown {
+#store_nav>ul>li:nth-child(2) div.dropdown {
     left: 101px;
 }
 
-#store_nav ul li:hover {
+#store_nav>ul>li:hover {
     background: linear-gradient(to right bottom, #E3EAEF, #C2D0DA);
     color: #000;
     text-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.25);
@@ -139,7 +139,7 @@ a:hover {
     /* width: 90px; */
 }
 
-#store_nav ul li span {
+#store_nav>ul>li span {
     width: 19px;
     height: 15px;
     display: inline-block;

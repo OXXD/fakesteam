@@ -35,7 +35,7 @@
 }
 
 .leftcol {
-    width: 620px;
+    width: 630px;
     min-height: 460px;
     /* border: 1px solid #000;
     box-sizing: border-box; */
@@ -69,7 +69,8 @@
 .item_desc {
     float: left;
     padding: 23px 10px 0px;
-    width: 390px;
+    /* width: 390px; */
+    width: 405px;
     margin: 0px 5px;
 }
 
@@ -143,7 +144,8 @@
     color: #56707f;
     text-decoration: underline;
 }
-.item_price_box .remove:hover{
+
+.item_price_box .remove:hover {
     color: #66C0F4;
 }
 
@@ -212,9 +214,167 @@
     text-decoration: none;
 }
 
+h2 {
+    font-size: 17px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.cart_digital_notice {
+    background: rgba(0, 0, 0, 0.2);
+    min-height: 57px;
+    padding: 16px;
+    margin: 0px 0px 20px;
+}
+
+.cart_digital_notice .cart_digital_notice_logo img {
+    height: 57px;
+}
+
+.cart_digital_notice .cart_digital_notice_content {
+    float: left;
+    margin-left: 15px;
+    padding-top: 8px;
+}
+
+.cart_digital_notice .cart_digital_notice_content h4 {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.continue_shopping a {
+    background: #2A475E;
+    color: #67C1F5;
+    font-size: 16px;
+    border-radius: 2px;
+    padding: 0 10px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+}
+
+.continue_shopping a:hover {
+    background: linear-gradient(to bottom right, #67C1F5, #417A9B);
+    color: #fff;
+}
+
+.continue_shopping {
+    margin-bottom: 30px;
+}
+
+
+/* rightcol start */
+
 .rightcol {
-    width: 320px;
-    height: 900px;
-    border: 1px solid #000;
+    width: 310px;
+    min-height: 900px;
+}
+
+.dailydeal {
+    margin-bottom: 30px;
+    height: 190px;
+    background: linear-gradient(to bottom, #fff, #ABDAF4);
+    box-shadow: 0 0 5px #000;
+    color: #283846;
+}
+
+.dailydeal .dailydeal_img img {
+    width: 310px;
+    margin-bottom: 5px;
+}
+
+.dailydeal .discount_block {
+    margin-left: 10px;
+    height: 34px;
+}
+
+.discount_block>div {
+    /* display: inline-block; */
+    float: left;
+}
+
+.discount_pct {
+    background: #4C6B22;
+    font-size: 24px;
+    color: #A4D007;
+    padding: 0 5px;
+    height: 34px;
+    line-height: 34px;
+    display: inline-block;
+}
+
+.discount_price {
+    background: #000;
+    color: #626366;
+    height: 26px;
+    font-size: 11px;
+    text-align: right;
+    line-height: 14px;
+    padding: 4px 10px 4px 10px;
+}
+.dayly_deal_orginalprice {
+    text-decoration: line-through;
+}
+
+.dayly_deal_discountprice {
+    color: #ACDBCE;
+    font-size: 13px;
+}
+
+.dailydeal_desc {
+    margin-right: 10px;
+}
+
+.dailydeal_desc .dailydeal_timer {
+    font-size: 10px;
+    background: #4F95BD;
+    color: #C4E4F2;
+    text-align: right;
+    padding: 0px 2px 0px 0px;
+}
+
+.spotlight .spotlight_box {
+    height: 395px;
+}
+.spotlight .spotlight_box .spotlight_area {
+    position: relative;
+    height: 395px;
+}
+
+.spotlight .spotlight_img {
+    width: 310px;
+    /* height: 280px; */
+    overflow: hidden;
+}
+
+.spotlight .spotlight_img img {
+    width: 310px;
+}
+
+.spotlight .spotlight_box .spotlight_content {
+    position: absolute;
+    bottom: 0px;
+    background: #15212E;
+    padding: 10px 10px;
+    width: 310px;
     box-sizing: border-box;
+}
+
+.spotlight .spotlight_slider {
+    height: 18px;
+}
+
+.special {
+    float: left;
+    width: 120px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    padding: 16px;
+    background: #16202C;
+}
+
+.special :last-child {
+    color: #ABDBF4;
 }

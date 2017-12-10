@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slider</title>
+    <style>
+        body {
+            /* background: #1B2837; */
+        }
+
+        div {
+            /* border: 1px solid #000; */
+            height: 50px;
+            display: inline-block;
+            box-sizing: border-box;
+            border-radius: 3px;
+        }
+
+        .slider {
+            height: 50px;
+            border: none;
+        }
+
+        .prev,
+        .next {
+            width: 50px;
+            background: #1E2F3E;
+        }
+
+        .slider-box {
+            position: relative;
+            width: 500px;
+            border: none;
+            background: rgba(22, 30, 38, 0.5);
+        }
+
+        .slider-btn {
+            width: 100px;
+            height: 50px;
+            background: #36617F;
+            border: none;
+            position: absolute;
+            transition: all .2s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="prev"></div>
+        <div class="slider-box">
+            <div class="slider-btn"></div>
+        </div>
+        <div class="next"></div>
+    </div>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        var canMove = false;
+        var $box = $(".slider-box"),
+            $btn = $(".slider-btn");
+
+        $box.mousedown(() => {
+            canMove = true;
+        })
+
+        $box.mouseup(() => {
+            canMove = false;
+        })
+
+        // $box.mouseleave(() => {
+        //     canMove = false;
+        // });
+
+        var BTNWIDTH = parseInt($btn.css("width"));
+        var MAXWIDTH = parseInt($box.css("width")) - BTNWIDTH;
+        $box.mousemove(function (e) {
+            if ($(e.target).is(".slider-box")) {
+                var l = BTNWIDTH / 2;
+                l = e.offsetX - l;
+
+                // 左右边界处理
+                l < 0 && (l = 0);
+                l > MAXWIDTH && (l = MAXWIDTH);
+
+                if (canMove) {
+                    $btn.css("left", l);
+                }
+                $box.mousedown(() => $btn.css("left", l));
+            }
+        });
+
+        $(".next").click(function (e) {
+            // canMove = false;
+            var l = parseInt($btn.css("left"));
+            if (l < MAXWIDTH - BTNWIDTH) {
+                $btn.css("left", l + BTNWIDTH);
+            } else {
+                $btn.css("left", MAXWIDTH);
+            }
+
+        });
+        $(".prev").click(function (e) {
+            // canMove = false;
+            var l = parseInt($btn.css("left"));
+            if (l > 0 + BTNWIDTH) {
+                $btn.css("left", l - BTNWIDTH);
+            } else {
+                $btn.css("left", 0);
+            }
+        });
+    </script>
+</body>
+
+</html>

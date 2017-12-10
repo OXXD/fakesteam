@@ -20,13 +20,21 @@
         //     // console.log(e.target);
         // };
         // JQuery 实现尝试
-
-        $("#store_nav>ul>li").mouseover(function() {
-                $(this).children(".dropdown").css("display", "block");
-        }).mouseleave(function() {
+/*         $("#store_nav>ul>li").mouseover(function(e) {
+            // console.log("-------------mouseover---------");
+            // console.log(this); // this -> #store_nav>ul>li
+            // $(this).children(".dropdown").css("display", "block");
+            $(this).children(".dropdown").show();
+        }).mouseout(function() {
+            // console.log("-------------mouseout---------");
             // console.log(this);
-            // console.log($(this).children(".dropdown"));
-            $(this).children(".dropdown").css("display", "none");
+            // console.log($(this).children());
+            // $(this).children(".dropdown").css("display", "none");
+            $(this).children(".dropdown").hide();
+        }); */
+
+        $("#store_nav>ul>li").hover(function(e){
+            $(this).children(".dropdown").toggle();
         });
     });
 })();

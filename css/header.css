@@ -63,7 +63,7 @@
 
 .header-right li:last-child a {
     padding-right: 15px;
-    background: url(../img/header/btn_arrow_down_padded.png) no-repeat right center;
+    /* background: url(../img/header/btn_arrow_down_padded.png) no-repeat right center; */
 }
 
 .header-right li:first-child a:hover,
