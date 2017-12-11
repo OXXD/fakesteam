@@ -70,7 +70,7 @@
     float: left;
     padding: 23px 10px 0px;
     /* width: 390px; */
-    width: 405px;
+    width: 403px;
     margin: 0px 5px;
 }
 
@@ -80,21 +80,6 @@
 
 .item_platform {
     float: right;
-}
-
-.platform_img {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    background: url(../img/cart/icon_platform_win.png) no-repeat 0px 0px;
-}
-
-.platform_img.mac {
-    background: url(../img/cart/icon_platform_mac.png) no-repeat 0px 0px;
-}
-
-.platform_img.linux {
-    background: url(../img/cart/icon_platform_linux.png) no-repeat 0px 0px;
 }
 
 .item_desc .num {
@@ -314,6 +299,7 @@ h2 {
     line-height: 14px;
     padding: 4px 10px 4px 10px;
 }
+
 .dayly_deal_orginalprice {
     text-decoration: line-through;
 }
@@ -338,6 +324,7 @@ h2 {
 .spotlight .spotlight_box {
     height: 395px;
 }
+
 .spotlight .spotlight_box .spotlight_area {
     position: relative;
     height: 395px;

@@ -1,0 +1,167 @@
+body {
+    background: url(../img/colored_body_top2.png) no-repeat center top #1b2838;
+}
+
+.page_content {
+    min-height: 2000px;
+    margin-top: 40px;
+}
+
+.page_content>div {
+    min-height: 400px;
+}
+
+.carousel_container {
+    height: 380px;
+    position: relative;
+}
+
+.carousel_items {
+    height: 353px;
+    box-shadow: 0 0 7px 0px #000;
+    
+}
+
+.store_capsule {
+    display: flex;
+    justify-content: space-between;
+    background: url(../img/index/background_maincap_2.jpg) no-repeat right;
+    overflow: hidden;
+}
+
+.store_capsule .main_capsule {
+    width: 616px;
+    box-shadow: 0 0 10px 5px #000;
+}
+
+.store_capsule .info {
+    width: 344px;
+    height: 353px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.store_capsule .info .app_name {
+    padding: 25px 10px 0px;
+}
+
+.store_capsule .info .screenshots {
+    width: 344px;
+}
+
+.store_capsule .info .screenshots img {
+    float: left;
+    width: 162px;
+    height: 69px;
+    padding: 10px 10px 0 0;
+    opacity: 0.6;
+}
+
+.store_capsule .info .screenshots img:hover {
+    opacity: 1;
+}
+
+.store_capsule .info .reson {
+    padding: 0px 10px 0px;
+    margin-top: 5px;
+}
+
+.store_capsule .info .reson .main {
+    font-size: 21px;
+}
+
+.store_capsule .info .reson .additional {
+    font-size: 11px;
+    margin-top: 5px;
+    background: #394148;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 2px 5px;
+}
+
+.discount_block {
+    display: inline-block;
+    font-size: 13px;
+    margin: 10px 0px 0px 10px;
+    position: absolute;
+    bottom: 10px;
+}
+.discount_block .discount_pct {
+    height: 16px;
+    line-height: 16px;
+    font-size: 13px;
+}
+
+.discount_block .discount_price {
+    height: 16px;
+    line-height: 16px;
+    padding: 0px 5px;
+}
+.discount_block .discount_price div {
+    display: inline-block;
+}
+
+.finalprice {
+    background: none;
+    color: #ACDBF5;
+}
+
+.platforms {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+}
+
+.carousel_thumbs {
+    text-align: center;
+    padding-bottom: 4px;
+}
+
+.carousel_thumbs>div {
+    display: inline-block;
+    width: 17px;
+    height: 11px;
+    margin: 10px 2px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+
+.carousel_thumbs>div.focus {
+    background: rgba(255,255,255,0.5);
+}
+
+.arrow {
+    position: absolute;
+    top:122px;
+    width: 23px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 35px 10px;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    background: linear-gradient(to right,rgba(68, 115, 140, 0.7),rgba(29, 72, 98, 0.7));
+}
+
+.arrow.left{
+    left: -45px;
+}
+
+.arrow.right {
+    right:-45px;
+}
+
+.arrow div {
+    width: 23px;
+    height: 36px;
+    background: url(../img/index/arrows.png) no-repeat 0px 0px ;
+}
+.arrow.left div {
+    background: url(../img/index/arrows.png) no-repeat -23px 0px ;
+}
