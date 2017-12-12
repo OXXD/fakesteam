@@ -7,19 +7,27 @@ body {
     margin-top: 40px;
 }
 
-.page_content>div {
-    min-height: 400px;
+.page_content>div+div {
+    min-height: 500px;
 }
 
 .carousel_container {
     height: 380px;
     position: relative;
+    /* overflow: hidden; */
+}
+
+.carousel_items_container {
+    height: 353px;
+     position: relative;
+     overflow: hidden;
 }
 
 .carousel_items {
     height: 353px;
     box-shadow: 0 0 7px 0px #000;
-    
+    /* width: 4800px; */
+    position: absolute;
 }
 
 .store_capsule {
@@ -27,11 +35,14 @@ body {
     justify-content: space-between;
     background: url(../img/index/background_maincap_2.jpg) no-repeat right;
     overflow: hidden;
+    float: left;
 }
 
 .store_capsule .main_capsule {
     width: 616px;
     box-shadow: 0 0 10px 5px #000;
+    /* background:url(../img/index/capsule_616x353.jpg) no-repeat; */
+    transition: all .5s linear;
 }
 
 .store_capsule .info {
@@ -89,6 +100,7 @@ body {
     position: absolute;
     bottom: 10px;
 }
+
 .discount_block .discount_pct {
     height: 16px;
     line-height: 16px;
@@ -100,6 +112,7 @@ body {
     line-height: 16px;
     padding: 0px 5px;
 }
+
 .discount_block .discount_price div {
     display: inline-block;
 }
@@ -127,17 +140,18 @@ body {
     height: 11px;
     margin: 10px 2px;
     border-radius: 3px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
 
 .carousel_thumbs>div.focus {
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .arrow {
     position: absolute;
-    top:122px;
+    top: 122px;
+    /* top: 154px; */
     width: 23px;
     height: 36px;
     background: rgba(0, 0, 0, 0.3);
@@ -146,22 +160,23 @@ body {
 }
 
 .arrow:hover {
-    background: linear-gradient(to right,rgba(68, 115, 140, 0.7),rgba(29, 72, 98, 0.7));
+    background: linear-gradient(to right, rgba(68, 115, 140, 0.7), rgba(29, 72, 98, 0.7));
 }
 
-.arrow.left{
+.arrow.left {
     left: -45px;
 }
 
 .arrow.right {
-    right:-45px;
+    right: -45px;
 }
 
 .arrow div {
     width: 23px;
     height: 36px;
-    background: url(../img/index/arrows.png) no-repeat 0px 0px ;
+    background: url(../img/index/arrows.png) no-repeat 0px 0px;
 }
+
 .arrow.left div {
-    background: url(../img/index/arrows.png) no-repeat -23px 0px ;
+    background: url(../img/index/arrows.png) no-repeat -23px 0px;
 }

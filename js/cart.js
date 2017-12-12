@@ -1,4 +1,4 @@
-(()=>{
+$(()=>{
     // dailydeal_timer 
     var dailydealDate = new Date();
 
@@ -31,4 +31,4 @@
 
     var timer = setInterval(dailydeal_timer, 1000); // dailydeal_timer 定时器
 
-})();
+});
