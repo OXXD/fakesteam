@@ -39,7 +39,7 @@ $(() => {
     var data = {
         length: $carouselItems.children().length - 1
     };
-    console.log(data, data.length);
+    // console.log(data, data.length);
     var $carouselThumbs = $(".home_cluster .carousel_thumbs");
     $carouselThumbs.html("<div></div>".repeat(data.length)).children().first().addClass("focus");
     $carouselItems.css("width", WIDTH * (data.length + 1)); // data.length+1
@@ -102,4 +102,57 @@ $(() => {
         });
     });
 
+});
+
+// opacity carousel 透明度轮播
+$(()=>{
+    var $carouselItems = $(".special_offers .carousel_items");
+    var data = {
+        length:$carouselItems.children().length
+    };
+    var $carouselThumbs = $(".special_offers .carousel_thumbs");
+    console.log($carouselThumbs);
+    $carouselThumbs.html("<div></div>".repeat(data.length)).children().first().addClass("focus");
+    
+    const WAIT = 5000,DURA = 1000;
+    var moved = 0,timer = null;
+
+    function show(dir=1){
+        moved+=dir;
+        console.log(moved);
+        if (moved == data.length){
+            moved = 0;
+        }
+        $carouselItems.children(`:eq(${moved})`).addClass("active").siblings().removeClass("active");
+        $carouselThumbs.children(`:eq(${moved})`).addClass("focus").siblings().removeClass("focus");
+    }
+
+    timer = setInterval(show, WAIT);
+
+    // 鼠标移入暂停轮播
+    $(".special_offers").on("mouseenter",".special_offers",function(e){
+        clearInterval(timer);
+        timer = null;
+    });
+    $(".special_offers").on("mouseleave",".special_offers",function(e){
+        timer = setInterval(show, WAIT);
+    });
+    // arrow
+    $(".special_offers .arrow.right").click(()=>{
+        show();
+    });
+    $(".special_offers .arrow.left").click(()=>{
+        if(moved == 0) {
+            $carouselItems.children(`:eq(${data.length})`).addClass("active").siblings().removeClass("active");
+            moved = data.length;
+        }
+        show(-1);
+    });
+
+    // thumbs
+    $carouselThumbs.on("click","div",function(e){
+        var i = $(this).index();
+        moved = i-1;
+        show();
+    });
 });

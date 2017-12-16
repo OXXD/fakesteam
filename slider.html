@@ -10,7 +10,7 @@
         body {
             /* background: #1B2837; */
         }
-
+        
         div {
             /* border: 1px solid #000; */
             height: 50px;
@@ -18,32 +18,32 @@
             box-sizing: border-box;
             border-radius: 3px;
         }
-
+        
         .slider {
             height: 50px;
             border: none;
         }
-
+        
         .prev,
         .next {
             width: 50px;
             background: #1E2F3E;
         }
-
+        
         .slider-box {
             position: relative;
-            width: 500px;
+            width: 800px;
             border: none;
             background: rgba(22, 30, 38, 0.5);
         }
-
+        
         .slider-btn {
             width: 100px;
             height: 50px;
             background: #36617F;
             border: none;
             position: absolute;
-            transition: all .2s linear;
+            transition: all .1s linear;
         }
     </style>
 </head>
@@ -77,8 +77,9 @@
 
         var BTNWIDTH = parseInt($btn.css("width"));
         var MAXWIDTH = parseInt($box.css("width")) - BTNWIDTH;
-        $box.mousemove(function (e) {
+        $box.mousemove(function(e) {
             if ($(e.target).is(".slider-box")) {
+                $btn.css("transition", "");
                 var l = BTNWIDTH / 2;
                 l = e.offsetX - l;
 
@@ -93,8 +94,13 @@
             }
         });
 
-        $(".next").click(function (e) {
+        // $box.mouseleave(function() {
+        //     canMove = false;
+        // })
+
+        $(".next").click(function(e) {
             // canMove = false;
+            $btn.css("transition", "all .1s linear");
             var l = parseInt($btn.css("left"));
             if (l < MAXWIDTH - BTNWIDTH) {
                 $btn.css("left", l + BTNWIDTH);
@@ -103,8 +109,9 @@
             }
 
         });
-        $(".prev").click(function (e) {
+        $(".prev").click(function(e) {
             // canMove = false;
+            $btn.css("transition", "all .1s linear");
             var l = parseInt($btn.css("left"));
             if (l > 0 + BTNWIDTH) {
                 $btn.css("left", l - BTNWIDTH);

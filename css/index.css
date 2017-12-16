@@ -8,7 +8,7 @@ body {
 }
 
 .page_content>div+div {
-    min-height: 500px;
+    /* min-height: 500px; */
 }
 
 .carousel_container {
@@ -19,8 +19,8 @@ body {
 
 .carousel_items_container {
     height: 353px;
-     position: relative;
-     overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .carousel_items {
@@ -93,7 +93,7 @@ body {
     padding: 2px 5px;
 }
 
-.discount_block {
+.discount_block.sm {
     display: inline-block;
     font-size: 13px;
     margin: 10px 0px 0px 10px;
@@ -101,19 +101,19 @@ body {
     bottom: 10px;
 }
 
-.discount_block .discount_pct {
+.discount_block.sm .discount_pct {
     height: 16px;
     line-height: 16px;
     font-size: 13px;
 }
 
-.discount_block .discount_price {
+.discount_block.sm .discount_price {
     height: 16px;
     line-height: 16px;
     padding: 0px 5px;
 }
 
-.discount_block .discount_price div {
+.discount_block.sm .discount_price div {
     display: inline-block;
 }
 
@@ -179,4 +179,94 @@ body {
 
 .arrow.left div {
     background: url(../img/index/arrows.png) no-repeat -23px 0px;
+}
+
+
+/* **************special_offers*************** */
+
+.special_offers {
+    margin-top: 40px;
+}
+
+.btn_tansparent {
+    padding: 2px 15px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 2px;
+}
+
+.special_offers .carousel_container {
+    height: 420px;
+    margin: 0;
+}
+
+.special_offers .carousel_items {
+    width: 960px;
+    height: 390px;
+    position: relative;
+    box-shadow: none;
+}
+
+.spotlight_item {  
+    width: 960px;  
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .5s linear;
+}
+
+.spotlight_item.active {
+    opacity: 1;
+}
+
+
+.spotlight_item .spotlight_area {
+    width: 310px;
+    height: 390px;
+    background: url(../img/index/background_spotlight.jpg) no-repeat;
+    background-size: cover;
+    color: #85D0E4;
+    box-shadow: 0 0 5px 0 #000;
+}
+
+.spotlight .spotlight_content {
+    background: url(../img/index/background_spotlight.jpg);
+}
+
+.spotlight .discount_price {
+    background: #0D303F;
+}
+
+.spotlight .discount_block .dayly_deal_orginalprice {
+    color: #7193A6;
+    text-decoration: line-through;
+}
+
+.spotlight .discount_block .dayly_deal_discountprice {
+    color: #ACDBD8;
+}
+
+.spotlight_area.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    box-shadow: none;
+}
+.spotlight_area.flex>.md_box {
+    display: block;
+    height: 185px;
+    background: url(../img/index/background_spotlight.jpg);
+    box-shadow: 0 0 5px 0 #000;
+}
+
+.spotlight_area.flex .dailydeal {
+    height: 185px;
+}
+
+.spotlight_area.flex .dailydeal.md_box {
+    background: url(../img/index/background_spotlight.jpg);
 }

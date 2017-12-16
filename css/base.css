@@ -119,3 +119,71 @@ h2 {
 .platform_img.linux {
     background: url(../img/cart/icon_platform_linux.png) no-repeat 0px 0px;
 }
+
+
+/* ***********spotlight************* */
+
+.spotlight {
+    height: 395px;
+    margin-bottom: 30px;
+}
+
+.spotlight .spotlight_area {
+    position: relative;
+    height: 395px;
+}
+
+.spotlight .spotlight_img {
+    width: 310px;
+    /* height: 280px; */
+    overflow: hidden;
+}
+
+.spotlight .spotlight_img img {
+    width: 310px;
+}
+
+.spotlight .spotlight_content {
+    position: absolute;
+    bottom: 0px;
+    background: #15212E;
+    padding: 10px 10px;
+    width: 310px;
+    box-sizing: border-box;
+}
+
+.spotlight .spotlight_slider {
+    height: 18px;
+}
+
+/* *************spotlight_dailydeal************** */
+.dailydeal {
+    margin-bottom: 30px;
+    height: 190px;
+    background: linear-gradient(to bottom, #fff, #ABDAF4);
+    box-shadow: 0 0 5px #000;
+    color: #283846;
+}
+
+.dailydeal .dailydeal_img img {
+    width: 310px;
+    margin-bottom: 3px;
+}
+
+.dailydeal .discount_block {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 34px;
+}
+
+.dailydeal_desc {
+    margin-right: 10px;
+}
+
+.dailydeal_desc .dailydeal_timer {
+    font-size: 10px;
+    background: #4F95BD;
+    color: #C4E4F2;
+    text-align: right;
+    padding: 0px 2px 0px 0px;
+}
