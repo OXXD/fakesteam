@@ -32,7 +32,7 @@ $(() => {
                 }); */
 
         $("#store_nav>ul>li").hover(function(e) {
-            $(this).children(".dropdown").toggle();
+            $(this).children(".dropdown_menu").toggle();
         });
     });
 });

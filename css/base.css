@@ -23,6 +23,10 @@ dt {
     color: #c6d4df;
 }
 
+.content {
+    min-width: 1100px;
+}
+
 
 /* a {
     color: #fff;

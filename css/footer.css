@@ -5,6 +5,12 @@
     padding: 20px 0px 50px;
     color: #C6D4DF;
 }
+#footer .content {
+    background: linear-gradient(to top, #0D141C, #121B27);
+    height: 150px;
+    padding: 20px 0px 50px;
+    margin-top: -20px;
+}
 
 .footer-content {
     /* border: 1px solid #000; */

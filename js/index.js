@@ -111,15 +111,16 @@ $(()=>{
         length:$carouselItems.children().length
     };
     var $carouselThumbs = $(".special_offers .carousel_thumbs");
-    console.log($carouselThumbs);
     $carouselThumbs.html("<div></div>".repeat(data.length)).children().first().addClass("focus");
     
     const WAIT = 5000,DURA = 1000;
     var moved = 0,timer = null;
 
+/* *********************************透明轮播方法*********************************************** */
+
     function show(dir=1){
         moved+=dir;
-        console.log(moved);
+        // console.log(moved);
         if (moved == data.length){
             moved = 0;
         }
@@ -127,7 +128,10 @@ $(()=>{
         $carouselThumbs.children(`:eq(${moved})`).addClass("focus").siblings().removeClass("focus");
     }
 
+    // uncomment next line to start opacity carousel
     timer = setInterval(show, WAIT);
+
+/* *********************************special_offers 轮播*************************************** */
 
     // 鼠标移入暂停轮播
     $(".special_offers").on("mouseenter",".special_offers",function(e){
@@ -155,4 +159,6 @@ $(()=>{
         moved = i-1;
         show();
     });
+
+/* ***************************************************************** */
 });
