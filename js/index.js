@@ -1,12 +1,12 @@
 // 切换 main_capsule 的图片
 $(() => {
-    $(".store_capsule").mouseenter(function () {
+    $(".store_capsule").mouseenter(function() {
         var $info = $(this).children(".info");
         // var src = $info.prev().attr("src");
         var src = $(this).children(".main_capsule").data("src");
-        $info.on("mouseenter", "img", function () {
+        $info.on("mouseenter", "img", function() {
             $info.prev().attr("src", $(this).attr("src"));
-        }).on("mouseleave", "img", function () {
+        }).on("mouseleave", "img", function() {
             $info.prev().attr("src", src);
         });
     });
@@ -91,7 +91,7 @@ $(() => {
     });
 
     // 下方小点事件绑定
-    $carouselThumbs.on("click", "div", function () {
+    $carouselThumbs.on("click", "div", function() {
         var $thumbs = $(this);
         var i = $thumbs.index();
         moved = i;
@@ -105,23 +105,26 @@ $(() => {
 });
 
 // opacity carousel 透明度轮播
-$(()=>{
+$(() => {
     var $carouselItems = $(".special_offers .carousel_items");
     var data = {
-        length:$carouselItems.children().length
+        length: $carouselItems.children().length
     };
     var $carouselThumbs = $(".special_offers .carousel_thumbs");
     $carouselThumbs.html("<div></div>".repeat(data.length)).children().first().addClass("focus");
-    
-    const WAIT = 5000,DURA = 1000;
-    var moved = 0,timer = null;
 
-/* *********************************透明轮播方法*********************************************** */
+    const WAIT = 5000,
+        DURA = 1000;
+    var moved = 0,
+        timer = null;
 
-    function show(dir=1){
-        moved+=dir;
+    /**
+     * opacity carousel 透明轮播方法
+     */
+    function show(dir = 1) {
+        moved += dir;
         // console.log(moved);
-        if (moved == data.length){
+        if (moved == data.length) {
             moved = 0;
         }
         $carouselItems.children(`:eq(${moved})`).addClass("active").siblings().removeClass("active");
@@ -131,22 +134,23 @@ $(()=>{
     // uncomment next line to start opacity carousel
     timer = setInterval(show, WAIT);
 
-/* *********************************special_offers 轮播*************************************** */
-
-    // 鼠标移入暂停轮播
-    $(".special_offers").on("mouseenter",".special_offers",function(e){
+    /**
+     * special_offers 轮播
+     * 鼠标移入暂停轮播
+     */
+    $(".special_offers").on("mouseenter", ".special_offers", function(e) {
         clearInterval(timer);
         timer = null;
     });
-    $(".special_offers").on("mouseleave",".special_offers",function(e){
+    $(".special_offers").on("mouseleave", ".special_offers", function(e) {
         timer = setInterval(show, WAIT);
     });
     // arrow
-    $(".special_offers .arrow.right").click(()=>{
+    $(".special_offers .arrow.right").click(() => {
         show();
     });
-    $(".special_offers .arrow.left").click(()=>{
-        if(moved == 0) {
+    $(".special_offers .arrow.left").click(() => {
+        if (moved == 0) {
             $carouselItems.children(`:eq(${data.length})`).addClass("active").siblings().removeClass("active");
             moved = data.length;
         }
@@ -154,11 +158,33 @@ $(()=>{
     });
 
     // thumbs
-    $carouselThumbs.on("click","div",function(e){
+    $carouselThumbs.on("click", "div", function(e) {
         var i = $(this).index();
-        moved = i-1;
+        moved = i - 1;
         show();
     });
 
-/* ***************************************************************** */
+});
+
+// tabs 切换功能
+$(() => {
+    var $tabs = $(".tabs");
+    $tabs.on("click", ".tab>a", function(e) {
+        e.preventDefault();
+        $this = $(this);
+        var id = $this.attr("href");
+        $this.parent().addClass("active").siblings().removeClass("active");
+        $(id).addClass("active").siblings().removeClass("active");
+        console.log($(id).children().first().trigger("mouseenter")); // 为点击出现的第一项 tab_item 触发事件添加 class 并显示
+    });
+
+    // tab_item 二级菜单切换功能
+    var $tabItem = $(".tab_item"),
+        $tabRightcol = $(".tab_rightcol>.tab_preview_container");
+    $tabItem.mouseenter(function(e) {
+        var $this = $(this);
+        var id = $this.attr("data-appid");
+        $this.addClass("active").siblings().removeClass("active");
+        $tabRightcol.children(`[data-appid=${id}]`).addClass("active").siblings().removeClass("active");
+    });
 });

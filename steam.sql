@@ -36,9 +36,8 @@ INSERT INTO `steam_apps` VALUES('524220',
     'NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.',
     '<h2>关于这款游戏</h2><img src="img/product/524220_Nier_PRE_Launch-ENG_UK_Multi_06_Mod.gif"><br>NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.<br><br>Humanity has been driven from the Earth by mechanical beings from another world. In a final effort to take back the planet, the human resistance sends a force of android soldiers to destroy the invaders. Now, a war between machines and androids rages on... A war that could soon unveil a long-forgotten truth of the world.<br><br>Key Features:<br><ul class="bb_ul"><li><strong>Action-Packed Battles</strong> – Players will switch between using melee and ranged attacks in battle against hordes of enemies and challenging bosses across a variety of open field maps. The tight controls and incredibly fluid combat are simple to learn for newcomers while offering plenty of depth for more experienced action gamers. Players can perform high-speed battle actions—combining light and heavy attacks—and switch through an arsenal of weaponry while evading enemies with speed and style. <br></li><li><strong>Beautifully Desolate Open-World</strong> – The game seamlessly joins together hauntingly beautiful vistas and locations with no area loading. The environments are rendered in 60fps and contain a wealth of sub-events in addition to the main storyline. <br></li><li><strong>Masterfully Crafted Story and Characters</strong> – NieR: Automata tells the story of androids 2B, 9S and A2 and their ferocious battle to reclaim a machine-driven dystopia overrun by powerful weapons known as machine lifeforms.<br></li><li><strong>Elements of an RPG</strong> – Players will obtain a variety of weapon types, level up in battle, learn new combat skills, and customise a loadout that caters to their playstyle.<br></li><li><strong>Utilise the Pod Support System to Assist In and Outside of Battle</strong> – Pods can attack the enemy in both manual and lock-on modes. They can also assist outside of battle, such as allowing the player to glide through the air. Pods can be enhanced throughout the game, with upgrades including new attack methods and variations.<br></li><li><strong>“Auto Mode” Available for Beginners </strong>– Novice players can elect “Auto Mode” for easy attacks and evasions.</li></ul>',
     'Action',
-    ',win,',
-    ',
-    ,Great Soundtrack
+    'win',
+    'Great Soundtrack
     ,Story Rich
     ,Action
     ,Female Protagonist
@@ -57,7 +56,7 @@ INSERT INTO `steam_apps` VALUES('524220',
     ,Character Action Game
     ,Adventure
     ,Nudity
-    ,Violent+,');
+    ,Violent+');
 INSERT INTO `steam_apps` VALUES('240720',
     '1',
     'Getting Over It with Bennett Foddy',
@@ -68,9 +67,8 @@ INSERT INTO `steam_apps` VALUES('240720',
     '我做的这个游戏， 是为了某种特定类型的人 为了伤害他们。',
     '<h2>关于这款游戏</h2>我做的这个游戏，<br>是为了某种特定类型的人<br>为了伤害他们。<br><br>《和Bennett Foddy 一起攻克难关》是一个惩罚性的攀岩游戏，对Jazzuo的2002推出的B类游戏经典《迷人远足》表示敬意。你用鼠标移动锤子可可以了。通过练习，你可以跳跃，摇摆，爬升和飞跃。伟大的奥秘和美秒的回报等待着登顶的远足者。<br>引用Jazzuo的话：“游戏中的徒步和现实生活中的非常相似，记住这一点，你会做得很好”。<br><br><ul class="bb_ul"><li>只用一把锤子和一个锅攀越高山。<br></li><li>像我对手头的问题进行哲学观察一样倾听。<br></li><li>这段痛苦的游戏至少要两个小时及以上的时间才能完成。我们的测试者结束游戏的中位时间是5小时，但平均值接近于正无穷。<br></li><li>一次次地退后。<br></li><li>体会你曾不知道能承受的新型挫折。<br></li><li>不可思议的奖励等待登顶的远足者。</li></ul>',
     'Action',
-    ',win,',
-    ',
-    ,Difficult
+    'win,mac',
+    'Difficult
     ,Psychological Horror
     ,Physics
     ,Singleplayer
@@ -89,7 +87,7 @@ INSERT INTO `steam_apps` VALUES('240720',
     ,Illuminati
     ,Walking Simulator
     ,Story Rich
-    ,Strategy+,');
+    ,Strategy+');
 INSERT INTO `steam_apps` VALUES('578080',
     '1',
     'PLAYERUNKNOWN\'S BATTLEGROUNDS',
@@ -111,8 +109,7 @@ INSERT INTO `steam_apps` VALUES('578080',
     (这不仅是游戏，是大逃杀。)',
     'Action',
     ',win,',
-    ',
-    ,Great Soundtrack
+    'Great Soundtrack
     ,Story Rich
     ,Action
     ,Female Protagonist
@@ -131,7 +128,7 @@ INSERT INTO `steam_apps` VALUES('578080',
     ,Character Action Game
     ,Adventure
     ,Nudity
-    ,Violent+,');
+    ,Violent+');
 INSERT INTO `steam_apps` VALUES('365590',
     '1',
     'Tom Clancy\’s The Division™',
@@ -170,9 +167,8 @@ INSERT INTO `steam_apps` VALUES('365590',
 补充信息: <br>
 眼动追踪特性可由Tobii眼动追踪技术实现						',
     'Action',
-    ',win,',
-    ',
-,Open World
+    'win',
+    'Open World
 ,Third-Person Shooter
 ,Multiplayer
 ,Action
@@ -191,7 +187,7 @@ INSERT INTO `steam_apps` VALUES('365590',
 ,Singleplayer
 ,Stealth
 ,FPS
-,Sandbox+,');
+,Sandbox+');
 INSERT INTO `steam_apps` VALUES('292030',
     '1',
     'The Witcher® 3: Wild Hunt',
@@ -202,9 +198,8 @@ INSERT INTO `steam_apps` VALUES('292030',
     'The Witcher is a story-driven, next-generation open world role-playing game, set in a visually stunning fantasy universe, full of meaningful choices and impactful consequences. In The Witcher, you play as Geralt of Rivia, a monster hunter tasked with finding a child from an ancient prophecy.',
     '<h2>关于这款游戏</h2>The Witcher: Wild Hunt is a story-driven, next-generation open world role-playing game set in a visually stunning fantasy universe full of meaningful choices and impactful consequences. In The Witcher you play as the professional monster hunter, Geralt of Rivia, tasked with finding a child of prophecy in a vast open world rich with merchant cities, viking pirate islands, dangerous mountain passes, and forgotten caverns to explore.<br><br><strong>PLAY AS A HIGHLY TRAINED MONSTER SLAYER FOR HIRE</strong><br>Trained from early childhood and mutated to gain superhuman skills, strength and reflexes, witchers are a distrusted counterbalance to the monster-infested world in which they live.<br><ul class="bb_ul"><li>Gruesomely destroy foes as a professional monster hunter armed with a range of upgradeable weapons, mutating potions and combat magic.<br></li><li>Hunt down a wide range of exotic monsters from savage beasts prowling the mountain passes to cunning supernatural predators lurking in the shadows of densely populated towns.<br></li><li>Invest your rewards to upgrade your weaponry and buy custom armour, or spend them away in horse races, card games, fist fighting, and other pleasures the night brings.</li></ul><br><strong>EXPLORE A MORALLY INDIFFERENT FANTASY OPEN WORLD</strong><br>Built for endless adventure, the massive open world of The&nbsp; Witcher sets new standards in terms of size, depth and complexity.<br><ul class="bb_ul"><li>Traverse a fantastical open world: explore forgotten ruins, caves and shipwrecks, trade with merchants and dwarven smiths in cities, and hunt across the open plains, mountains and seas.<br></li><li>Deal with treasonous generals, devious witches and corrupt royalty to provide dark and dangerous services.<br></li><li>Make choices that go beyond good &amp; evil, and face their far-reaching consequences.</li></ul><br><strong>CHASE DOWN THE CHILD OF PROPHECY</strong><br>Take on the most important contract to track down the child of prophecy, a key to save or destroy this world.<br><ul class="bb_ul"><li>In times of war, chase down the child of prophecy, a living weapon of power, foretold by ancient elven legends.<br></li><li>Struggle against ferocious rulers, spirits of the wilds and even a threat from beyond the veil – all hell-bent on controlling this world.<br></li><li>Define your destiny in a world that may not be worth saving.</li></ul><br><strong>FULLY REALIZED NEXT GENERATION</strong><br><ul class="bb_ul"><li>Built exclusively for next generation hardware, the REDengine&nbsp;3 renders the world of The Witcher visually nuanced and organic, a real true to life fantasy.<br></li><li>Dynamic weather systems and day/night cycles affect how the citizens of the towns and the monsters of the wilds behave.<br></li><li>Rich with storyline choices in both main and subplots, this grand open world is influenced by the player unlike ever before.</li></ul>',
     'RPG',
-    ',win,',
-    ',
-,Open World
+    'win',
+    'Open World
 ,RPG
 ,Story Rich
 ,Atmospheric
@@ -223,7 +218,7 @@ INSERT INTO `steam_apps` VALUES('292030',
 ,Action RPG
 ,Magic
 ,Dark
-,Sandbox+,');
+,Sandbox+');
 INSERT INTO `steam_apps` VALUES('582160',
     '1',
     'Assassin\'s Creed® Origins',
@@ -234,9 +229,8 @@ INSERT INTO `steam_apps` VALUES('582160',
     '《ASSASSIN’S CREED® ORIGINS》是嶄新的開始 充滿王權角力與陰謀詭計的古埃及時代，正在權力的殘酷鬥爭下逐漸消失。回到刺客兄弟會的緣起時刻，揭開黑暗秘辛和早已被世人遺忘的神話。',
     '<h2>关于这款游戏</h2>《ASSASSIN’S CREED® ORIGINS》是一次全新的开始<br><br>王权和阴谋统治下的古埃及时代正慢慢消失在争权夺位的冷酷之战中。重返刺客兄弟会起源的最初时刻，揭开不为人知的黑暗秘密和被遗忘的神秘事件。<br><br><strong>等待发现的国度</strong><br>朝着尼罗河下游航行，在探索这片巨大未知国度的过程中，逐步揭开金字塔的神秘面纱，与危险的古代宗教派别和野兽展开殊死一搏。<br><br><strong>每场游历都是全新故事</strong><br>从富有的权贵人士到绝望的被驱逐者，跟着众多色彩鲜明、令人难忘的角色一同参与各项任务，进入扣人心弦的故事情节。<br><br><strong>畅享动作角色扮演体验</strong><br>感受全新的战斗方式。掠夺并使用数十款特色和稀有程度各不相同的武器。精研深度发展的机械，并迎战独特强大的头目，发挥你的战术技能。<br><br><strong>奇迹之瞳</strong><br>在TOBII眼动追踪的帮助下拥有全新的动作体验。视野扩展功能让您更好的感知周围环境，动态光照和阳光效应功能可以根据视线所在提供更为逼真的浸入式体验,使用眼睛标记，瞄准或是锁定目标也显得愈加自然。让您的视线引领前进的道路，提升游戏体验。<br>兼容全部Tobii眼动追踪游戏设备<br>---<br>补充信息: <br>眼动追踪特性可由Tobii眼动追踪技术实现',
     'Action',
-    ',win,',
-    ',
-,Open World
+    'win',
+    'Open World
 ,Assassin
 ,Action
 ,Parkour
@@ -255,7 +249,7 @@ INSERT INTO `steam_apps` VALUES('582160',
 ,Walking Simulator
 ,Illuminati
 ,Sandbox
-,Heist+,');
+,Heist+');
 
 
 -- ----------------------------
