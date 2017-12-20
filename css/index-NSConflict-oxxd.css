@@ -202,7 +202,7 @@ body {
     margin-bottom: 20px;
 }
 
-.btn_transparent {
+.btn_tansparent {
     padding: 2px 15px;
     border: 1px solid #fff;
     background: transparent;
@@ -230,12 +230,10 @@ body {
     left: 0;
     opacity: 0;
     transition: all .5s linear;
-    z-index: 0;
 }
 
 .spotlight_item.active {
     opacity: 1;
-    z-index: 2;
 }
 
 .spotlight_item .spotlight_area {
@@ -323,7 +321,6 @@ body {
 
 .steam_creators .carousel_items {
     position: relative;
-    min-height: 374px;
 }
 
 .creator_page {
@@ -332,78 +329,7 @@ body {
     box-sizing: border-box;
     background: linear-gradient(to right bottom, #48535F, #323D4C);
     box-shadow: 0 0 5px 0 #000;
-    padding: 20px 20px 0px 20px;
-    position: absolute;
-    opacity: 0;
-    transition: all .5s linear;
-    z-index: 0;
-}
-
-.creator_page.active {
-    opacity: 1;
-    z-index: 2;
-}
-
-.profile .avatar {
-    margin-right: 10px;
-}
-
-.info .name {
-    font-size: 18px;
-}
-
-.info .name span {
-    color: #EFF3F6;
-}
-
-.actions {
-    background: rgba(0, 0, 0, 0.2);
-    width: fit-content;
-    padding: 2px 20px 2px 2px;
-    font-size: 12px;
-}
-
-.actions .btn_green {
-    float: left;
-    margin: 0;
-    width: 60px;
-    font-size: 15px;
-    margin: 3px 5px 3px 5px;
-}
-
-.actions .followers {
-    float: left;
-}
-
-.actions .followers span {
-    font-size: 15px;
-}
-
-.creations {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.creations>div {
-    width: 220px;
-    min-height: 264px;
-}
-
-.creations .capsule {
-    display: block;
-    box-shadow: 0 0 10px 0 #000;
-}
-
-.creations img {
-    width: 220px;
-    height: 105px;
-}
-
-.creations .review_recommended {
-    font-size: 14px;
-    margin: 5px 0px;
-    color: #66C0F4;
+    padding: 20px;
 }
 
 
@@ -418,8 +344,19 @@ body {
 
 .tab_leftcol {
     /* height: 815px; */
-    width: 630px;
+    width: 620px;
     float: left;
+}
+
+.tab_rightcol {
+    /* height: 714px; */
+    height: 640px;
+    width: 320px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    float: right;
+    /* margin-top: 37px; */
+    margin-top: 8px;
 }
 
 .tab_container a {
@@ -434,12 +371,11 @@ body {
 .tabs {
     display: flex;
     margin-top: -37px;
-    height: 38px;
 }
 
 .tabs .tab {
     padding: 10px;
-    border-radius: 3px 3px 0 0;
+    border-radius: 3px;
 }
 
 .tabs .tab.active {
@@ -451,11 +387,14 @@ body {
 }
 
 .tabs_content {
-    margin-top: 7px;
+    margin-top: 5px;
     box-sizing: border-box;
+    border: 1px solid #000;
 }
 
 .tabs_content .tab_content {
+    /* display: flex;
+    flex-direction: column; */
     display: none;
 }
 
@@ -470,40 +409,20 @@ body {
     background: rgba(0, 0, 0, 0.2);
 }
 
-.tabs_content .tab_content .tab_item.active {
+.tabs_content .tab_content .tab_item:hover {
     background: linear-gradient( to right, #c6e6f8 5%, #95bcd3 95%);
-    margin-right: -14px;
 }
 
-.tab_see_more {
-    background: rgba(0, 0, 0, 0.2);
-    text-align: right;
-    padding: 10px 0px;
-    font-size: 12px;
-}
-
-.tab_see_more .btn_transparent {
-    color: #C6D4DF;
-    font-size: 12px;
-    margin: 0 5px;
-    border-color: #737981;
-}
-
-.tab_see_more .btn_transparent:hover {
-    border-color: #fff;
-}
-
-.tab_item>img {
+.tab_item img {
     float: left;
 }
 
 .tab_item .discount_block {
     float: right;
-    margin: 25px 10px 0px 0px;
 }
 
-.tab_item.active .discount_block {
-    margin-right: 24px;
+.tab_item .discount_block {
+    margin: 25px 10px 0px 0px;
 }
 
 .tab_item .discount_price {
@@ -522,7 +441,7 @@ body {
     color: #7193a6;
 }
 
-.tab_item.active .discountprice {
+.tab_item:hover .discountprice {
     color: #22303D;
 }
 
@@ -534,8 +453,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    /* max-width: 320px; */
-    max-width: 305px;
+    max-width: 320px;
 }
 
 .tab_item .tab_item_content .tab_item_tags {
@@ -543,7 +461,7 @@ body {
     color: #384959;
 }
 
-.tab_item.active .tab_item_content {
+.tab_item:hover .tab_item_content {
     color: #10161b;
 }
 
@@ -557,85 +475,14 @@ body {
     opacity: 0.3;
 }
 
-.tab_item.active .platform_img.win {
+.tab_item:hover .platform_img.win {
     background: url(../img/index/icon_platform_win_dark.png);
 }
 
-.tab_item.active .platform_img.mac {
+.tab_item:hover .platform_img.mac {
     background: url(../img/index/icon_platform_mac_dark.png);
 }
 
-.tab_item.active .platform_img.linux {
+.tab_item:hover .platform_img.linux {
     background: url(../img/index/icon_platform_linux_dark.png);
-}
-
-.tab_rightcol {
-    height: 735px;
-    width: 320px;
-    float: right;
-    margin-top: 8px;
-}
-
-.tab_preview_container {}
-
-.tab_preview {
-    height: 735px;
-    background: linear-gradient(to right, #95BBD4, #859BAC);
-    box-sizing: border-box;
-    display: none;
-    padding: 15px 25px 0px;
-}
-
-.tab_preview.active {
-    display: block;
-}
-
-.tab_preview h2 {
-    font-size: 21px;
-    color: #263645;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.tab_review_summary {
-    font-size: 12px;
-    background: rgba(38, 54, 69, 0.6);
-    padding: 5px;
-    border-radius: 3px;
-    width: 250px;
-}
-
-.tab_review_summary .game_review_summary.positive {
-    color: #66C0F4;
-}
-
-.tab_review_summary .game_review_summary.mixed {
-    color: #B9A074;
-}
-
-.tab_review_summary .game_review_summary.noreeciews {
-    color: #929396;
-}
-
-.tags {
-    margin-top: 10px;
-    margin-bottom: 5px
-}
-
-.tags a {
-    background: rgba(38, 54, 69, 0.6);
-    color: #fff;
-    font-size: 11px;
-    padding: 5px;
-    border-radius: 3px;
-}
-
-.tags a:hover {
-    color: #66C0F4;
-}
-
-.tab_preview img {
-    width: 258px;
-    margin-top: 5px;
 }

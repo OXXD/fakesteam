@@ -160,7 +160,7 @@
     padding: 0px 0px 15px;
 }
 
-.cart_checkout_buttons a {
+.cart_checkout_buttons .btn_green {
     /* display: inline-block; */
     width: 105px;
     height: 30px;
@@ -174,12 +174,12 @@
     font-size: 14px;
 }
 
-.cart_checkout_buttons a:not(.disabled):hover {
+.cart_checkout_buttons .btn_green:not(.disabled):hover {
     background: linear-gradient(to top left, #6D8905, #A4D007);
     color: #fff;
 }
 
-.cart_checkout_buttons a.disabled {
+.cart_checkout_buttons .btn_green.disabled {
     opacity: 0.5;
     cursor: default;
 }

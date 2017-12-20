@@ -160,7 +160,9 @@ h2 {
     height: 18px;
 }
 
+
 /* *************spotlight_dailydeal************** */
+
 .dailydeal {
     margin-bottom: 30px;
     height: 190px;
@@ -190,4 +192,28 @@ h2 {
     color: #C4E4F2;
     text-align: right;
     padding: 0px 2px 0px 0px;
+}
+
+.btn_green {
+    /* display: inline-block; */
+    width: 105px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: linear-gradient(to top left, #546A04, #799905);
+    border-radius: 2px;
+    color: #D2E885;
+    float: right;
+    margin: 0px 0px 10px 20px;
+    font-size: 14px;
+}
+
+.btn_green:not(.disabled):hover {
+    background: linear-gradient(to top left, #6D8905, #A4D007);
+    color: #fff;
+}
+
+.btn_green.disabled {
+    opacity: 0.5;
+    cursor: default;
 }
