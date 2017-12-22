@@ -217,3 +217,64 @@ h2 {
     opacity: 0.5;
     cursor: default;
 }
+
+
+/* slider */
+
+.slider div {
+    height: 18px;
+    border: none;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.prev,
+.next {
+    width: 40px;
+    height: 18px;
+    line-height: 18px;
+    background: #1E2F3E;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.prev span,
+.next span {
+    display: inline-block;
+    width: 10px;
+    height: 7px;
+    background: url(../img/icon_cluster_controls.png) 10px 0px;
+}
+
+.prev:hover span {
+    background-position: 10px -7px;
+}
+.next:hover span {
+    background-position: 19px -7px;
+}
+
+.next span {
+    background-position: 19px 0px;
+}
+
+.slider-box {
+    position: relative;
+    width: 220px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    background: rgba(22, 30, 38, 0.5);
+    border: none;
+    border-radius: 2px;
+    margin: 0 1px;
+}
+
+.slider-btn {
+    width: 25px;
+    height: 18px;
+    background: #36617F;
+    border: none;
+    position: absolute;
+    transition: all .1s linear;
+}

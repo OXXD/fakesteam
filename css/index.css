@@ -145,6 +145,7 @@ body {
 .carousel_thumbs {
     text-align: center;
     padding-bottom: 4px;
+    /* z-index: 10; */
 }
 
 .carousel_thumbs>div {
@@ -207,6 +208,7 @@ body {
     border: 1px solid #fff;
     background: transparent;
     border-radius: 2px;
+    margin-left: 10px;
 }
 
 .special_offers .carousel_container {
@@ -332,16 +334,18 @@ body {
     box-sizing: border-box;
     background: linear-gradient(to right bottom, #48535F, #323D4C);
     box-shadow: 0 0 5px 0 #000;
-    padding: 20px 20px 0px 20px;
+    padding: 20px 20px 10px 20px;
     position: absolute;
+    top: 0;
     opacity: 0;
-    transition: all .5s linear;
-    z-index: 0;
+    transition: opacity .3s linear;
+    z-index: -1;
 }
 
 .creator_page.active {
     opacity: 1;
     z-index: 2;
+    position: relative;
 }
 
 .profile .avatar {
@@ -393,9 +397,28 @@ body {
 .creations .capsule {
     display: block;
     box-shadow: 0 0 10px 0 #000;
+    position: relative;
 }
 
-.creations img {
+.creations .capsule .discount_block {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+
+.creations .capsule .discount_block .discount_price {
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 11px;
+}
+
+.creations .capsule .discount_block .discount_price .discountprice,
+.creations .capsule .discount_block .discount_price .orginalprice,
+.creations .capsule .discount_block .discount_price .discount_pct,
+.creations .capsule .discount_block .discount_price .finalprice {
+    font-size: 11px;
+}
+
+.creations .capsule img {
     width: 220px;
     height: 105px;
 }
@@ -527,8 +550,8 @@ body {
 }
 
 .tab_item .tab_item_content {
-    margin-left: 15px;
-    float: left;
+    padding-left: 15px;
+    /* float: left; */
     color: #C0CFDC;
     padding-top: 5px;
     overflow: hidden;
@@ -638,4 +661,119 @@ body {
 .tab_preview img {
     width: 258px;
     margin-top: 5px;
+}
+
+
+/* specials_under10 */
+
+.specials_under10 {
+    margin-bottom: 40px;
+}
+
+.specials_under10 .carousel_items {
+    position: relative;
+}
+
+.specials_under10 .carousel_item {
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .3s linear;
+}
+
+.specials_under10 .carousel_item.active {
+    position: relative;
+    opacity: 1;
+    z-index: 1;
+}
+
+.specials_under10 .arrow {
+    top: 25%;
+}
+
+.specials_store_capsule {
+    background: linear-gradient(to bottom right, #2A3E59, #407999);
+    display: block;
+}
+
+.specials_store_capsule:hover {
+    background: linear-gradient(to bottom right, #386B87, #3A708C);
+}
+
+.specials_store_capsule .discount_block {
+    position: static;
+    margin: 10px;
+    font-size: 11px;
+}
+
+.specials_store_capsule .discount_block .discount_price {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.specials_store_capsule .discount_block .discount_pct,
+.specials_store_capsule .discount_block .finalprice,
+.specials_store_capsule .discount_block .discountprice,
+.specials_store_capsule .discount_block .orginalprice {
+    font-size: 11px;
+}
+
+.specials_store_capsule img {
+    width: 229px;
+}
+
+
+/* marketing_area */
+
+.marketing_area {
+    margin-bottom: 40px;
+}
+
+
+/* content */
+
+.content_callout,
+.content_login {
+    background: #000;
+    text-align: center;
+    padding: 25px 0px;
+    font-size: 14px;
+}
+
+.more_content_title {
+    background: url(../img/data-image-png;base….png);
+    background-repeat: repeat-x;
+    font-size: 24px;
+    color: #67C1F5;
+}
+
+.more_content_title span {
+    background: #000;
+    padding: 0 10px;
+}
+
+.content_callout .btn_green,
+.content_login .btn_green {
+    width: 60px;
+    margin: 10px 0px;
+    display: inline-block;
+    float: none;
+}
+
+.content_callout .register,
+.content_login .register {
+    font-size: 14px;
+    color: #fff;
+}
+
+.content_callout .register:hover,
+.content_login .register:hover {
+    color: #66C0F4;
+}
+
+.content_login>div>div {
+    margin: 8px 0px;
 }

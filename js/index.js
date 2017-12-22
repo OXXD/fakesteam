@@ -10,24 +10,6 @@ $(() => {
             $info.prev().attr("src", src);
         });
     });
-
-    // img 做法(TODO)
-    // $(".store_capsule").mouseenter(function(){
-    //         var $info = $(this).children(".info");
-    //         // var src = $info.prev().attr("src");
-    //         var src = $(this).children(".main_capsule").data("src");
-    //         $info.on("mouseenter", "img", function() {
-    //             console.log($(this).attr("src"));
-    //             $info.prev().css({
-    //                 backgroundImage:`url(${$(this).attr("src")})`
-    //             });
-    //         }).on("mouseleave", "img", function() {
-    //             console.log(src);
-    //             $info.prev().css({
-    //                 backgroundImage:`url(${src})`
-    //             });
-    //         });
-    //     });
 });
 
 // carousel 轮播
@@ -151,7 +133,7 @@ $(() => {
     });
     $(".special_offers .arrow.left").click(() => {
         if (moved == 0) {
-            $carouselItems.children(`:eq(${data.length})`).addClass("active").siblings().removeClass("active");
+            // $carouselItems.children(`:eq(${data.length})`).addClass("active").siblings().removeClass("active");
             moved = data.length;
         }
         show(-1);
@@ -159,6 +141,44 @@ $(() => {
 
     // thumbs
     $carouselThumbs.on("click", "div", function(e) {
+        var i = $(this).index();
+        moved = i - 1; // moved-1 因为在 show 方法内+1
+        show();
+    });
+
+});
+
+
+// creators carousel
+$(() => {
+    var $carouselItems = $(".steam_creators .carousel_items"),
+        $carouselThumbs = $(".steam_creators .carousel_thumbs");
+    var data = {
+        length: $carouselItems.children().length
+    }
+    $carouselThumbs.html(`<div></div>`.repeat(data.length)).children().first().addClass("focus");
+    var moved = 0;
+    /**
+     * opacity carousel 透明轮播方法
+     */
+    function show(dir = 1) {
+        moved += dir;
+        // console.log(moved);
+        if (moved == data.length) {
+            moved = 0;
+        }
+        $carouselItems.children(`:eq(${moved})`).addClass("active").siblings().removeClass("active");
+        $carouselThumbs.children(`:eq(${moved})`).addClass("focus").siblings().removeClass("focus");
+    }
+
+    $(".steam_creators .arrow.right").click(() => {
+        show();
+    });
+    $(".steam_creators .arrow.left").click(() => {
+        if (moved == 0) moved = data.length;
+        show(-1);
+    });
+    $carouselThumbs.on("click", "div", function() {
         var i = $(this).index();
         moved = i - 1;
         show();
@@ -175,7 +195,7 @@ $(() => {
         var id = $this.attr("href");
         $this.parent().addClass("active").siblings().removeClass("active");
         $(id).addClass("active").siblings().removeClass("active");
-        console.log($(id).children().first().trigger("mouseenter")); // 为点击出现的第一项 tab_item 触发事件添加 class 并显示
+        $(id).children().first().trigger("mouseenter"); // 为点击出现的第一项 tab_item 触发事件添加 class 并显示
     });
 
     // tab_item 二级菜单切换功能
@@ -186,5 +206,41 @@ $(() => {
         var id = $this.attr("data-appid");
         $this.addClass("active").siblings().removeClass("active");
         $tabRightcol.children(`[data-appid=${id}]`).addClass("active").siblings().removeClass("active");
+    });
+});
+
+// specials_under10 carousel
+$(() => {
+    var $carouselItems = $(".specials_under10 .carousel_items"),
+        $carouselThumbs = $(".specials_under10 .carousel_thumbs");
+    var data = {
+        length: $carouselItems.children().length
+    }
+    $carouselThumbs.html(`<div></div>`.repeat(data.length)).children().first().addClass("focus");
+    var moved = 0;
+    /**
+     * opacity carousel 透明轮播方法
+     */
+    function show(dir = 1) {
+        moved += dir;
+        // console.log(moved);
+        if (moved == data.length) {
+            moved = 0;
+        }
+        $carouselItems.children(`:eq(${moved})`).addClass("active").siblings().removeClass("active");
+        $carouselThumbs.children(`:eq(${moved})`).addClass("focus").siblings().removeClass("focus");
+    }
+
+    $(".specials_under10 .arrow.right").click(() => {
+        show();
+    });
+    $(".specials_under10 .arrow.left").click(() => {
+        if (moved == 0) moved = data.length;
+        show(-1);
+    });
+    $carouselThumbs.on("click", "div", function() {
+        var i = $(this).index();
+        moved = i - 1;
+        show();
     });
 });

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>discovery_queue</title>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        body {
+            overflow: hidden;
+            /* background: #1B2838; */
+        }
+        
+        #discovery_queue {
+            height: 289px;
+            border: 1px solid #000;
+            position: relative;
+        }
+        
+        .dq_item {
+            width: 460px;
+            height: 215px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            box-shadow: 0 0 5px 0 #000;
+            transition: all .5s linear;
+        }
+        
+        .dq_pos0 {
+            width: 365px;
+            height: 170px;
+            left: -400px;
+            top: 24px;
+            z-index: 10;
+            box-shadow: none;
+        }
+        
+        .dq_pos1 {
+            width: 412px;
+            height: 194px;
+            left: -220px;
+            top: 14px;
+            z-index: 13;
+        }
+        
+        .dq_pos2 {
+            left: 0px;
+            top: 0px;
+            z-index: 16;
+        }
+        
+        .dq_pos3 {
+            width: 412px;
+            height: 194px;
+            left: 260px;
+            top: 14px;
+            z-index: 13
+        }
+        
+        .dq_pos4 {
+            width: 365px;
+            height: 170px;
+            left: 514px;
+            top: 24px;
+            z-index: 10;
+        }
+        
+        .dq_pos5 {
+            width: 319px;
+            height: 149px;
+            left: 760px;
+            top: 32px;
+            z-index: 7;
+        }
+        
+        .dq_pos6 {
+            width: 278px;
+            height: 130px;
+            left: 900px;
+            top: 46px;
+            z-index: 4;
+            opacity: 0;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- dq_pos2 当前正中最大那个 -->
+    <div class="main">
+        <div id="discovery_queue">
+            <div class="dq_item dq_pos0"></div>
+            <div class="dq_item dq_pos1"></div>
+            <div class="dq_item dq_pos2"></div>
+            <div class="dq_item dq_pos3"></div>
+            <div class="dq_item dq_pos4"></div>
+            <div class="dq_item dq_pos5"></div>
+            <div class="dq_item dq_pos6"></div>
+            <div class="dq_item dq_pos6"></div>
+            <div class="dq_item dq_pos6"></div>
+            <div class="dq_item dq_pos6"></div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.0.js"></script>
+    <script>
+        $dq = $("#discovery_queue");
+        $dq.on("click", ".dq_item", function(e) {
+            $this = $(this);
+            $this.prev().removeClass().addClass("dq_item dq_pos1").prevAll().removeClass().addClass("dq_item dq_pos0");
+            $this.removeClass().addClass("dq_item dq_pos2");
+            $this.nextAll().removeClass().addClass("dq_item");
+            $this.next().addClass("dq_pos3").next().addClass("dq_pos4").next().addClass("dq_pos5").nextAll().addClass("dq_pos6");
+        })
+    </script>
+</body>
+
+</html>

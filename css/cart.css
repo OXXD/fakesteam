@@ -67,11 +67,9 @@
 }
 
 .item_desc {
-    float: left;
-    padding: 23px 10px 0px;
-    /* width: 390px; */
-    width: 403px;
-    margin: 0px 5px;
+    padding: 23px 10px 0px 10px;
+    width: 390px;
+    display: inline-block;
 }
 
 .item_desc_text {
@@ -323,11 +321,19 @@ h2 {
 
 .spotlight .spotlight_box {
     height: 395px;
+    position: relative;
 }
 
 .spotlight .spotlight_box .spotlight_area {
-    position: relative;
+    position: absolute;
     height: 395px;
+    opacity: 0;
+    z-index: -1;
+    transition: all .3s linear;
+}
+.spotlight .spotlight_box .spotlight_area.active {
+    opacity: 1;
+    z-index: 1;
 }
 
 .spotlight .spotlight_img {
@@ -351,6 +357,9 @@ h2 {
 
 .spotlight .spotlight_slider {
     height: 18px;
+    width: 310px;
+    box-sizing: border-box;
+    margin-top: 5px;
 }
 
 .special {

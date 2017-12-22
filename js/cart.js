@@ -32,3 +32,40 @@ $(()=>{
     var timer = setInterval(dailydeal_timer, 1000); // dailydeal_timer 定时器
 
 });
+
+// spotlight carousel 透明轮播
+$(()=>{
+    var $carouselItems = $(".spotlight .carousel_items");
+    var data = {
+        length: $carouselItems.children().length
+    };
+    var moved = 0;
+
+    /**
+     * opacity carousel 透明轮播方法
+     */
+    function show(dir = 1) {
+        moved += dir;
+        // console.log(moved);
+        if (moved == data.length) {
+            moved = 0;
+        }
+        $carouselItems.children(`:eq(${moved})`).addClass("active").siblings().removeClass("active");
+        //  slider-box 内的文字(计数)变化
+        $(".spotlight_slider .slider-box").children().first().html(moved+1).siblings().html(data.length);
+    }
+
+    // arrow
+    $(".spotlight .next").click(() => {
+        show();
+    });
+    $(".spotlight .prev").click(() => {
+        if (moved == 0) {
+            // $carouselItems.children(`:eq(${data.length})`).addClass("active").siblings().removeClass("active");
+            moved = data.length;
+        }
+        show(-1);
+    });
+
+
+});

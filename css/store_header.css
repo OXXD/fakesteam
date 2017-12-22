@@ -74,6 +74,7 @@ a:hover {
     padding: 0px;
     border: none;
     display: none;
+    /* padding-top: 10px; */
 }
 
 #store_nav ul div.dropdown_menu ul {
@@ -132,9 +133,11 @@ a:hover {
 #store_nav>ul>li:nth-child(3) div.dropdown_menu {
     left: 178px;
 }
+
 #store_nav>ul>li:nth-child(4) div.dropdown_menu {
     left: 255px;
 }
+
 #store_nav>ul>li:nth-child(5) div.dropdown_menu {
     left: 332px;
 }
