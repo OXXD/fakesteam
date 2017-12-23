@@ -72,7 +72,9 @@ h2 {
     margin-bottom: 10px;
 }
 
+
 /* page_header and page_content */
+
 body {
     background: url(../img/colored_body_top2.png) no-repeat center top #1b2838;
     /* background: url(../img/page_bg_generated_v6b.jpg) no-repeat center top #1b2838; */
@@ -83,7 +85,9 @@ body {
     margin-top: 40px;
 }
 
+
 /* breadcrumbs */
+
 .breadcrumbs {
     font-size: 12px;
     margin-top: 10px;
@@ -104,7 +108,9 @@ body {
     font-size: 34px;
 }
 
+
 /* carousel_conteiner */
+
 .carousel_container {
     position: relative;
 }
@@ -351,6 +357,7 @@ body {
 .prev:hover span {
     background-position: 10px -7px;
 }
+
 .next:hover span {
     background-position: 19px -7px;
 }
@@ -380,6 +387,7 @@ body {
     transition: all .1s linear;
 }
 
+
 /* discovery_queue */
 
 #discovery_queue {
@@ -401,7 +409,22 @@ body {
 
 .dq_item img {
     width: 100%;
-    height: auto;
+    /* height: auto; */
+    height: 100%;
+}
+
+/* .dq_item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+} */
+
+.dq_item .dq_overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
 }
 
 .dq_pos0 {
@@ -460,3 +483,29 @@ body {
     opacity: 0;
     box-shadow: none;
 }
+
+.dq_pos0 .dq_overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+.dq_pos1 .dq_overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+.dq_pos2 .dq_overlay {
+    background: rgba(0, 0, 0, 0);
+}
+.dq_pos3 .dq_overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+.dq_pos4 .dq_overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+.dq_pos6 .dq_overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+.dq_pos5 .dq_overlay {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
