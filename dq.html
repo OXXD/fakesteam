@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/base.css">
     <style>
         body {
-            overflow: hidden;
+            /* overflow: hidden; */
             /* background: #1B2838; */
         }
         
@@ -108,7 +108,7 @@
 
     <script src="js/jquery-3.2.0.js"></script>
     <script>
-        $dq = $("#discovery_queue");
+        var $dq = $("#discovery_queue");
         $dq.on("click", ".dq_item", function(e) {
             $this = $(this);
             $this.prev().removeClass().addClass("dq_item dq_pos1").prevAll().removeClass().addClass("dq_item dq_pos0");

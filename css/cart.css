@@ -9,6 +9,10 @@
     margin-bottom: -30px;
 }
 
+.page_content {
+    margin: 0px;
+}
+
 .breadcrumbs {
     font-size: 12px;
     margin-top: 10px;

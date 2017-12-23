@@ -1,46 +1,22 @@
-body {
-    background: url(../img/colored_body_top2.png) no-repeat center top #1b2838;
-}
-
-.page_content {
-    min-height: 2000px;
-    margin-top: 40px;
-}
-
 .page_content>div+div {
     /* min-height: 500px; */
 }
 
-.carousel_container {
-    position: relative;
-    /* overflow: hidden; */
-}
+
+/* home_cluster */
 
 .home_cluster .carousel_container {
     height: 380px;
     /* overflow: hidden; */
 }
 
-.carousel_items_container {
-    height: 353px;
-    position: relative;
-    overflow: hidden;
-}
-
 .home_cluster .carousel_items_container {
     box-shadow: 0 0 5px #000;
-}
-
-.carousel_items {
-    /* width: 4800px; */
-    position: absolute;
 }
 
 .home_cluster .carousel_items {
     height: 353px;
     box-shadow: 0 0 7px 0px #000;
-    /* width: 4800px; */
-    position: absolute;
 }
 
 .store_capsule {
@@ -106,6 +82,8 @@ body {
     padding: 2px 5px;
 }
 
+/* discount_block.sm */
+
 .discount_block.sm {
     display: inline-block;
     font-size: 13px;
@@ -142,58 +120,7 @@ body {
     font-size: 10px;
 }
 
-.carousel_thumbs {
-    text-align: center;
-    padding-bottom: 4px;
-    /* z-index: 10; */
-}
 
-.carousel_thumbs>div {
-    display: inline-block;
-    width: 17px;
-    height: 11px;
-    margin: 10px 2px;
-    border-radius: 3px;
-    background: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-}
-
-.carousel_thumbs>div.focus {
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.arrow {
-    position: absolute;
-    top: 35%;
-    /* top: 154px; */
-    width: 23px;
-    height: 36px;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 35px 10px;
-    cursor: pointer;
-}
-
-.arrow:hover {
-    background: linear-gradient(to right, rgba(68, 115, 140, 0.7), rgba(29, 72, 98, 0.7));
-}
-
-.arrow.left {
-    left: -45px;
-}
-
-.arrow.right {
-    right: -45px;
-}
-
-.arrow div {
-    width: 23px;
-    height: 36px;
-    background: url(../img/index/arrows.png) no-repeat 0px 0px;
-}
-
-.arrow.left div {
-    background: url(../img/index/arrows.png) no-repeat -23px 0px;
-}
 
 
 /* **************special_offers*************** */
