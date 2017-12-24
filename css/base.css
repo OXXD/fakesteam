@@ -216,6 +216,11 @@ body {
     font-size: 13px;
 }
 
+.finalprice {
+    background: none;
+    color: #ACDBF5;
+}
+
 .platform_img {
     width: 20px;
     height: 20px;
@@ -391,8 +396,8 @@ body {
 /* discovery_queue */
 
 #discovery_queue {
-    height: 289px;
-    border: 1px solid #000;
+    height: 265px;
+    /* border: 1px solid #000; */
     position: relative;
 }
 
@@ -419,7 +424,7 @@ body {
     height: 100%;
 } */
 
-.dq_item .dq_overlay {
+.dq_item .dq_item_overlay {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0);
@@ -484,26 +489,36 @@ body {
     box-shadow: none;
 }
 
-.dq_pos0 .dq_overlay {
+.dq_pos0 .dq_item_overlay {
     background: rgba(0, 0, 0, 0.6);
 }
-.dq_pos1 .dq_overlay {
+.dq_pos1 .dq_item_overlay {
     background: rgba(0, 0, 0, 0.5);
 }
-.dq_pos2 .dq_overlay {
+.dq_pos2 .dq_item_overlay {
     background: rgba(0, 0, 0, 0);
 }
-.dq_pos3 .dq_overlay {
+.dq_pos3 .dq_item_overlay {
     background: rgba(0, 0, 0, 0.5);
 }
-.dq_pos4 .dq_overlay {
+.dq_pos4 .dq_item_overlay {
     background: rgba(0, 0, 0, 0.6);
 }
-.dq_pos6 .dq_overlay {
+.dq_pos6 .dq_item_overlay {
     background: rgba(0, 0, 0, 0.7);
 }
-.dq_pos5 .dq_overlay {
+.dq_pos5 .dq_item_overlay {
     background: rgba(0, 0, 0, 0.8);
+}
+
+.dq_item_info{
+    margin-top: 5px;
+    display: none;
+}
+
+.dq_item_reson {
+    font-size: 18px;;
+    color: #fff;
 }
 
 

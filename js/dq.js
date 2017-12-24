@@ -9,9 +9,10 @@ $(()=>{
         $this.next().addClass("dq_pos3").next().addClass("dq_pos4").next().addClass("dq_pos5").nextAll().addClass("dq_pos6");
 
 
-        // 为当前激活的(dq_pos2)添加链接(a 标签的 href 属性)
-        $this.siblings().children("a").removeAttr("href");
-        $this.children("a").attr("href",$this.data("appid"));
+        // 为当前激活的(dq_pos2)添加链接(a 标签的 href 属性)    // 显示 dq_item_info
+        $this.siblings().children("a").removeAttr("href").siblings(".dq_item_info").hide();
+        $this.children("a").attr("href","#"+$this.data("appid")).siblings(".dq_item_info").show();
+
     });
 
     //  只允许 dq_pos2 的超链接能被点击跳转到产品页
