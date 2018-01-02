@@ -2,21 +2,6 @@ body {
     background: url(../img/page_bg_generated_v6b.jpg) no-repeat center top #1b2838;
 }
 
-.contenthub {
-    margin: 20px 0px;
-}
-
-.contenthub h2 {
-    font-size: 40px;
-    margin: 0px;
-}
-
-.contenthub .contenthub_subtitle {
-    font-size: 18px;
-    color: #858E97;
-}
-
-
 .page_content {
     display: flex;
     justify-content: space-between;
@@ -25,6 +10,7 @@ body {
 .leftcol {
     margin-bottom: 80px;
 }
+
 
 /* tab_contaier */
 
@@ -66,44 +52,6 @@ body {
     color: #ABDBF5;
 }
 
-/* pages */
-.page_summary {
-    float: left;
-    color: #3b6e8c;
-}
-
-.page_btn {
-    display: inline-block;
-    background: rgba( 103, 193, 245, 0.2 );
-    color: #67c1f5;
-}
-
-.page_btn:hover {
-    background: linear-gradient(to right, #3F7999, #64C0F3);
-    color: #fff;
-}
-
-.page_btn.disabled {
-    background: rgba(0, 0, 0, 0.1);
-    color: #28394D;
-    cursor: default;
-    border: 1px solid #253E4B;
-}
-
-.pagelink {
-    padding: 0px 5px;
-    cursor: pointer;
-    color: #3A6D8A;
-}
-
-.pagelink:hover {
-    color: #64C0F3;
-}
-
-.pagelink.active {
-    color: #fff;
-    cursor: default;
-}
 
 /* rightcol start */
 
@@ -114,26 +62,9 @@ body {
     margin-bottom: 20px;
 }
 
-.btn_small {
-    width: 153px;
-    display: inline-block;
-    background: #2A465D;
-    height: 26px;
-    line-height: 26px;
-    font-size: 14px;
-    color: #64C0F3;
-    text-align: center;
-    border-radius: 3px;
-    margin-bottom: 3px;
-}
-
-.btn_small:hover {
-    color: #fff;
-    background: linear-gradient(to right, #64C0F3, #3F7999);
-}
-
 
 /* specials_container */
+
 .specials_container {
     display: flex;
     justify-content: space-around;
@@ -142,9 +73,10 @@ body {
     margin-bottom: 20px;
 }
 
-.specials_store_capsule  {
+.specials_store_capsule {
     margin: 5px;
 }
+
 .specials_store_capsule img {
     width: 145px;
 }
@@ -152,6 +84,7 @@ body {
 .specials_container .discount_block {
     margin: 5px;
 }
+
 .specials_container .tab_see_more {
     width: 100%;
     background: none;
@@ -160,6 +93,7 @@ body {
 .specials_container.big .specials_store_capsule img {
     width: 290px;
 }
+
 .specials_container.big .specials_store_capsule .discount_pct {
     font-size: 24px;
 }

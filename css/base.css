@@ -18,10 +18,10 @@ dt {
     text-decoration: none;
     list-style: none;
     padding: 0;
-    font-family: "Microsoft Yahei";
+    /* font-family: "Microsoft Yahei"; */
     font-size: 12px;
     color: #c6d4df;
-    font-family: "Motiva Sans", Sans-serif;
+    font-family: "Motiva Sans", Sans-serif, "Microsoft Yahei";
     font-weight: 300;
 }
 
@@ -67,7 +67,6 @@ div.rule {
 
 h2 {
     font-size: 17px;
-    font-weight: 300;
     color: #fff;
     margin-bottom: 10px;
 }
@@ -102,9 +101,24 @@ body {
     color: #fff;
 }
 
+
+/* contenthub */
+
+.contenthub {
+    margin: 20px 0px;
+}
+
+.contenthub h2 {
+    font-size: 40px;
+    margin: 0px;
+}
+
+.contenthub .contenthub_subtitle {
+    font-size: 18px;
+    color: #858E97;
+}
+
 .page_header h2 {
-    font-weight: 300;
-    color: #fff;
     font-size: 34px;
 }
 
@@ -363,6 +377,24 @@ body {
     background: transparent;
     border-radius: 2px;
     margin-left: 10px;
+}
+
+.btn_small {
+    width: 153px;
+    display: inline-block;
+    background: #2A465D;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #64C0F3;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 3px;
+}
+
+.btn_small:hover {
+    color: #fff;
+    background: linear-gradient(to right, #64C0F3, #3F7999);
 }
 
 .tab_see_more .btn_transparent:hover {
@@ -822,7 +854,7 @@ body {
 
 .specials_store_capsule .discount_block {
     position: static;
-    margin: 10px;
+    margin: 6px;
     font-size: 11px;
 }
 
@@ -850,4 +882,51 @@ body {
 
 .rightcol {
     width: 310px;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* pages */
+
+.page_summary {
+    float: left;
+    color: #3b6e8c;
+}
+
+.page_btn {
+    display: inline-block;
+    background: rgba( 103, 193, 245, 0.2);
+    color: #67c1f5;
+}
+
+.page_btn:hover {
+    background: linear-gradient(to right, #3F7999, #64C0F3);
+    color: #fff;
+}
+
+.page_btn.disabled {
+    background: rgba(0, 0, 0, 0.1);
+    color: #28394D;
+    cursor: default;
+    border: 1px solid #253E4B;
+}
+
+.pagelink {
+    padding: 0px 5px;
+    cursor: pointer;
+    color: #3A6D8A;
+}
+
+.pagelink:hover {
+    color: #64C0F3;
+}
+
+.pagelink.active {
+    color: #fff;
+    cursor: default;
 }

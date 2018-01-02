@@ -193,14 +193,33 @@ a:hover {
     width: 170px;
     background: transparent;
     color: #111;
-    font-style: italic;
     padding: 0px 10px 0px 0px;
     position: relative;
     right: 10px;
     font-size: 14px;
 }
 
-.searchbox a {
+.searchbox input::-webkit-input-placeholder {
+    color: #0e1c25;
+    font-style: italic;
+}
+
+.searchbox input::-moz-placeholder {
+    color: #0e1c25;
+    font-style: italic;
+}
+
+.searchbox input:-moz-placeholder {
+    color: #0e1c25;
+    font-style: italic;
+}
+
+.searchbox input:-ms-input-placeholder {
+    color: #0e1c25;
+    font-style: italic;
+}
+
+.searchbox .btn_search {
     position: absolute;
     right: 0px;
     top: 0px;

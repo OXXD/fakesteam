@@ -361,6 +361,31 @@
     margin-bottom: 40px;
 }
 
+.marketing_message {
+    float: left;
+    background: linear-gradient(to bottom right,#212B37,#305672);
+}
+
+.marketing_message.small {
+    margin:0px 0px 5px 10px;
+}
+
+.marketing_message img {
+    width:368px;
+    /* height:398px; */
+    height:412px;
+}
+.marketing_message.small img {
+    /* width:173px;
+    height:182px; */
+    width:187px;
+    height:192px;
+}
+
+.msg_inline.right {
+    text-align: right;
+    padding: 3px;
+}
 
 /* content */
 

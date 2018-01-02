@@ -1,0 +1,14 @@
+body {
+    background: url(../img/app/page_bg_generated_v6b_1.jpg) no-repeat center top #1b2838;
+}
+
+.apphub h2 {
+    display: inline-block;
+    font-size: 26px;
+}
+
+.apphub .btn_small {
+    width: 80px;
+    padding: 5px 0px;
+    font-size: 15px;
+}
