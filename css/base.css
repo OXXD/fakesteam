@@ -350,8 +350,8 @@ body {
 .btn_green {
     /* display: inline-block; */
     width: 105px;
-    height: 30px;
-    line-height: 30px;
+    height: 32px;
+    line-height: 32px;
     text-align: center;
     background: linear-gradient(to top left, #546A04, #799905);
     border-radius: 2px;
@@ -461,6 +461,7 @@ body {
     border: none;
     position: absolute;
     transition: all .1s linear;
+    cursor: pointer;
 }
 
 

@@ -38,7 +38,7 @@ $(() => {
         $carouselItems.animate({
             left: -WIDTH * moved
         }, DURA, () => {
-            if (moved == data.length) { // data.length
+            if (moved >= data.length) { // data.length
                 $carouselItems.css("left", 0);
                 moved = 0;
             }

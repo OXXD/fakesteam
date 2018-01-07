@@ -2,6 +2,10 @@ body {
     background: url(../img/app/page_bg_generated_v6b_1.jpg) no-repeat center top #1b2838;
 }
 
+.apphub {
+    min-height: 46px;
+}
+
 .apphub h2 {
     display: inline-block;
     font-size: 26px;
@@ -11,4 +15,346 @@ body {
     width: 80px;
     padding: 5px 0px;
     font-size: 15px;
+}
+
+.block {
+    width: 100%;
+    height: 432px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+
+/* .block .leftcol */
+
+.block .leftcol {
+    width: 600px;
+    overflow: hidden;
+}
+
+.highlight_strip {
+    margin: 4px 0px;
+    width: 100%;
+    height: 69px;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.highlight_selector {
+    background: url(../img/game_highlight_activethumb.png) no-repeat 0px 0px;
+    z-index: 50;
+    position: absolute;
+    top: -9px;
+    left: 0px;
+    width: 116px;
+    height: 77px;
+}
+
+.highlight_strip_scroll {
+    width: 1800px;
+    position: absolute;
+    left: 0px;
+}
+
+
+/* .highlight_strip_item:nth-child(2) {
+    margin-left: 4px;
+} */
+
+.highlight_strip_item {
+    /* display: inline-block; */
+    margin: 2.5px;
+    float: left;
+    cursor: pointer;
+}
+
+.highlight_strip_item img {
+    width: 115px;
+    height: 65px;
+}
+
+.slider-box {
+    width: 85%;
+}
+
+.slider-btn {
+    width: 65px;
+    border-radius: 3px;
+    left: 0px;
+    background: rgba( 35, 60, 81, 0.4);
+}
+
+.slider-btn:hover {
+    background: #36617F;
+}
+
+
+/* .block .rightcol */
+
+.block .rightcol {
+    width: 334px;
+}
+
+.game_header_image {
+    width: 334px;
+    margin-bottom: 10px;
+}
+
+.game_description_snippet {
+    font-size: 13px;
+    max-height: 111px;
+    overflow: hidden;
+    padding-right: 16px;
+    line-height: 18px;
+}
+
+.user_reviews {
+    margin-top: 10px;
+    color: #556772;
+}
+
+.subtitle,
+.summary,
+.date {
+    display: inline-block;
+}
+
+.subtitle {
+    font-size: 11px;
+    width: 104px;
+}
+
+.release_date {
+    padding: 10px 0px;
+}
+
+.game_review_summary,
+.dev_row a {
+    color: #66C0F4;
+}
+
+.date {
+    color: #c6d4df;
+}
+
+.glance_tags_box {
+    margin-top: 10px;
+}
+
+.glance_tags_label {
+    color: #556772;
+    margin-bottom: 2px;
+}
+
+.app_tag {
+    color: #64C0F3;
+    background: #2A465D;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.app_tag:hover {
+    color: #fff;
+    background: linear-gradient(to right, #64C0F3, #3F7999);
+}
+
+.page_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+/* leftcol */
+
+.page_content .leftcol {}
+
+
+/* rightcol */
+
+.page_content .rightcol {}
+
+.game_area_purchase_game_wrapper {
+    margin-bottom: 40px;
+}
+
+.game_area_purchase_game {
+    padding: 16px;
+    padding-bottom: 26px;
+    background: linear-gradient(to right, #333D49, #556472);
+    position: relative;
+}
+
+.game_area_purchase_game h1 {
+    font-size: 21px;
+    color: #fff;
+}
+
+.game_purchase_discount_countdown {
+    color: #7CB8E4;
+}
+
+.game_purchase_action {
+    position: absolute;
+    right: 16px;
+    bottom: -17px;
+}
+
+.game_purchase_action_bg {
+    display: inline-block;
+    height: 32px;
+    background: #000;
+    border-radius: 2px;
+    padding: 2px;
+    vertical-align: bottom;
+}
+
+.game_purchase_price {
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 0px 12px 12px;
+    color: #B0AEAC;
+}
+
+.leftcol h2 {
+    margin-bottom: 10px;
+    background: url(../img/maincol_gradient_rule.png) no-repeat bottom left;
+}
+
+.gradientbg {
+    color: #67C1F5;
+}
+
+.game_page_autocollapse_box {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.game_page_autocollapse {
+    overflow: hidden;
+    transition: all .5s linear;
+}
+
+.game_area_description {
+    overflow: hidden;
+    line-height: 1.5em;
+}
+
+.game_area_description {
+    font-size: 14px;
+}
+
+.game_area_description li {
+    list-style: square;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.game_area_description ul {
+    margin-left: 16px;
+}
+
+.game_page_autocolapse_fade {
+    display: block;
+    height: 73px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: url(../img/game_page_autocollapse_fade.png) top repeat-x;
+}
+
+.game_page_autocollapse_readmore {
+    padding-right: 12px;
+    background: url(../img/game_page_autocollapse_readmore.png) no-repeat right center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    color: #537CA6;
+}
+
+.game_page_autocollapse_readmore:hover {
+    color: #fff;
+}
+
+.game_area_review p {
+    margin-bottom: 20px;
+}
+
+.game_area_review a {
+    color: #fff;
+}
+
+.game_area_review a:hover {
+    color: #66C0F4;
+}
+
+.package_contents {
+    color: #8f98a0;
+}
+
+.package_contents b {
+    color: #8BC53F;
+}
+
+.btn_package {
+    /* display: inline-block; */
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: linear-gradient(to top left, #17435C, #2F89BC);
+    border-radius: 2px;
+    color: #94CAEB;
+    float: right;
+    font-size: 14px;
+}
+
+.btn_package:hover {
+    background: linear-gradient(to top left, #2F89BC, #66C0F4);
+}
+
+.game_area_dlc_section {
+    margin-bottom: 40px;
+}
+
+.game_area_dlc_row {
+    display: block;
+    background: linear-gradient(to right, #303A46, #566574);
+    padding: 4px 20px;
+    margin-bottom: 1px;
+}
+
+.game_area_dlc_row:hover {
+    background: linear-gradient(to right, #4B748B, #6189A0);
+    color: #fff;
+}
+
+.game_area_dlc_price {
+    float: right;
+    color: #fff;
+}
+
+.dlc_show_all_link,
+.dlc_footer_element {
+    padding: 5px 8px;
+    color: #898A8C;
+}
+
+.dlc_show_all_link {
+    background: rgba( 103, 193, 245, 0.1);
+}
+
+.dlc_show_all_link:hover {
+    background: linear-gradient(to bottom right, #66BFF3, #427B9D);
+    color: #fff;
+}
+
+.dlc_show_all_link .pulldown {
+    padding-right: 15px;
+    background: url(../img/btn_arrow_down_padded_white.png) no-repeat right center;
 }
