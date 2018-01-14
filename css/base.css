@@ -401,6 +401,19 @@ body {
     color: #fff;
 }
 
+.btn_xs {
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin-right: 10px;
+    background: #223B4E;
+    color: #67C1F5;
+}
+
+.btn_xs:hover {
+    background: linear-gradient(to right, #67C0F4, #417A9C);
+    color: #fff;
+}
+
 
 /* slider */
 

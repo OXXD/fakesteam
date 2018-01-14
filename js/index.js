@@ -35,6 +35,7 @@ $(() => {
     // 定义移动方法
     function move(dir = 1) {
         moved += dir;
+        console.log(moved);
         $carouselItems.animate({
             left: -WIDTH * moved
         }, DURA, () => {
