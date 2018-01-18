@@ -1,0 +1,135 @@
+http://www.cnblogs.com/Chen-xy/p/4500053.html
+
+https://github.com/alsotang/node-lessons/tree/master/lesson16
+
+http://wiki.jikexueyuan.com/project/node-lessons/cookie-session.html
+
+https://github.com/expressjs/session
+
+
+node 验证码
+https://github.com/lemonce/svg-captcha
+https://github.com/DoubleSpout/ccap
+https://cnodejs.org/topic/50f90d8edf9e9fcc58a5ee0b
+http://blog.csdn.net/xiaotuni/article/details/77151620
+
+
+Nodejs之使用session
+
+阅读目录
+
+session介绍
+nodejs中的session模块
+nodejs中使用session的说明。
+
+ 
+
+回到顶部
+session介绍
+
+为什么使用session:
+
+      session运行在服务器端,当客户端第一次访问服务器时，可以将客户的登陆信息保存。
+
+      当客户访问其他界面时，可以判断客户的登陆状态,做出提示。
+
+      可以保存一些客户的常用信息，当客户端再次获取常用信息时，不必再从数据库中进行查询。
+
+      session可以与redis或数据库等结合做持久化操作，当服务器挂掉时也不会导致某些客户信息(购物车)消失。
+
+session的工作流程：
+
+      当浏览器访问服务器并发送第一次请求时，服务器端会创建一个session对象，生成一个类似于key,value的键值对，
+
+      然后将key(cookie)返回到浏览器(客户)端，浏览器下次再访问时，携带key(cookie)，找到对应的session(value)。
+
+      客户的信息都保存在session中。
+
+回到顶部
+nodejs中的session模块
+
+      nodejs中通过express-session来操作和使用session。
+
+      GitHub上地址:https://github.com/expressjs/session
+
+express-session的常用参数:
+
+      secret:一个String类型的字符串，作为服务器端生成session的签名。
+
+      name:返回客户端的key的名称，默认为connect.sid,也可以自己设置。
+
+      resave:(是否允许)当客户端并行发送多个请求时，其中一个请求在另一个请求结束时对session进行修改覆盖并保存。
+
+                 默认为true。但是(后续版本)有可能默认失效，所以最好手动添加。
+
+      saveUninitialized:初始化session时是否保存到存储。默认为true， 但是(后续版本)有可能默认失效，所以最好手动添加。
+
+      cookie:设置返回到前端key的属性，默认值为{ path: '/', httpOnly: true, secure: false, maxAge: null }。
+
+express-session的一些方法:
+
+      Session.destroy():删除session，当检测到客户端关闭时调用。
+
+      Session.reload():当session有修改时，刷新session。
+
+      Session.regenerate()：将已有session初始化。
+
+      Session.save()：保存session。
+
+3.示例demo
+
+      
+
+复制代码
+//app.js中添加如下代码(已有的不用添加)
+var express = require('express');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+
+app.use(cookieParser('sessiontest'));
+app.use(session({
+    secret: 'sessiontest',//与cookieParser中的一致
+    resave: true,
+    saveUninitialized:true
+}));
+复制代码
+ 
+
+复制代码
+//修改router/index.js,第一次请求时我们保存一条用户信息。
+router.get('/', function(req, res, next) {
+    var user={
+        name:"Chen-xy",
+        age:"22",
+        address:"bj"
+    }
+  req.session.user=user;
+  res.render('index', {
+      title: 'the test for nodejs session' ,
+      name:'sessiontest'
+  });
+});
+复制代码
+复制代码
+//修改router/users.js，判断用户是否登陆。
+router.get('/', function(req, res, next) {
+    if(req.session.user){
+        var user=req.session.user;
+        var name=user.name;
+        res.send('你好'+name+'，欢迎来到我的家园。');
+    }else{
+        res.send('你还没有登录，先登录下再试试！');
+    }
+});
+复制代码
+第一次访问http://localhost:3000/users时，会提示没有登陆，访问http://localhost:3000/后再访问，则显示用户信息。
+
+ 
+
+4.其他说明
+
+     学习使用session时，在网上找了大部分文章，说的都比较笼统，所以自己整理了一篇。
+
+     文中一些方法参数，是本人查看api后，个人理解，可能会有所偏差，欢迎随时提问、补充。
+
+     网上查阅过程中觉得写得很好的文章，来自alsotang，GitHub地址：https://github.com/alsotang/node-lessons/tree/master/lesson16

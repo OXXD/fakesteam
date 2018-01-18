@@ -1,0 +1,114 @@
+.page_header {
+    background: url(../img/cluster_bg_2.png) no-repeat bottom center;
+    padding-bottom: 80px;
+}
+
+.leftcol {
+    float: left;
+    width: 630px;
+}
+
+.rightcol {
+    float: right;
+    width: 310px;
+}
+
+.loginbox,
+.block {
+    min-height: 350px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 16px;
+}
+
+.loginbox_left,
+.loginbox_right {
+    width: 270px;
+    padding: 0px 16px 14px 0px;
+}
+
+.loing_step {
+    float: left;
+    height: 250px;
+    width: 2px;
+    border-left: 1px solid #38444E;
+    margin-left: 10px;
+}
+
+h2,
+.page_header h2 {
+    margin: 0;
+    color: #67C1F5;
+    font-size: 18px;
+}
+
+.login_row {
+    margin-bottom: 5px;
+}
+
+.login_row input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #000;
+    border-radius: 3px;
+    height: 30px;
+    padding: 0px 5px;
+    box-sizing: border-box;
+    color: #fff;
+    margin: 4px 0px;
+}
+
+.login_row.captcha input {
+    width: 50%;
+}
+
+.captcha_img {
+    float: right;
+    width: 40%;
+    height: 30px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    margin-top: 4px;
+}
+
+ ::-webkit-input-placeholder {
+    color: #fff;
+}
+
+::-moz-placeholder {
+    color: #fff;
+}
+
+:-moz-placeholder {
+    color: #fff;
+}
+
+:-ms-input-placeholder {
+    color: #fff;
+}
+
+.login_tip {
+    color: #CC3300;
+    /* display: none; */
+    opacity: 0;
+}
+
+.loginbox_btn>div {
+    display: inline-block;
+    width: 49%;
+}
+
+.btn_small {
+    background: linear-gradient(to right, #295977, #2A5979);
+    width: 120px;
+}
+
+.login_btn .btn_small {
+    width: 60px;
+}
+
+.why_list,
+.why_list li {
+    list-style: square;
+    list-style-position: inside;
+    line-height: 22px;
+}
