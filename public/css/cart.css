@@ -154,6 +154,14 @@
     margin-left: 50px;
 }
 
+.selectAll {
+    margin-right: 5px;
+}
+
+input[type=checkbox] {
+    vertical-align: middle;
+}
+
 .checkout_content .item_desc_text div {
     padding: 0px 10px 0px 0px;
 }

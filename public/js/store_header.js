@@ -34,5 +34,20 @@ $(() => {
         $("#store_nav>ul>li").hover(function(e) {
             $(this).children(".dropdown_menu").toggle();
         });
+
+        // 购物车数量功能
+        $cart = $('#cart');
+        $.ajax({
+            type: "get",
+            url: "/cart/count",
+            success: function(response) {
+                if (response.count > 0) {
+                    $cart.find('span').html(`(${response.count})`);
+                }
+            },
+            error: function() {
+                alert('网络故障');
+            }
+        });
     });
 });

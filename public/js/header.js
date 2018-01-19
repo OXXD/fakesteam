@@ -11,7 +11,7 @@ $(() => {
                 if (response.code == 1) {
                     console.log(response);
                     $loginList.hide();
-                    $welcomeList.show().find('#uname').html(response.uname);
+                    $welcomeList.show().find('#uname').html(response.user.uname);
                 } else {
                     $welcomeList.hide();
                     $loginList.show();
@@ -26,7 +26,7 @@ $(() => {
         $('.lgon-btn').click((e) => {
             e.preventDefault();
             location = "login.html?back=" + location.href;
-        })
+        });
 
         // 注销
         $('#logout').click(() => {

@@ -23,6 +23,7 @@ router.get('/', (req, res) => {
                 if (err) throw err;
                 output.imgs = result;
                 res.json(output);
+                conn.release();
             });
         });
     });

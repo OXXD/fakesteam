@@ -7,96 +7,96 @@ http://wiki.jikexueyuan.com/project/node-lessons/cookie-session.html
 https://github.com/expressjs/session
 
 
-node ÑéÖ¤Âë
+node éªŒè¯ç 
 https://github.com/lemonce/svg-captcha
 https://github.com/DoubleSpout/ccap
 https://cnodejs.org/topic/50f90d8edf9e9fcc58a5ee0b
 http://blog.csdn.net/xiaotuni/article/details/77151620
 
 
-NodejsÖ®Ê¹ÓÃsession
+Nodejsä¹‹ä½¿ç”¨session
 
-ÔÄ¶ÁÄ¿Â¼
+é˜…è¯»ç›®å½•
 
-session½éÉÜ
-nodejsÖĞµÄsessionÄ£¿é
-nodejsÖĞÊ¹ÓÃsessionµÄËµÃ÷¡£
+sessionä»‹ç»
+nodejsä¸­çš„sessionæ¨¡å—
+nodejsä¸­ä½¿ç”¨sessionçš„è¯´æ˜ã€‚
 
  
 
-»Øµ½¶¥²¿
-session½éÉÜ
+å›åˆ°é¡¶éƒ¨
+sessionä»‹ç»
 
-ÎªÊ²Ã´Ê¹ÓÃsession:
+ä¸ºä»€ä¹ˆä½¿ç”¨session:
 
-      sessionÔËĞĞÔÚ·şÎñÆ÷¶Ë,µ±¿Í»§¶ËµÚÒ»´Î·ÃÎÊ·şÎñÆ÷Ê±£¬¿ÉÒÔ½«¿Í»§µÄµÇÂ½ĞÅÏ¢±£´æ¡£
+      sessionè¿è¡Œåœ¨æœåŠ¡å™¨ç«¯,å½“å®¢æˆ·ç«¯ç¬¬ä¸€æ¬¡è®¿é—®æœåŠ¡å™¨æ—¶ï¼Œå¯ä»¥å°†å®¢æˆ·çš„ç™»é™†ä¿¡æ¯ä¿å­˜ã€‚
 
-      µ±¿Í»§·ÃÎÊÆäËû½çÃæÊ±£¬¿ÉÒÔÅĞ¶Ï¿Í»§µÄµÇÂ½×´Ì¬,×ö³öÌáÊ¾¡£
+      å½“å®¢æˆ·è®¿é—®å…¶ä»–ç•Œé¢æ—¶ï¼Œå¯ä»¥åˆ¤æ–­å®¢æˆ·çš„ç™»é™†çŠ¶æ€,åšå‡ºæç¤ºã€‚
 
-      ¿ÉÒÔ±£´æÒ»Ğ©¿Í»§µÄ³£ÓÃĞÅÏ¢£¬µ±¿Í»§¶ËÔÙ´Î»ñÈ¡³£ÓÃĞÅÏ¢Ê±£¬²»±ØÔÙ´ÓÊı¾İ¿âÖĞ½øĞĞ²éÑ¯¡£
+      å¯ä»¥ä¿å­˜ä¸€äº›å®¢æˆ·çš„å¸¸ç”¨ä¿¡æ¯ï¼Œå½“å®¢æˆ·ç«¯å†æ¬¡è·å–å¸¸ç”¨ä¿¡æ¯æ—¶ï¼Œä¸å¿…å†ä»æ•°æ®åº“ä¸­è¿›è¡ŒæŸ¥è¯¢ã€‚
 
-      session¿ÉÒÔÓëredis»òÊı¾İ¿âµÈ½áºÏ×ö³Ö¾Ã»¯²Ù×÷£¬µ±·şÎñÆ÷¹ÒµôÊ±Ò²²»»áµ¼ÖÂÄ³Ğ©¿Í»§ĞÅÏ¢(¹ºÎï³µ)ÏûÊ§¡£
+      sessionå¯ä»¥ä¸redisæˆ–æ•°æ®åº“ç­‰ç»“åˆåšæŒä¹…åŒ–æ“ä½œï¼Œå½“æœåŠ¡å™¨æŒ‚æ‰æ—¶ä¹Ÿä¸ä¼šå¯¼è‡´æŸäº›å®¢æˆ·ä¿¡æ¯(è´­ç‰©è½¦)æ¶ˆå¤±ã€‚
 
-sessionµÄ¹¤×÷Á÷³Ì£º
+sessionçš„å·¥ä½œæµç¨‹ï¼š
 
-      µ±ä¯ÀÀÆ÷·ÃÎÊ·şÎñÆ÷²¢·¢ËÍµÚÒ»´ÎÇëÇóÊ±£¬·şÎñÆ÷¶Ë»á´´½¨Ò»¸ösession¶ÔÏó£¬Éú³ÉÒ»¸öÀàËÆÓÚkey,valueµÄ¼üÖµ¶Ô£¬
+      å½“æµè§ˆå™¨è®¿é—®æœåŠ¡å™¨å¹¶å‘é€ç¬¬ä¸€æ¬¡è¯·æ±‚æ—¶ï¼ŒæœåŠ¡å™¨ç«¯ä¼šåˆ›å»ºä¸€ä¸ªsessionå¯¹è±¡ï¼Œç”Ÿæˆä¸€ä¸ªç±»ä¼¼äºkey,valueçš„é”®å€¼å¯¹ï¼Œ
 
-      È»ºó½«key(cookie)·µ»Øµ½ä¯ÀÀÆ÷(¿Í»§)¶Ë£¬ä¯ÀÀÆ÷ÏÂ´ÎÔÙ·ÃÎÊÊ±£¬Ğ¯´økey(cookie)£¬ÕÒµ½¶ÔÓ¦µÄsession(value)¡£
+      ç„¶åå°†key(cookie)è¿”å›åˆ°æµè§ˆå™¨(å®¢æˆ·)ç«¯ï¼Œæµè§ˆå™¨ä¸‹æ¬¡å†è®¿é—®æ—¶ï¼Œæºå¸¦key(cookie)ï¼Œæ‰¾åˆ°å¯¹åº”çš„session(value)ã€‚
 
-      ¿Í»§µÄĞÅÏ¢¶¼±£´æÔÚsessionÖĞ¡£
+      å®¢æˆ·çš„ä¿¡æ¯éƒ½ä¿å­˜åœ¨sessionä¸­ã€‚
 
-»Øµ½¶¥²¿
-nodejsÖĞµÄsessionÄ£¿é
+å›åˆ°é¡¶éƒ¨
+nodejsä¸­çš„sessionæ¨¡å—
 
-      nodejsÖĞÍ¨¹ıexpress-sessionÀ´²Ù×÷ºÍÊ¹ÓÃsession¡£
+      nodejsä¸­é€šè¿‡express-sessionæ¥æ“ä½œå’Œä½¿ç”¨sessionã€‚
 
-      GitHubÉÏµØÖ·:https://github.com/expressjs/session
+      GitHubä¸Šåœ°å€:https://github.com/expressjs/session
 
-express-sessionµÄ³£ÓÃ²ÎÊı:
+express-sessionçš„å¸¸ç”¨å‚æ•°:
 
-      secret:Ò»¸öStringÀàĞÍµÄ×Ö·û´®£¬×÷Îª·şÎñÆ÷¶ËÉú³ÉsessionµÄÇ©Ãû¡£
+      secret:ä¸€ä¸ªStringç±»å‹çš„å­—ç¬¦ä¸²ï¼Œä½œä¸ºæœåŠ¡å™¨ç«¯ç”Ÿæˆsessionçš„ç­¾åã€‚
 
-      name:·µ»Ø¿Í»§¶ËµÄkeyµÄÃû³Æ£¬Ä¬ÈÏÎªconnect.sid,Ò²¿ÉÒÔ×Ô¼ºÉèÖÃ¡£
+      name:è¿”å›å®¢æˆ·ç«¯çš„keyçš„åç§°ï¼Œé»˜è®¤ä¸ºconnect.sid,ä¹Ÿå¯ä»¥è‡ªå·±è®¾ç½®ã€‚
 
-      resave:(ÊÇ·ñÔÊĞí)µ±¿Í»§¶Ë²¢ĞĞ·¢ËÍ¶à¸öÇëÇóÊ±£¬ÆäÖĞÒ»¸öÇëÇóÔÚÁíÒ»¸öÇëÇó½áÊøÊ±¶Ôsession½øĞĞĞŞ¸Ä¸²¸Ç²¢±£´æ¡£
+      resave:(æ˜¯å¦å…è®¸)å½“å®¢æˆ·ç«¯å¹¶è¡Œå‘é€å¤šä¸ªè¯·æ±‚æ—¶ï¼Œå…¶ä¸­ä¸€ä¸ªè¯·æ±‚åœ¨å¦ä¸€ä¸ªè¯·æ±‚ç»“æŸæ—¶å¯¹sessionè¿›è¡Œä¿®æ”¹è¦†ç›–å¹¶ä¿å­˜ã€‚
 
-                 Ä¬ÈÏÎªtrue¡£µ«ÊÇ(ºóĞø°æ±¾)ÓĞ¿ÉÄÜÄ¬ÈÏÊ§Ğ§£¬ËùÒÔ×îºÃÊÖ¶¯Ìí¼Ó¡£
+                 é»˜è®¤ä¸ºtrueã€‚ä½†æ˜¯(åç»­ç‰ˆæœ¬)æœ‰å¯èƒ½é»˜è®¤å¤±æ•ˆï¼Œæ‰€ä»¥æœ€å¥½æ‰‹åŠ¨æ·»åŠ ã€‚
 
-      saveUninitialized:³õÊ¼»¯sessionÊ±ÊÇ·ñ±£´æµ½´æ´¢¡£Ä¬ÈÏÎªtrue£¬ µ«ÊÇ(ºóĞø°æ±¾)ÓĞ¿ÉÄÜÄ¬ÈÏÊ§Ğ§£¬ËùÒÔ×îºÃÊÖ¶¯Ìí¼Ó¡£
+      saveUninitialized:åˆå§‹åŒ–sessionæ—¶æ˜¯å¦ä¿å­˜åˆ°å­˜å‚¨ã€‚é»˜è®¤ä¸ºtrueï¼Œ ä½†æ˜¯(åç»­ç‰ˆæœ¬)æœ‰å¯èƒ½é»˜è®¤å¤±æ•ˆï¼Œæ‰€ä»¥æœ€å¥½æ‰‹åŠ¨æ·»åŠ ã€‚
 
-      cookie:ÉèÖÃ·µ»Øµ½Ç°¶ËkeyµÄÊôĞÔ£¬Ä¬ÈÏÖµÎª{ path: '/', httpOnly: true, secure: false, maxAge: null }¡£
+      cookie:è®¾ç½®è¿”å›åˆ°å‰ç«¯keyçš„å±æ€§ï¼Œé»˜è®¤å€¼ä¸º{ path: '/', httpOnly: true, secure: false, maxAge: null }ã€‚
 
-express-sessionµÄÒ»Ğ©·½·¨:
+express-sessionçš„ä¸€äº›æ–¹æ³•:
 
-      Session.destroy():É¾³ısession£¬µ±¼ì²âµ½¿Í»§¶Ë¹Ø±ÕÊ±µ÷ÓÃ¡£
+      Session.destroy():åˆ é™¤sessionï¼Œå½“æ£€æµ‹åˆ°å®¢æˆ·ç«¯å…³é—­æ—¶è°ƒç”¨ã€‚
 
-      Session.reload():µ±sessionÓĞĞŞ¸ÄÊ±£¬Ë¢ĞÂsession¡£
+      Session.reload():å½“sessionæœ‰ä¿®æ”¹æ—¶ï¼Œåˆ·æ–°sessionã€‚
 
-      Session.regenerate()£º½«ÒÑÓĞsession³õÊ¼»¯¡£
+      Session.regenerate()ï¼šå°†å·²æœ‰sessionåˆå§‹åŒ–ã€‚
 
-      Session.save()£º±£´æsession¡£
+      Session.save()ï¼šä¿å­˜sessionã€‚
 
-3.Ê¾Àıdemo
+3.ç¤ºä¾‹demo
 
       
 
-¸´ÖÆ´úÂë
-//app.jsÖĞÌí¼ÓÈçÏÂ´úÂë(ÒÑÓĞµÄ²»ÓÃÌí¼Ó)
+å¤åˆ¶ä»£ç 
+//app.jsä¸­æ·»åŠ å¦‚ä¸‹ä»£ç (å·²æœ‰çš„ä¸ç”¨æ·»åŠ )
 var express = require('express');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 
 app.use(cookieParser('sessiontest'));
 app.use(session({
-    secret: 'sessiontest',//ÓëcookieParserÖĞµÄÒ»ÖÂ
+    secret: 'sessiontest',//ä¸cookieParserä¸­çš„ä¸€è‡´
     resave: true,
     saveUninitialized:true
 }));
-¸´ÖÆ´úÂë
+å¤åˆ¶ä»£ç 
  
 
-¸´ÖÆ´úÂë
-//ĞŞ¸Ärouter/index.js,µÚÒ»´ÎÇëÇóÊ±ÎÒÃÇ±£´æÒ»ÌõÓÃ»§ĞÅÏ¢¡£
+å¤åˆ¶ä»£ç 
+//ä¿®æ”¹router/index.js,ç¬¬ä¸€æ¬¡è¯·æ±‚æ—¶æˆ‘ä»¬ä¿å­˜ä¸€æ¡ç”¨æˆ·ä¿¡æ¯ã€‚
 router.get('/', function(req, res, next) {
     var user={
         name:"Chen-xy",
@@ -109,27 +109,27 @@ router.get('/', function(req, res, next) {
       name:'sessiontest'
   });
 });
-¸´ÖÆ´úÂë
-¸´ÖÆ´úÂë
-//ĞŞ¸Ärouter/users.js£¬ÅĞ¶ÏÓÃ»§ÊÇ·ñµÇÂ½¡£
+å¤åˆ¶ä»£ç 
+å¤åˆ¶ä»£ç 
+//ä¿®æ”¹router/users.jsï¼Œåˆ¤æ–­ç”¨æˆ·æ˜¯å¦ç™»é™†ã€‚
 router.get('/', function(req, res, next) {
     if(req.session.user){
         var user=req.session.user;
         var name=user.name;
-        res.send('ÄãºÃ'+name+'£¬»¶Ó­À´µ½ÎÒµÄ¼ÒÔ°¡£');
+        res.send('ä½ å¥½'+name+'ï¼Œæ¬¢è¿æ¥åˆ°æˆ‘çš„å®¶å›­ã€‚');
     }else{
-        res.send('Äã»¹Ã»ÓĞµÇÂ¼£¬ÏÈµÇÂ¼ÏÂÔÙÊÔÊÔ£¡');
+        res.send('ä½ è¿˜æ²¡æœ‰ç™»å½•ï¼Œå…ˆç™»å½•ä¸‹å†è¯•è¯•ï¼');
     }
 });
-¸´ÖÆ´úÂë
-µÚÒ»´Î·ÃÎÊhttp://localhost:3000/usersÊ±£¬»áÌáÊ¾Ã»ÓĞµÇÂ½£¬·ÃÎÊhttp://localhost:3000/ºóÔÙ·ÃÎÊ£¬ÔòÏÔÊ¾ÓÃ»§ĞÅÏ¢¡£
+å¤åˆ¶ä»£ç 
+ç¬¬ä¸€æ¬¡è®¿é—®http://localhost:3000/usersæ—¶ï¼Œä¼šæç¤ºæ²¡æœ‰ç™»é™†ï¼Œè®¿é—®http://localhost:3000/åå†è®¿é—®ï¼Œåˆ™æ˜¾ç¤ºç”¨æˆ·ä¿¡æ¯ã€‚
 
  
 
-4.ÆäËûËµÃ÷
+4.å…¶ä»–è¯´æ˜
 
-     Ñ§Ï°Ê¹ÓÃsessionÊ±£¬ÔÚÍøÉÏÕÒÁË´ó²¿·ÖÎÄÕÂ£¬ËµµÄ¶¼±È½ÏÁıÍ³£¬ËùÒÔ×Ô¼ºÕûÀíÁËÒ»Æª¡£
+     å­¦ä¹ ä½¿ç”¨sessionæ—¶ï¼Œåœ¨ç½‘ä¸Šæ‰¾äº†å¤§éƒ¨åˆ†æ–‡ç« ï¼Œè¯´çš„éƒ½æ¯”è¾ƒç¬¼ç»Ÿï¼Œæ‰€ä»¥è‡ªå·±æ•´ç†äº†ä¸€ç¯‡ã€‚
 
-     ÎÄÖĞÒ»Ğ©·½·¨²ÎÊı£¬ÊÇ±¾ÈË²é¿´apiºó£¬¸öÈËÀí½â£¬¿ÉÄÜ»áÓĞËùÆ«²î£¬»¶Ó­ËæÊ±ÌáÎÊ¡¢²¹³ä¡£
+     æ–‡ä¸­ä¸€äº›æ–¹æ³•å‚æ•°ï¼Œæ˜¯æœ¬äººæŸ¥çœ‹apiåï¼Œä¸ªäººç†è§£ï¼Œå¯èƒ½ä¼šæœ‰æ‰€åå·®ï¼Œæ¬¢è¿éšæ—¶æé—®ã€è¡¥å……ã€‚
 
-     ÍøÉÏ²éÔÄ¹ı³ÌÖĞ¾õµÃĞ´µÃºÜºÃµÄÎÄÕÂ£¬À´×Ôalsotang£¬GitHubµØÖ·£ºhttps://github.com/alsotang/node-lessons/tree/master/lesson16
+     ç½‘ä¸ŠæŸ¥é˜…è¿‡ç¨‹ä¸­è§‰å¾—å†™å¾—å¾ˆå¥½çš„æ–‡ç« ï¼Œæ¥è‡ªalsotangï¼ŒGitHubåœ°å€ï¼šhttps://github.com/alsotang/node-lessons/tree/master/lesson16

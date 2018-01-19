@@ -26,36 +26,37 @@
                         <div class="loginbox">
                             <div class="loginbox_content clear">
                                 <div class="loginbox_left lf">
-                                    <form action="">
+                                    <form action="" id="registerForm">
                                         <div class="login_row">
                                             <div class="input_title">创建 Steam 帐户名称</div>
                                             <input type="text" name="uname" id="uname">
-                                            <div class="login_tip">不能为空</div>
+                                            <div class="login_tip">帐户名称不能为空</div>
                                         </div>
                                         <div class="login_row">
                                             <div class="input_title">请输入密码</div>
                                             <input type="password" name="upwd" id="upwd">
-                                            <div class="login_tip">不能为空</div>
+                                            <div class="login_tip">密码不能为空</div>
                                         </div>
                                         <div class="login_row">
                                             <div class="input_title">请重新输入密码</div>
                                             <input type="password" name="cpwd" id="cpwd">
-                                            <div class="login_tip">不能为空</div>
-                                        </div>
-                                        <div class="login_row">
-                                            <div class="input_title">请重新输入电子邮件地址</div>
-                                            <input type="password" name="email" id="email">
-                                            <div class="login_tip">不能为空</div>
+                                            <div class="login_tip">密码不能为空</div>
                                         </div>
                                         <div class="login_row">
                                             <div class="input_title">您当前的电子邮件地址</div>
-                                            <input type="password" name="cemail" id="cemail">
-                                            <div class="login_tip">不能为空</div>
+                                            <input type="email" name="email" id="email">
+                                            <div class="login_tip">电子邮件地址不能为空</div>
+                                        </div>
+                                        <div class="login_row">
+                                            <div class="input_title">请重新输入电子邮件地址</div>
+                                            <input type="email" name="cemail" id="cemail">
+                                            <div class="login_tip">电子邮件地址不能为空</div>
                                         </div>
                                         <div class="login_row captcha">
-                                            <div class="captcha_img"></div>
-                                            <input type="text" placeholder="验证码">
-                                            <div class="login_tip">不能为空</div>
+                                            <embed class="captcha_img" src="http://127.0.0.1:3500/captcha.svg" type="image/svg+xml" />
+                                            <input type="text" name="ucaptcha" placeholder="验证码" id="captcha">
+                                            <div class="login_tip" style="display:inline-block;">验证码不能为空</div>
+                                            <a class="refresh rt" href="javascript:;" class="rt">刷新</a>
                                         </div>
                                     </form>
                                 </div>
@@ -94,7 +95,7 @@
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/store_header.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/register.js"></script>
 </body>
 
 </html>

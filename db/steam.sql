@@ -360,7 +360,7 @@ INSERT INTO steam_apps_pic VALUES(null, 582160,
 'img/app/582160/582160_ss_fbed28aec9059db9477e9bf8fb2ffa92c3ea9e56.1920x1080.jpg');
 
 INSERT INTO steam_apps_pic VALUES(null, 306130, 'img/app/306130/306130_capsule_184x69.jpg', null, null);
-INSERT INTO steam_apps_pic VALUES(null, 306130, 'img/app/306130/306130_capsule_sm.jpg', null, null);
+INSERT INTO steam_apps_pic VALUES(null, 306130, 'img/app/306130/306130_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 306130, 'img/app/306130/306130_header.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 306130, 
 'img/app/306130/306130_ss_5e0c14f9b39283bafbcd37fb33a1c79a87757154.116x65.jpg', 
@@ -516,6 +516,7 @@ INSERT INTO `steam_user` VALUES ('1', 'dingding', '123456', 'ding@qq.com', '1351
 INSERT INTO `steam_user` VALUES ('2', 'dangdang', '123456', 'dang@qq.com', '13501234568', 'img/avatar/default.png', '当当喵', '1');
 INSERT INTO `steam_user` VALUES ('3', 'doudou', '123456', 'dou@qq.com', '13501234569', 'img/avatar/default.png', '窦志强', '1');
 INSERT INTO `steam_user` VALUES ('4', 'yaya', '123456', 'ya@qq.com', '13501234560', 'img/avatar/default.png', '秦小雅', '0');
+INSERT INTO `steam_user` VALUES ('5', 'dongdong', '123456', 'dong@qq.com', '13501234560', 'img/avatar/default.png', '东东', '1');
 
 -- ----------------------------
 -- Table structure for `steam_shoppingcart`
@@ -534,58 +535,23 @@ CREATE TABLE `steam_shoppingcart` (
 -- ----------------------------
 -- Records of steam_shoppingcart
 -- ----------------------------
-INSERT INTO `steam_shoppingcart` VALUES ('1', '10', '17', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('2', '11', '11', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('3', '12', '1', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('4', '13', '3', '9', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('5', '14', '1', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('13', '20', '1', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('14', '22', '17', '11', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('15', '20', '28', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('16', '25', '2', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('17', '3', '28', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('18', '3', '14', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('19', '28', '1', '99997', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('20', '29', '31', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('25', '3', '18', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('26', '32', '13', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('27', '32', '5', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('28', '32', '19', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('29', '33', '1', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('31', '3', '1', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('32', '35', '20', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('33', '2', '19', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('34', '39', '19', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('35', '1', '5', '15', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('36', '1', '28', '2', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('37', '1', '9', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('38', '45', '22', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('39', '46', '1', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('40', '48', '28', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('41', '1', '1', '6', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('42', '50', '28', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('43', '52', '28', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('44', '51', '5', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('45', '54', '1', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('46', '56', '28', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('47', '59', '5', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('48', '59', '9', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('49', '59', '19', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('50', '31', '1', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('51', '59', '1', '2', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('52', '60', '28', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('53', '46', '21', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('54', '1', '12', '2', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('55', '61', '5', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('56', '61', '6', '1', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('57', '70', '1', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('58', '71', '1', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('59', '1', '4', '3', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('60', '36', '17', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('61', '35', '17', '7', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('62', '35', '5', '13', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('63', '72', '9', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('64', '82', '1', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('65', '83', '17', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES ('66', '35', '28', '4', '0');
-INSERT INTO `steam_shoppingcart` VALUES ('67', '65', '40', '2', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '1', '240720', '15', '1');
+INSERT INTO `steam_shoppingcart` VALUES (null, '1', '292030', '2', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '1', '306130', '1', '1');
+INSERT INTO `steam_shoppingcart` VALUES (null, '1', '346110', '6', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '1', '578080', '2', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '2', '240720', '15', '1');
+INSERT INTO `steam_shoppingcart` VALUES (null, '2', '292030', '2', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '2', '306130', '1', '1');
+INSERT INTO `steam_shoppingcart` VALUES (null, '2', '346110', '6', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '2', '578080', '2', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '3', '240720', '15', '1');
+INSERT INTO `steam_shoppingcart` VALUES (null, '3', '292030', '2', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '3', '306130', '1', '1');
+INSERT INTO `steam_shoppingcart` VALUES (null, '3', '346110', '6', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '3', '578080', '2', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '4', '240720', '15', '1');
+INSERT INTO `steam_shoppingcart` VALUES (null, '4', '292030', '2', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '4', '306130', '1', '1');
+INSERT INTO `steam_shoppingcart` VALUES (null, '4', '346110', '6', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '4', '578080', '2', '0');

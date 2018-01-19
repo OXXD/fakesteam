@@ -59,15 +59,15 @@ h2,
 
 .login_row.captcha input {
     width: 50%;
+    height: 40px
 }
 
 .captcha_img {
     float: right;
     width: 40%;
-    height: 30px;
-    border: 1px solid #000;
-    box-sizing: border-box;
+    height: 40px;
     margin-top: 4px;
+    background: #fff;
 }
 
  ::-webkit-input-placeholder {
