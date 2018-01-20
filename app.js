@@ -18,7 +18,7 @@ app.use(session({
     secret: 'sessiontest',
     resave: false,
     saveUninitialized: true
-}))
+}));
 
 //captcha
 svgCaptcha.options.width = 108,
