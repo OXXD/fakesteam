@@ -528,6 +528,7 @@ CREATE TABLE `steam_shoppingcart` (
   `appid` int(11) default NULL,
   `count` int(11) default NULL,
   `is_checked` tinyint(1) default NULL,
+  `expired` ENUM('0', '1') DEFAULT '0' NOT NULL, 
   PRIMARY KEY  (`iid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
@@ -535,23 +536,28 @@ CREATE TABLE `steam_shoppingcart` (
 -- ----------------------------
 -- Records of steam_shoppingcart
 -- ----------------------------
-INSERT INTO `steam_shoppingcart` VALUES (null, '1', '240720', '15', '1');
-INSERT INTO `steam_shoppingcart` VALUES (null, '1', '292030', '2', '0');
-INSERT INTO `steam_shoppingcart` VALUES (null, '1', '306130', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES (null, '1', '346110', '6', '0');
-INSERT INTO `steam_shoppingcart` VALUES (null, '1', '578080', '2', '0');
-INSERT INTO `steam_shoppingcart` VALUES (null, '2', '240720', '15', '1');
-INSERT INTO `steam_shoppingcart` VALUES (null, '2', '292030', '2', '0');
-INSERT INTO `steam_shoppingcart` VALUES (null, '2', '306130', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES (null, '2', '346110', '6', '0');
-INSERT INTO `steam_shoppingcart` VALUES (null, '2', '578080', '2', '0');
-INSERT INTO `steam_shoppingcart` VALUES (null, '3', '240720', '15', '1');
-INSERT INTO `steam_shoppingcart` VALUES (null, '3', '292030', '2', '0');
-INSERT INTO `steam_shoppingcart` VALUES (null, '3', '306130', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES (null, '3', '346110', '6', '0');
-INSERT INTO `steam_shoppingcart` VALUES (null, '3', '578080', '2', '0');
-INSERT INTO `steam_shoppingcart` VALUES (null, '4', '240720', '15', '1');
-INSERT INTO `steam_shoppingcart` VALUES (null, '4', '292030', '2', '0');
-INSERT INTO `steam_shoppingcart` VALUES (null, '4', '306130', '1', '1');
-INSERT INTO `steam_shoppingcart` VALUES (null, '4', '346110', '6', '0');
-INSERT INTO `steam_shoppingcart` VALUES (null, '4', '578080', '2', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '1', '240720', '1', '1', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '1', '292030', '2', '0', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '1', '306130', '1', '1', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '1', '346110', '6', '0', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '1', '578080', '2', '0', '0');
+-- INSERT INTO `steam_shoppingcart` VALUES (null, '1', '240720', '1', '1', '0');
+-- INSERT INTO `steam_shoppingcart` VALUES (null, '1', '292030', '2', '0', '0');
+-- INSERT INTO `steam_shoppingcart` VALUES (null, '1', '306130', '1', '1', '0');
+-- INSERT INTO `steam_shoppingcart` VALUES (null, '1', '346110', '6', '0', '0');
+-- INSERT INTO `steam_shoppingcart` VALUES (null, '1', '578080', '2', '0', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '2', '240720', '5', '1', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '2', '292030', '2', '0', '0');
+-- INSERT INTO `steam_shoppingcart` VALUES (null, '2', '306130', '1', '1', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '2', '346110', '6', '0', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '2', '578080', '2', '0', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '3', '240720', '5', '1', '0');
+-- INSERT INTO `steam_shoppingcart` VALUES (null, '3', '292030', '2', '0', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '3', '306130', '1', '1', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '3', '346110', '6', '0', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '3', '578080', '2', '0', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '4', '240720', '5', '1', '0');
+-- INSERT INTO `steam_shoppingcart` VALUES (null, '4', '292030', '2', '0', '0');
+-- INSERT INTO `steam_shoppingcart` VALUES (null, '4', '306130', '1', '1', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '4', '346110', '6', '0', '0');
+INSERT INTO `steam_shoppingcart` VALUES (null, '4', '578080', '2', '0', '0');

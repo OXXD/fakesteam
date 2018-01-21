@@ -106,10 +106,12 @@
     line-height: 20px;
     background: rgba(0, 0, 0, 0.3);
     text-align: center;
+    cursor: pointer;
 }
 
 .item_desc .select {
     float: right;
+    margin-top: 3px;
 }
 
 .item_price_box {
