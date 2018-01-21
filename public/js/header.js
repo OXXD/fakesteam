@@ -9,7 +9,7 @@ $(() => {
             url: "/user/islogin",
             success: function(response) {
                 if (response.code == 1) {
-                    console.log(response);
+                    // console.log(response);
                     $loginList.hide();
                     $welcomeList.show().find('#uname').html(response.user.uname);
                 } else {

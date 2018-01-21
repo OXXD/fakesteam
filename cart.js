@@ -221,7 +221,7 @@ router.get("/addCart", (req, res) => {
             if (err) throw err;
             if (result.length) {
                 sql =
-                    "UPDATE steam_shoppingcart SET count=count+1 WHERE uid = ? AND appid = ?";
+                    "UPDATE steam_shoppingcart SET count=count+1, expired='0', is_checked = 1 WHERE uid = ? AND appid = ?";
             } else {
                 sql =
                     "INSERT INTO steam_shoppingcart VALUE(null, ?, ?, 1, 1, '0')";

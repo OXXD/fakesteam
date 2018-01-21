@@ -33,7 +33,7 @@ $(() => {
             url: "/user/login",
             data: { uname, upwd, ucaptcha },
             success: function(response) {
-                console.log(response);
+                // console.log(response);
                 var back = location.search.slice(6);
                 if (response.code == 1) {
                     if (!back) {

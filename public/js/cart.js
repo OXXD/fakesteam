@@ -48,18 +48,9 @@ $(() => {
         if (moved == data.length) {
             moved = 0;
         }
-        $carouselItems
-            .children(`:eq(${moved})`)
-            .addClass("active")
-            .siblings()
-            .removeClass("active");
+        $carouselItems.children(`:eq(${moved})`).addClass("active").siblings().removeClass("active");
         //  slider-box 内的文字(计数)变化
-        $(".spotlight_slider .slider-box")
-            .children()
-            .first()
-            .html(moved + 1)
-            .siblings()
-            .html(data.length);
+        $(".spotlight_slider .slider-box").children().first().html(moved + 1).siblings().html(data.length);
     }
 
     // arrow
@@ -121,39 +112,25 @@ $(() => {
                         html += `<div class="cart_row">
                                     <div class="cart_item clear">
                                         <div class="item_img">
-                                            <a href="app.html?appid=${
-                                                item.appid
-                                            }">
+                                            <a href="app.html?appid=${item.appid}">
                                                 <img src="${item.sm}" alt="">
                                             </a>
                                         </div>
                                         <div class="item_desc" >
                                             <div class="select">
-                                                <input ${
-                                                    item.is_checked
-                                                        ? "checked"
-                                                        : ""
-                                                } type="checkbox" data-iid="${item.iid}">
+                                                <input ${item.is_checked? "checked": ""} type="checkbox" data-iid="${item.iid}">
                                             </div>
                                             <div class="num" data-iid="${item.iid}">
                                                 <span class="reduce">-</span>
-                                                <input type="text" value="${
-                                                    item.count
-                                                }">
+                                                <input type="text" value="${item.count}">
                                                 <span class="add">+</span>
                                             </div>
-                                            <a href="app.html?appid=${
-                                                item.appid
-                                            }">${item.name}</a>
+                                            <a href="app.html?appid=${item.appid}">${item.name}</a>
                                             <br>
                                         </div>
                                         <div class="item_price_box">
-                                            <div class="price">￥${
-                                                item.price
-                                            }</div>
-                                            <a data-iid="${
-                                                item.iid
-                                            }" href="#" class="remove">移除</a>
+                                            <div class="price">￥${item.price}</div>
+                                            <a data-iid="${item.iid}" href="#" class="remove">移除</a>
                                         </div>
                                     </div>
                                 </div>`;

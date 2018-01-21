@@ -1,12 +1,12 @@
 // 切换 main_capsule 的图片
 $(() => {
-    $(".store_capsule").mouseenter(function() {
+    $(".store_capsule").mouseenter(function () {
         var $info = $(this).children(".info");
         // var src = $info.prev().attr("src");
         var src = $(this).children(".main_capsule").data("src");
-        $info.on("mouseenter", "img", function() {
+        $info.on("mouseenter", "img", function () {
             $info.prev().attr("src", $(this).attr("src"));
-        }).on("mouseleave", "img", function() {
+        }).on("mouseleave", "img", function () {
             $info.prev().attr("src", src);
         });
     });
@@ -75,7 +75,7 @@ $(() => {
     });
 
     // 下方小点事件绑定
-    $carouselThumbs.on("click", "div", function() {
+    $carouselThumbs.on("click", "div", function () {
         var $thumbs = $(this);
         var i = $thumbs.index();
         moved = i;
@@ -122,11 +122,11 @@ $(() => {
      * special_offers 轮播
      * 鼠标移入暂停轮播
      */
-    $(".special_offers").on("mouseenter", ".special_offers", function(e) {
+    $(".special_offers").on("mouseenter", ".special_offers", function (e) {
         clearInterval(timer);
         timer = null;
     });
-    $(".special_offers").on("mouseleave", ".special_offers", function(e) {
+    $(".special_offers").on("mouseleave", ".special_offers", function (e) {
         timer = setInterval(show, WAIT);
     });
     // arrow
@@ -142,7 +142,7 @@ $(() => {
     });
 
     // thumbs
-    $carouselThumbs.on("click", "div", function(e) {
+    $carouselThumbs.on("click", "div", function (e) {
         var i = $(this).index();
         moved = i - 1; // moved-1 因为在 show 方法内+1
         show();
@@ -180,7 +180,7 @@ $(() => {
         if (moved == 0) moved = data.length;
         show(-1);
     });
-    $carouselThumbs.on("click", "div", function() {
+    $carouselThumbs.on("click", "div", function () {
         var i = $(this).index();
         moved = i - 1;
         show();
@@ -217,9 +217,21 @@ $(() => {
         if (moved == 0) moved = data.length;
         show(-1);
     });
-    $carouselThumbs.on("click", "div", function() {
+    $carouselThumbs.on("click", "div", function () {
         var i = $(this).index();
         moved = i - 1;
         show();
+    });
+
+    // frontend3d
+    var $frontend_box = $(".frontend_box");
+    $frontend_box.hover(function () {
+        // over
+        var $this = $(this).children();
+        $this.addClass("rotate").siblings().addClass("rotate");
+    }, function () {
+        // out
+        var $this = $(this).children();
+        $this.removeClass("rotate").siblings().removeClass("rotate");
     });
 });

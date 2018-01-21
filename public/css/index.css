@@ -368,6 +368,7 @@
 
 .marketing_message.small {
     margin:0px 0px 5px 10px;
+    background: transparent;
 }
 
 .marketing_message img {
@@ -430,4 +431,48 @@
 
 .content_login>div>div {
     margin: 8px 0px;
+}
+
+/* frontend3d */
+.frontend_box {
+    width: 187px;
+    height: 215px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.frontend_box>div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+    transition: all .5s linear;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.frontend_box>.front {
+    background: linear-gradient(to bottom right,#212B37,#305672);
+}
+
+.frontend_box>.end {
+    z-index: 1;
+    transform: rotateY(-180deg);
+}
+
+.frontend_box>.end img {
+    width: 187px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.frontend_box>.front.rotate {
+    transform: rotateY(180deg);
+}
+
+.frontend_box>.end.rotate {
+    transform: rotateY(0deg);
 }

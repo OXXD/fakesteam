@@ -28,6 +28,10 @@ $(() => {
         $glance = $('.glance');
     var itemIndex = 0;
 
+    var $box = $(".page_header .slider-box"),
+    $btn = $(".page_header .slider-btn");
+    var BTNWIDTH_copy = 0;
+
     var data = [];
 
     // loadProductByAppid
@@ -38,9 +42,10 @@ $(() => {
         $.ajax({
             type: "get",
             url: "/product",
-            data: { appid: appid },
-            success: function(response) {
-                console.log(response);
+            data: {
+                appid: appid
+            },
+            success: function (response) {
                 var appdetail = response.data;
                 $(document).attr('title', appdetail.name);
                 var imgs = response.imgs;
@@ -57,19 +62,21 @@ $(() => {
                     }
                 }
                 $img.attr('src', data[0].md);
-                $highlight_strip.html(html).css({ width: data.length * 120 });
+                $highlight_strip.html(html).css({
+                    width: data.length * 120
+                });
                 $highlight_strip.children(":eq(1)").addClass("selected");
                 $highlight_selector = $(".highlight_selector"); // 动态生成的 selector 所以需要重新选择
 
                 // $galance app 右栏详情
                 $glance.children('.game_description_snippet').html(appdetail.desc);
-                console.log(appdetail);
+                // console.log(appdetail);
                 var releaseDate = new Date(appdetail.release_date);
                 $glance.find('.user_reviews .release_date .date').html(releaseDate.getFullYear() + "年" + releaseDate.getMonth() + "月" + releaseDate.getDay() + "日");
                 $glance.find('.dev_row').first().children('.summary').html(`<a href="search.html">${appdetail.developer}</a>`);
                 $glance.find('.dev_row').last().children('.summary').html(`<a href="search.html">${appdetail.publisher}</a>`);
                 var tags = appdetail.tag_list.split(',');
-                console.log(tags);
+                // console.log(tags);
                 html = "";
                 for (let i = 0; i < 4; i++) {
                     html += `<a href="search.html?tag=${tags[i]}" class="app_tag">${tags[i]}</a> `
@@ -117,8 +124,88 @@ $(() => {
                     <br>
                     <b>发行日期:</b> ${releaseDate.getFullYear() + "年" + releaseDate.getMonth() + "月" + releaseDate.getDay() + "日"}`;
                 $('.page_content>.rightcol').children(".game_detail").children().children().first().html(html);
+
+                // highlight_player_area 下的 slider 功能
+                var canMove = false;
+                var $box = $(".page_header .slider-box"),
+                    $btn = $(".page_header .slider-btn");
+                var BTNWIDTH = Math.floor(parseInt($box.css("width")) / data.length);
+                var MAXWIDTH = parseInt($box.css("width")) - parseInt($btn.css("width"));
+
+                BTNWIDTH_copy = BTNWIDTH;
+
+                $box.mousedown(() => {
+                    canMove = true;
+                });
+
+                $box.mouseup(() => {
+                    canMove = false;
+                });
+
+                // $box.mouseleave(() => {
+                //     canMove = false;
+                // });
+
+
+                $box.mousemove(function (e) {
+                    if ($(e.target).is(".slider-box")) {
+                        var l = BTNWIDTH / 2;
+                        l = e.offsetX - l;
+
+                        // 左右边界处理
+                        l < 0 && (l = 0);
+                        l > MAXWIDTH && (l = MAXWIDTH);
+
+                        if (canMove) {
+                            // $btn.css("left", l);
+                            // $highlight_strip.css("left", -l);
+                        }
+                        // $box.mousedown(() => $btn.css("left", l));
+                    }
+                });
+
+                $(".next").click(function (e) {
+                    // var l = parseInt($btn.css("left"));
+                    // if (l < MAXWIDTH - BTNWIDTH) {
+                    //     $btn.css("left", l + BTNWIDTH);
+                    // } else {
+                    //     $btn.css("left", MAXWIDTH);
+                    // }
+
+                    if (itemIndex < data.length - 1) {
+                        // if (i < data.length - 4) { $highlight_strip.css("left", -i * 120); }
+                        var i = itemIndex;
+                        if (i >= data.length - 4) i = data.length - 5;
+                        $highlight_strip.css("left", -i * 120);
+
+                        updateItemIndex();
+                        updateImg();
+                        $highlight_strip.children(`:eq(${itemIndex+1})`).addClass("selected").siblings().removeClass("selected");
+                        $highlight_selector.css("left", itemIndex * 120);
+                    }
+
+                });
+                $(".prev").click(function (e) {
+                    // var l = parseInt($btn.css("left"));
+                    // if (l > 0 + BTNWIDTH) {
+                    //     $btn.css("left", l - BTNWIDTH);
+                    // } else {
+                    //     $btn.css("left", 0);
+                    // }
+
+                    if (itemIndex > 0) {
+                        $highlight_strip.children(`:eq(${itemIndex})`).addClass("selected").siblings().removeClass("selected");
+                        itemIndex--;
+                        $highlight_selector.css("left", itemIndex * 120);
+                        if (itemIndex < data.length - 4) {
+                            $highlight_strip.css("left", -itemIndex * 120);
+                        }
+                        updateImg();
+                    }
+
+                });
             },
-            error: function() {
+            error: function () {
                 alert('网络异常');
             }
         });
@@ -128,7 +215,7 @@ $(() => {
 
     // 展开阅读
     var $game_page_autocollapse_readmore = $('.game_page_autocollapse_readmore');
-    $game_page_autocollapse_readmore.click(function() {
+    $game_page_autocollapse_readmore.click(function () {
         var $this = $(this);
         $this.parent().prev().css({
             maxHeight: $this.parent().prev().children().css('height')
@@ -146,104 +233,22 @@ $(() => {
         $img.attr("src", src);
     }
 
-    $highlight_strip.on("click", ".highlight_strip_item", function(e) {
+    // 小图点击事件
+    $highlight_strip.on("click", ".highlight_strip_item", function (e) {
         var $this = $(this);
         var src = $this.children("img").attr("src");
         src = "img/app/" + src.slice(8, src.indexOf(".116")) + ".600x338.jpg";
         itemIndex = $this.index();
         $highlight_selector.css("left", (itemIndex - 1) * 120);
+        // $btn.css("left", itemIndex * BTNWIDTH_copy);
         $img.attr("src", src);
         $this.addClass("selected").siblings().removeClass("selected");
         updateItemIndex();
     });
 
-
-    // highlight_player_area 下的 slider 功能
-    var canMove = false;
-    var $box = $(".page_header .slider-box"),
-        $btn = $(".page_header .slider-btn");
-
-    $box.mousedown(() => {
-        canMove = true;
-    });
-
-    $box.mouseup(() => {
-        canMove = false;
-    });
-
-    // $box.mouseleave(() => {
-    //     canMove = false;
-    // });
-
-    var BTNWIDTH = parseInt($box.css("width")) / data.length;
-    var MAXWIDTH = parseInt($box.css("width")) - BTNWIDTH;
-    $box.mousemove(function(e) {
-        if ($(e.target).is(".slider-box")) {
-            $btn.css("transition", "");
-            var l = BTNWIDTH / 2;
-            l = e.offsetX - l;
-
-            // 左右边界处理
-            l < 0 && (l = 0);
-            l > MAXWIDTH && (l = MAXWIDTH);
-
-            if (canMove) {
-                // $btn.css("left", l);
-                // $highlight_strip.css("left", -l);
-            }
-            // $box.mousedown(() => $btn.css("left", l));
-        }
-    });
-
-    $(".next").click(function(e) {
-        // canMove = false;
-        $btn.css("transition", "all .1s linear");
-        var l = parseInt($btn.css("left"));
-        // if (l < MAXWIDTH - BTNWIDTH) {
-        //     $btn.css("left", l + BTNWIDTH);
-        // } else {
-        //     $btn.css("left", MAXWIDTH);
-        // }
-
-        if (itemIndex < data.length - 1) {
-            // if (i < data.length - 4) { $highlight_strip.css("left", -i * 120); }
-            var i = itemIndex;
-            if (i >= data.length - 4) i = data.length - 5;
-            $highlight_strip.css("left", -i * 120);
-
-            updateItemIndex();
-            updateImg();
-            $highlight_strip.children(`:eq(${itemIndex+1})`).addClass("selected").siblings().removeClass("selected");
-            $highlight_selector.css("left", itemIndex * 120);
-        }
-
-    });
-    $(".prev").click(function(e) {
-        // canMove = false;
-        $btn.css("transition", "all .1s linear");
-        var l = parseInt($btn.css("left"));
-        // if (l > 0 + BTNWIDTH) {
-        //     $btn.css("left", l - BTNWIDTH);
-        // } else {
-        //     $btn.css("left", 0);
-        // }
-
-        console.log(itemIndex);
-        if (itemIndex > 0) {
-            $highlight_strip.children(`:eq(${itemIndex})`).addClass("selected").siblings().removeClass("selected");
-            itemIndex--;
-            $highlight_selector.css("left", itemIndex * 120);
-            if (itemIndex < data.length - 4) {
-                $highlight_strip.css("left", -itemIndex * 120);
-            }
-            updateImg();
-        }
-
-    });
-
     // 显示大图
     var i = $highlight_strip.children(".selected").index();
-    $highlight_player.on("click", "img", function(e) {
+    $highlight_player.on("click", "img", function (e) {
         $screentshotModal.show();
         $screentshotContentModal.show();
 
@@ -255,7 +260,7 @@ $(() => {
         $screentshotContentModal.children("img").attr("src", src);
     });
     // 大图上下一张切换
-    $screentshotContentModal.on("click", ".next_screenshot", function(e) {
+    $screentshotContentModal.on("click", ".next_screenshot", function (e) {
         if (i < data.length) {
             i++;
             $screentshotContentModal.children(".screenshot_count").html(`${i} / ${data.length}张截图`);
@@ -264,7 +269,7 @@ $(() => {
             $screentshotContentModal.children("img").attr("src", src);
         }
     });
-    $screentshotContentModal.on("click", ".prev_screenshot", function(e) {
+    $screentshotContentModal.on("click", ".prev_screenshot", function (e) {
         if (i > 1) {
             i--;
             $screentshotContentModal.children(".screenshot_count").html(`${i} / ${data.length}张截图`);
@@ -275,8 +280,7 @@ $(() => {
     });
 
     // 隐藏 screentshotModal  screentshotContentModal
-    $screentshotModal.on("click", function(e) {
-        console.log(this);
+    $screentshotModal.on("click", function (e) {
         // e.stopPropagation();
         $screentshotModal.hide();
         $screentshotContentModal.hide();
@@ -344,7 +348,7 @@ $(() => {
     //     }
     // });
 
-    $(".page_content .next").click(function(e) {
+    $(".page_content .next").click(function (e) {
         // canMove = false;
         $btn.css("transition", "all .1s linear");
         var l = parseInt($btn.css("left"));
@@ -357,7 +361,7 @@ $(() => {
         move(1);
         if (moved > data.length - 3) moved = data.length - 3;
     });
-    $(".page_content .prev").click(function(e) {
+    $(".page_content .prev").click(function (e) {
         // canMove = false;
         $btn.css("transition", "all .1s linear");
         var l = parseInt($btn.css("left"));
@@ -372,6 +376,32 @@ $(() => {
     });
 });
 
-$(() => {
-
-})
+// 添加至购物车功能
+$(()=>{
+    $(".game_purchase_action").on("click", "a",function(e){
+        e.preventDefault();
+        console.log(this);
+        var $this = $(this);
+        var appid = $this.data("appid");
+        $.ajax({
+            type: "get",
+            url: "/cart/addCart",
+            data: {appid},
+            success: function (response) {
+                if (response.code > 0) {
+                    alert("添加成功, 跳转到购物车页面...");
+                    location = "cart.html";
+                } else if(response.code == -2) {
+                    alert("尚未登录，跳转到登录页面...");
+                    location = "login.html";
+                } else {
+                    console.log(response);
+                    alert(response.msg);
+                }
+            },
+            error: function() {
+                alert("网络故障");
+            }
+        });
+    });
+});
