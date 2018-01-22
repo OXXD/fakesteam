@@ -36,6 +36,8 @@ app.get('/captcha.svg', function(req, res) {
 const routerProduct = require('./product');
 const routerUser = require('./user');
 const routerCart = require('./cart');
+const routerSearch = require('./search');
 app.use('/product', routerProduct);
 app.use('/user', routerUser);
 app.use('/cart', routerCart);
+app.use('/search', routerSearch);

@@ -14,6 +14,11 @@
     margin: 5px 3px 0 0;
 }
 
+.termcontainer p {
+    font-size: 18px;
+    color: #9099A1;
+}
+
 .btn_close {
     display: inline-block;
     width: 12px;
