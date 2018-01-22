@@ -451,6 +451,9 @@
     z-index: 2;
     transition: all .5s linear;
     backface-visibility: hidden;
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden; 
     transform-style: preserve-3d;
 }
 

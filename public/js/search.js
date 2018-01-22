@@ -59,6 +59,7 @@ $(() => {
         // TODO: 发送 AJAX 请求分类搜索逻辑
     });
 
+    // 分页搜索功能
     function loadSearchResult(pno = 1, pageSize = 15, kw = '') {
         $.ajax({
             type: "get",
@@ -102,29 +103,29 @@ $(() => {
                 }
                 $search.html(html);
 
-                var pno_copy = parseInt(response.pno),
+                var page = parseInt(response.pno),
                     pageCount = response.pageCount;
 
                 html = `<span class="page_btn prev">&lt;</span>`;
-                (pno_copy - 2 > 0) && (html += `<span class="pagelink">${pno_copy-2}</span>`);
-                (pno_copy - 1 > 0) && (html += `<span class="pagelink">${pno_copy-1}</span>`);
-                html += `<span class="pagelink">${pno_copy}</span>`;
-                (pno_copy + 1 <= pageCount) && (html += `<span class="pagelink">${pno_copy + 1}</span>`);
-                (pno_copy + 2 <= pageCount) && (html += `<span class="pagelink">${pno_copy + 2}</span>`);
-                // html += `</span>`;
+                (page - 2 > 0) && (html += `<span class="pagelink">${page-2}</span>`);
+                (page - 1 > 0) && (html += `<span class="pagelink">${page-1}</span>`);
+                html += `<span class="pagelink">${page}</span>`;
+                (page + 1 <= pageCount) && (html += `<span class="pagelink">${page + 1}</span>`);
+                (page + 2 <= pageCount) && (html += `<span class="pagelink">${page + 2}</span>`);
                 $pages.html(html).append(`<span class="page_btn next">&gt;</span>`);
                 // 当前页码显示及上一页下一页禁用
-                $pages.children(`:contains(${pno_copy})`).addClass("active");
-                if (pno_copy == 1) {
+                $pages.children(`:contains(${page})`).addClass("active");
+                if (page == 1) {
                     $pages.children().first().addClass("disabled");
-                } else if (pno_copy == pageCount) {
+                }
+                if (page == pageCount || pageCount == 0) {
                     $pages.children().last().addClass("disabled");
                 }
 
                 // 页码结果数量计算
                 html = `正在显示第
-                <span class="start">${(pno_copy-1) * pageSize + 1}</span> -
-                <span class="end">${pno_copy * pageSize > response.totalRecord ? response.totalRecord : pno_copy * pageSize}</span> 个, 共
+                <span class="start">${(page-1) * pageSize + 1}</span> -
+                <span class="end">${page * pageSize > response.totalRecord ? response.totalRecord : page * pageSize}</span> 个, 共
                 <span class="total">${response.totalRecord}</span> 个结果`;
                 $page_summary.html(html);
             },
@@ -139,7 +140,7 @@ $(() => {
     // 页码点击事件
     $pages.on('click', 'span', function() {
         var $this = $(this);
-        if (!$this.is('.disabled')) {
+        if (!$this.is('.disabled') && !$this.is('.active')) {
             if ($this.is('.prev')) {
                 loadSearchResult(parseInt($pages.children(".active").html()) - 1, psize);
             } else if ($this.is('.next')) {
