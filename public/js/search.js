@@ -138,9 +138,9 @@ $(() => {
                 </div>`);
             }
         } 
-        // else {
-        //     $termcontainer.html('<p>所有产品</p>');
-        // }
+        else {
+            $termcontainer.children('.kw').html('').remove();
+        }
     }
 
     // 删除 searchtag 功能
