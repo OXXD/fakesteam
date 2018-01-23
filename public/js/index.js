@@ -36,7 +36,7 @@ $(() => {
     function move(dir = 1) {
         moved += dir;
         console.log(moved);
-        // if (moved > data.length) moved = 0;
+        if (moved > data.length) moved = 0;
         $carouselItems.animate({
             left: -WIDTH * moved
         }, DURA, () => {
@@ -49,7 +49,8 @@ $(() => {
     }
 
     // 启动定时器
-    timer = setInterval(move, WAIT);
+    if (!timer)
+        timer = setInterval(move, WAIT);
 
     // 鼠标移入时暂停动画，左右按钮事件绑定
     $(".home_cluster").hover(
@@ -224,8 +225,8 @@ $(() => {
     });
 
     // frontend3d
-    var $frontend_box = $(".frontend_box");
-    $frontend_box.hover(function() {
+    var $frontendBox = $(".frontend_box");
+    $frontendBox.hover(function() {
         // over
         var $this = $(this).children();
         $this.addClass("rotate").siblings().addClass("rotate");
@@ -235,3 +236,26 @@ $(() => {
         $this.removeClass("rotate").siblings().removeClass("rotate");
     });
 });
+
+// 判断用户是否登录
+$(() => {
+    var $contentCallout = $('.content_callout'),
+        $contentLogin = $('.content_login');
+    $.ajax({
+        type: "get",
+        url: "/user/islogin",
+        success: function(response) {
+            if (response.code == 1) {
+                // console.log(response);
+                $contentLogin.hide();
+                $contentCallout.show();
+            } else {
+                $contentLogin.show();
+                $contentCallout.hide();
+            }
+        },
+        error: function() {
+            alert('网络故障');
+        }
+    });
+})

@@ -189,6 +189,11 @@
     background: rgba(0, 0, 0, 0.2);
 }
 
+.search_result_row.noresult {
+    height: auto;
+    padding: 5px 10px;
+}
+
 .search_result_row:hover {
     border-color: rgba(139, 185, 224, 0.2);
     background: rgba(0, 0, 0, 0.4);

@@ -17,20 +17,6 @@ $(() => {
         };
 
         // 鼠标悬停下拉菜单功能
-        // JQuery 实现尝试
-        /*$("#store_nav>ul>li").mouseover(function(e) {
-                    // console.log("-------------mouseover---------");
-                    // console.log(this); // this -> #store_nav>ul>li
-                    // $(this).children(".dropdown").css("display", "block");
-                    $(this).children(".dropdown").show();
-                }).mouseout(function() {
-                    // console.log("-------------mouseout---------");
-                    // console.log(this);
-                    // console.log($(this).children());
-                    // $(this).children(".dropdown").css("display", "none");
-                    $(this).children(".dropdown").hide();
-                }); */
-
         $("#store_nav>ul>li").hover(function(e) {
             $(this).children(".dropdown_menu").toggle();
         });
@@ -48,6 +34,56 @@ $(() => {
             error: function() {
                 alert('网络故障');
             }
+        });
+
+        // 搜索按钮
+        var $btnSearch = $('.btn_search');
+        $btnSearch.click(function(e) {
+            e.preventDefault();
+            var $this = $(this),
+                kw = $this.prev().val();
+            location = `search.html?kw=${kw}`;
+        });
+        $btnSearch.prev().keyup(function(e) {
+            var $this = $(this);
+            if (e.keyCode == 13) {
+                var kw = $this.val();
+                location = `search.html?kw=${kw}`;
+            }
+        });
+
+        // 搜索自动补全
+        var $searchSuggest = $('.search_suggest');
+        $('.searchbox>input').keyup(function() {
+            var $this = $(this),
+                kw = $this.val();
+            $.ajax({
+                type: "get",
+                url: "/search/autocomplete",
+                data: { kw },
+                success: function(response) {
+                    var html = "<ul>";
+                    if (response.length > 0) {
+                        for (const item of response) {
+                            html += `<li class="ellipsis">
+                        <a href="app.html?appid=${item.appid}">${item.name}</a>
+                    </li>`
+                        }
+                        html += "</ul>"
+                        $searchSuggest.html(html).show();
+                    } else {
+                        $searchSuggest.hide();
+                    }
+
+                },
+                error: function() {
+                    alert('网络故障');
+                }
+            });
+        });
+
+        $(document).on('click', function() {
+            $searchSuggest.hide();
         });
     });
 });

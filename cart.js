@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
     pool.getConnection((err, conn) => {
         if (err) throw err;
         var sql =
-            "SELECT *, (SELECT sm FROM steam_apps_pic as p WHERE p.appid = c.appid AND  p.sm LIKE '%capsule_sm_120%' LIMIT 1) as sm, (SELECT price  FROM steam_apps a WHERE a.appid = c.appid) as price, (SELECT name  FROM steam_apps a WHERE a.appid = c.appid) as name FROM steam_shoppingcart as c WHERE uid = ?";
+            "SELECT *, (SELECT sm FROM steam_apps_pic as p WHERE p.appid = c.appid AND  p.sm LIKE '%capsule_sm_120%' LIMIT 1) as sm, (SELECT price  FROM steam_apps a WHERE a.appid = c.appid LIMIT 1) as price, (SELECT name  FROM steam_apps a WHERE a.appid = c.appid LIMIT 1) as name FROM steam_shoppingcart as c WHERE c.uid = ?";
         conn.query(sql, [uid], (err, result) => {
             if (err) throw err;
             res.json(result);
@@ -141,7 +141,7 @@ router.get("/deleteAll", (req, res) => {
         return;
     }
     var uid = req.session.user.uid;
-    var sql = "UPDATE steam_shoppingcart SET expired = '1' WHERE uid = ? ";
+    var sql = "UPDATE steam_shoppingcart SET expired = '1', count=0 WHERE uid = ? ";
     pool.getConnection((err, conn) => {
         if (err) throw err;
         conn.query(sql, [uid], (err, result) => {
@@ -166,7 +166,7 @@ router.get("/delete", (req, res) => {
         if (err) throw err;
         if (req.query.iid) {
             var iid = req.query.iid;
-            sql = "UPDATE steam_shoppingcart SET expired = '1' WHERE iid = ?";
+            sql = "UPDATE steam_shoppingcart SET expired = '1', count=0 WHERE iid = ?";
             conn.query(sql, [iid], (err, result) => {
                 if (err) throw err;
                 if (result.affectedRows) {

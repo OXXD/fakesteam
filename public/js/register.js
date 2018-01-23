@@ -105,7 +105,12 @@ $(() => {
 
     // 验证码点击事件
     $refresh.click(function() {
-        console.log(1);
-        $captchaImg.attr('src', 'http://127.0.0.1:3500/captcha.svg');
+        // $captchaImg.attr('src', 'http://127.0.0.1:3500/captcha.svg');
+        $captchaImg.load('/captcha.svg');
     });
+    $captchaImg.click(function() {
+        $captchaImg.load('/captcha.svg');
+    });
+    $captchaImg.load('/captcha.svg');
+
 });

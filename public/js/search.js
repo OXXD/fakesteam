@@ -1,7 +1,7 @@
 // select_container 下拉菜单功能
 $(() => {
     var $selectContainer = $(".select_container");
-    $selectContainer.on("click", "a.trigger", function(e) {
+    $selectContainer.on("click", "a.trigger", function (e) {
         e.preventDefault();
         var $this = $(this);
         if ($this.siblings().hasClass("active")) {
@@ -12,7 +12,7 @@ $(() => {
     });
 
 
-    $(document.body).on("click", ":has(.select_container.active)", function(e) {
+    $(document.body).on("click", ":has(.select_container.active)", function (e) {
         e.stopPropagation();
         // console.log(this);
         if (!$(this).is(".sortbox")) {
@@ -36,7 +36,7 @@ $(() => {
         $(block).children(":gt(4)").hide();
     }
     //  展开收起显示全部
-    $expander.on("click", function(e) {
+    $expander.on("click", function (e) {
         e.preventDefault();
         var $this = $(this);
         if ($this.prev().children(":gt(4)").is(":hidden")) {
@@ -47,25 +47,128 @@ $(() => {
     });
 });
 
-// tab_filter_control 选中功能
+// 搜索模块
 $(() => {
     var $tbc = $(".tab_filter_control"),
         $search = $('.search-results_container'),
-        $page_summary = $('.page_summary'),
+        $pageSummary = $('.page_summary'),
         $pages = $('.pages'),
         psize = 15;
-    $tbc.on("click", function(e) {
-        $(this).toggleClass("checked");
-        // TODO: 发送 AJAX 请求分类搜索逻辑
+    var tags = [];
+    // tab_filter_control 选中功能
+    $tbc.on("click", function (e) {
+        var $this = $(this);
+        // $this.toggleClass("checked");
+        var tag = $this.data('loc');
+        // 发送 AJAX 请求分类搜索逻辑
+        if (!$this.is('.checked')) {
+            $this.addClass('checked');
+            tags.push(tag);
+            $termcontainer.append(`<div class="searchtag">
+                <span>${$this.children().last().html()}</span>
+                <a href="" class="btn_close"></a>
+            </div>`);
+        } else {
+            $this.removeClass('checked');
+            tags.splice(tags.indexOf(tag), 1);
+            $termcontainer.children(`:contains(${$this.children().last().html()})`).remove();
+        }
+        loadSearchResult(1, 15, kw, tags.toString());
+    });
+
+    var $searchTerm = $('.search_term'),
+        kw = '';
+    $termcontainer = $('.termcontainer');
+
+    loadSearchResult();
+
+    // 将 location.search 转换为对象
+    function search2Obj() {
+        var params = {};
+        if (location.search != "") {
+            var search = location.search.slice(1);
+            var arr = search.split("&");
+            for (var str of arr) {
+                // var key = str.split("=")[0];
+                // var value = str.split("=")[1];
+                var [key, value] = str.split("=");
+                if (params[key] == undefined) {
+                    params[key] = value;
+                } else {
+                    params[key] = [].concat(params[key], value);
+                }
+            }
+        }
+        return params;
+    }
+
+    if (location.search.indexOf('kw') > 0) {
+        kw = search2Obj().kw;
+        console.log(kw);
+        appendKw();
+        loadSearchResult(1, 15, kw, tags.toString());
+    }
+
+    // 搜索框回车事件
+    $searchTerm.keyup(function (e) {
+        // 搜索框输入改变更新 kw
+        kw = $(this).val();
+        if (e.keyCode == 13) {
+            appendKw();
+            loadSearchResult(1, 15, kw, tags.toString());
+        }
+    });
+
+    // 搜索框点击事件
+    $searchTerm.next().click(function (e) {
+        e.preventDefault();
+        kw = $(this).prev().val();
+        appendKw();
+        loadSearchResult(1, 15, kw, tags.toString());
+    });
+
+    function appendKw() {
+        if (kw) {
+            if($termcontainer.children().hasClass('kw')) {
+                $termcontainer.children('.kw').html(`<span>${kw}</span><a href="" class="btn_close"></a>`);
+            } else {
+                $termcontainer.append(`<div class="searchtag kw">
+                    <span>${kw}</span>
+                    <a href="" class="btn_close"></a>
+                </div>`);
+            }
+        } 
+        // else {
+        //     $termcontainer.html('<p>所有产品</p>');
+        // }
+    }
+
+    // 删除 searchtag 功能
+    $termcontainer.on('click', '.searchtag>a', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        $this.parent().remove();
+        $tbc.children(`:contains(${$this.prev().html()})`).parent().removeClass('checked');
+        $searchTerm.val('');
+        if($this.parent().is('.kw')) kw='';
+        else {
+            tags.splice(tags.indexOf($this.prev().html()), 1);
+        }
+        loadSearchResult(1, 15, kw, tags.toString());
     });
 
     // 分页搜索功能
-    function loadSearchResult(pno = 1, pageSize = 15, kw = '') {
+    function loadSearchResult(pno = 1, pageSize = 15, kw = '', tags = '') {
         $.ajax({
             type: "get",
             url: "/search",
-            data: { pno, pageSize, kw },
-            success: function(response) {
+            data: {
+                pno,
+                pageSize,
+                kw,
+                tags
+            },
+            success: function (response) {
                 console.log(response);
                 var html = "",
                     data = response.data;
@@ -101,7 +204,11 @@ $(() => {
                                 </div>
                             </a>`;
                 }
-                $search.html(html);
+                if (response.totalRecord == 0) {
+                    $search.html(`<p class="search_result_row noresult">没有找到结果</p>`);
+                } else {
+                    $search.html(html);
+                }
 
                 var page = parseInt(response.pno),
                     pageCount = response.pageCount;
@@ -127,26 +234,24 @@ $(() => {
                 <span class="start">${(page-1) * pageSize + 1}</span> -
                 <span class="end">${page * pageSize > response.totalRecord ? response.totalRecord : page * pageSize}</span> 个, 共
                 <span class="total">${response.totalRecord}</span> 个结果`;
-                $page_summary.html(html);
+                $pageSummary.html(html);
             },
-            error: function() {
+            error: function () {
                 alert("网络故障");
             }
         });
     }
 
-    loadSearchResult();
-
     // 页码点击事件
-    $pages.on('click', 'span', function() {
+    $pages.on('click', 'span', function () {
         var $this = $(this);
         if (!$this.is('.disabled') && !$this.is('.active')) {
             if ($this.is('.prev')) {
-                loadSearchResult(parseInt($pages.children(".active").html()) - 1, psize);
+                loadSearchResult(parseInt($pages.children(".active").html()) - 1, psize, kw);
             } else if ($this.is('.next')) {
-                loadSearchResult(parseInt($pages.children(".active").html()) + 1, psize);
+                loadSearchResult(parseInt($pages.children(".active").html()) + 1, psize, kw);
             } else {
-                loadSearchResult($this.html(), psize);
+                loadSearchResult($this.html(), psize, kw);
             }
         }
     })
@@ -155,7 +260,7 @@ $(() => {
 // #tagSuggest tag 搜索显示功能
 $(() => {
     var $tagSuggest = $("#tagSuggest");
-    $tagSuggest.on("keyup", function(e) {
+    $tagSuggest.on("keyup", function (e) {
         var $this = $(this);
         // 显示符合搜索的选项，隐藏不符合的
         $this.siblings(`:contains(${$this.val().toUpperCase()})`).show().siblings(`:not(:contains(${$this.val().toUpperCase()}))`).hide();

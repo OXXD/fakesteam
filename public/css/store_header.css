@@ -57,7 +57,7 @@ a:hover {
     position: relative;
 }
 
-#store_nav ul li {
+#store_nav>ul li {
     /* width: 70px; */
     padding: 0px 15px 0px;
     line-height: 35px;
@@ -171,6 +171,35 @@ a:hover {
     /* width: 230px; */
     height: 32px;
     padding: 4px 3px 0px;
+    position: relative;
+}
+
+.search_suggest {
+    position: absolute;
+    width: 280px;
+    top: 32px;
+    right: 5px;
+    z-index: 10;
+    background: #E3EAEF;
+    display: none;
+}
+
+.search_suggest ul {
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 2px 0px #000;
+}
+
+.search_suggest ul>li {
+    padding: 10px 8px;
+    color: #000;
+    cursor: pointer;
+}
+
+.search_suggest ul>li:hover {
+    background: #212D3D;
+    color: #fff;
 }
 
 .searchbox {
