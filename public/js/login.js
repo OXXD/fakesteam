@@ -41,7 +41,8 @@ $(() => {
                     }
                     location = back;
                 } else {
-                    alert(response.msg);
+                    // alert(response.msg);
+                    $captcha.next().css({ opacity: 1 }).html(response.msg);
                 }
             },
             error: function() {

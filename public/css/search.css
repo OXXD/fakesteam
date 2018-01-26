@@ -12,6 +12,12 @@
     color: #67C1F5;
     border-radius: 3px;
     margin: 5px 3px 0 0;
+    max-width: 150px;
+}
+
+.searchtag>span {
+    max-width: 100px;
+    display: inline-block;
 }
 
 .termcontainer p {
@@ -129,12 +135,16 @@
     height: 10px;
     background: url(../img/search/ico_arrow_dn_for_select.png) no-repeat -2px center;
     margin-left: 50px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
 }
 
 .select_container a.trigger {
     width: 100px;
     display: inline-block;
     padding: 2px 10px;
+    position: relative;
 }
 
 .select_container .dropdown_menu {
@@ -153,7 +163,8 @@
 
 .select_container .dropdown_menu.active,
 .select_container .dropdown_menu.active>ul {
-    height: 132px;
+    /* height: 132px; */
+    height: 110px;
     display: block;
 }
 

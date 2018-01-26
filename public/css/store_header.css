@@ -179,7 +179,7 @@ a:hover {
     width: 280px;
     top: 32px;
     right: 5px;
-    z-index: 10;
+    z-index: 100;
     background: #E3EAEF;
     display: none;
 }
@@ -200,6 +200,11 @@ a:hover {
 .search_suggest ul>li:hover {
     background: #212D3D;
     color: #fff;
+}
+
+.search_suggest ul>li>a {
+    display: inline-block;
+    width: 100%;
 }
 
 .searchbox {

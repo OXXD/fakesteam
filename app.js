@@ -11,7 +11,9 @@ var server = http.createServer(app);
 server.listen(3500);
 
 app.use(express.static("public"));
-app.use(bobyParser.urlencoded({ extended: false }));
+app.use(bobyParser.urlencoded({
+    extended: false
+}));
 
 // session 
 app.use(session({
@@ -24,7 +26,7 @@ app.use(session({
 svgCaptcha.options.width = 108,
     svgCaptcha.options.height = 40;
 
-app.get('/captcha.svg', function(req, res) {
+app.get('/captcha.svg', function (req, res) {
     var captcha = svgCaptcha.create();
     req.session.captcha = captcha.text;
 

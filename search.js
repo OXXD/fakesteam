@@ -13,7 +13,8 @@ router.get('/', (req, res) => {
     };
 
     var pno = parseInt(req.query.pno) || 1,
-        pageSize = parseInt(req.query.pageSize) || 15;
+        pageSize = parseInt(req.query.pageSize) || 15,
+        sortby = parseInt(req.query.sortby) || 0;
 
     if (req.query.kw) {
         var kw = req.query.kw;
@@ -46,6 +47,24 @@ router.get('/', (req, res) => {
                 sql = sql.slice(0, -3); // 
         }
 
+        if (sortby > 0)
+            switch (sortby) {
+                case 1:
+                    sql += ' ORDER BY release_date';
+                    break;
+                case 2:
+                    sql += ' ORDER BY name';
+                    break;
+                case 3:
+                    sql += ' ORDER BY price ASC';
+                    break;
+                case 4:
+                    sql += ' ORDER BY price DESC';
+                    break;
+                default:
+                    break;
+            }
+
         // console.log(sql);
 
         conn.query(sql, (err, result) => {
@@ -74,6 +93,23 @@ router.get('/', (req, res) => {
                     sql = sql.slice(0, -3);
             }
 
+            if (sortby > 0)
+                switch (sortby) {
+                    case 1:
+                        sql += ' ORDER BY a.release_date';
+                        break;
+                    case 2:
+                        sql += ' ORDER BY a.name';
+                        break;
+                    case 3:
+                        sql += ' ORDER BY a.price ASC';
+                        break;
+                    case 4:
+                        sql += ' ORDER BY a.price DESC';
+                        break;
+                    default:
+                        break;
+                }
 
             sql += ` LIMIT ?,?`;
 
