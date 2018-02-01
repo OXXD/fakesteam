@@ -339,6 +339,7 @@ CREATE TABLE `steam_apps_pic` (
   PRIMARY KEY  (`pid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
+INSERT INTO steam_apps_pic VALUES(null, 292030, 'img/app/292030/292030_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 292030, 'img/app/292030/292030_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 292030, 'img/app/292030/292030_header.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 292030, 'img/app/292030/292030_Purchase_Offer_615x405.png', null, null);
@@ -372,6 +373,7 @@ INSERT INTO steam_apps_pic VALUES(null, 578080, 'img/app/578080/578080_ss_bebdfd
 INSERT INTO steam_apps_pic VALUES(null, 578080, 'img/app/578080/578080_ss_d9ca09b78ebd943bca8268921c4404a99b611cad.116x65.jpg', 'img/app/578080/578080_ss_d9ca09b78ebd943bca8268921c4404a99b611cad.600x338.jpg', 'img/app/578080/578080_ss_d9ca09b78ebd943bca8268921c4404a99b611cad.1920x1080.jpg');
 INSERT INTO steam_apps_pic VALUES(null, 578080, 'img/app/578080/578080_ss_f1c0ed10225f6896f9d377067123c56afbe1e80e.116x65.jpg', 'img/app/578080/578080_ss_f1c0ed10225f6896f9d377067123c56afbe1e80e.600x338.jpg', 'img/app/578080/578080_ss_f1c0ed10225f6896f9d377067123c56afbe1e80e.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 240720, 'img/app/240720/240720_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 240720, 'img/app/240720/240720_capsule_616x353.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 240720, 'img/app/240720/240720_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 240720, 'img/app/240720/240720_header.jpg', null, null);
@@ -384,6 +386,7 @@ INSERT INTO steam_apps_pic VALUES(null, 240720,
 'img/app/240720/240720_ss_ba1b345f67daf713bd94934e0d837eb7f3625e4e.600x338.jpg', 
 'img/app/240720/240720_ss_ba1b345f67daf713bd94934e0d837eb7f3625e4e.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 365590, 'img/app/365590/365590_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 365590, 'img/app/365590/365590_capsule_616x353.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 365590, 'img/app/365590/365590_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 365590, 'img/app/365590/365590_header.jpg', null, null);
@@ -412,6 +415,7 @@ INSERT INTO steam_apps_pic VALUES(null, 365590,
 'img/app/365590/365590_ss_c499a4fcd1d72d859f52e0a9d558f43407ef6342.600x338.jpg', 
 'img/app/365590/365590_ss_c499a4fcd1d72d859f52e0a9d558f43407ef6342.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 524220, 'img/app/524220/524220_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 524220, 'img/app/524220/524220_capsule_616x353.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 524220, 'img/app/524220/524220_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 524220, 'img/app/524220/524220_header.jpg', null, null);
@@ -456,6 +460,7 @@ INSERT INTO steam_apps_pic VALUES(null, 524220,
 'img/app/524220/524220_ss_edcb7633ff42d7200bcb240a1ebb1116d602d9fe.600x338.jpg', 
 'img/app/524220/524220_ss_edcb7633ff42d7200bcb240a1ebb1116d602d9fe.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 582160, 'img/app/582160/582160_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 582160, 'img/app/582160/582160_capsule_616x353.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 582160, 'img/app/582160/582160_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 582160, 'img/app/582160/582160_header.jpg', null, null);
@@ -516,6 +521,7 @@ INSERT INTO steam_apps_pic VALUES(null, 306130,
 'img/app/306130/306130_ss_da66e194128088e46a5ecad2af455ae2ebe84be0.600x338.jpg', 
 'img/app/306130/306130_ss_da66e194128088e46a5ecad2af455ae2ebe84be0.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 582880, 'img/app/582880/582880_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 582880, 'img/app/582880/582880_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 582880, 'img/app/582880/582880_header.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 582880, 
@@ -619,6 +625,7 @@ INSERT INTO steam_apps_pic VALUES(null, 346110,
 'img/app/346110/346110_ss_ffe9f0e2e23892f3bb6188e5a3eed0f60a08baf4.600x338.jpg', 
 'img/app/346110/346110_ss_ffe9f0e2e23892f3bb6188e5a3eed0f60a08baf4.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 666140, 'img/app/666140/666140_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 666140, 'img/app/666140/666140_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 666140, 'img/app/666140/666140_header.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 666140, 
@@ -678,6 +685,7 @@ INSERT INTO steam_apps_pic VALUES(null, 666140,
 'img/app/666140/666140_ss_fe48d5e430ff658c9c96c45e89e4609900dd854d.600x338.jpg', 
 'img/app/666140/666140_ss_fe48d5e430ff658c9c96c45e89e4609900dd854d.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 477160, 'img/app/477160/477160_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 477160, 'img/app/477160/477160_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 477160, 'img/app/477160/477160_header.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 477160, 
@@ -713,6 +721,7 @@ INSERT INTO steam_apps_pic VALUES(null, 477160,
 'img/app/477160/477160_ss_fecc782b406ea59183ed804e2c5492e0e31d83b6.600x338.jpg', 
 'img/app/477160/477160_ss_fecc782b406ea59183ed804e2c5492e0e31d83b6.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 368360, 'img/app/368360/368360_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 368360, 'img/app/368360/368360_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 368360, 'img/app/368360/368360_header.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 368360, 
@@ -772,6 +781,7 @@ INSERT INTO steam_apps_pic VALUES(null, 368360,
 'img/app/368360/368360_ss_f21f4fb091a2a6d684f2a4f235afe8094c5334e9.600x338.jpg', 
 'img/app/368360/368360_ss_f21f4fb091a2a6d684f2a4f235afe8094c5334e9.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 105600, 'img/app/105600/105600_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 105600, 'img/app/105600/105600_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 105600, 'img/app/105600/105600_header.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 105600, 
@@ -851,6 +861,7 @@ INSERT INTO steam_apps_pic VALUES(null, 105600,
 'img/app/105600/105600_ss_fefd40cad50a10c09f928f9dc3f9017f8fe50213.600x338.jpg', 
 'img/app/105600/105600_ss_fefd40cad50a10c09f928f9dc3f9017f8fe50213.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 518030, 'img/app/518030/518030_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 518030, 'img/app/518030/518030_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 518030, 'img/app/518030/518030_header.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 518030, 
@@ -898,6 +909,7 @@ INSERT INTO steam_apps_pic VALUES(null, 518030,
 'img/app/518030/518030_ss_f62b557528f3b4e63e1736da418cd332cd9fb8a0.600x338.jpg', 
 'img/app/518030/518030_ss_f62b557528f3b4e63e1736da418cd332cd9fb8a0.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 4000, 'img/app/4000/4000_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 4000, 'img/app/4000/4000_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 4000, 'img/app/4000/4000_header.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 4000, 
@@ -929,6 +941,7 @@ INSERT INTO steam_apps_pic VALUES(null, 4000,
 'img/app/4000/4000_ss_ff27d52a103d1685e4981673c4f700b860cb23de.600x338.jpg', 
 'img/app/4000/4000_ss_ff27d52a103d1685e4981673c4f700b860cb23de.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 569480, 'img/app/569480/569480_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 569480, 'img/app/569480/569480_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 569480, 'img/app/569480/569480_header.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 569480, 
@@ -964,6 +977,7 @@ INSERT INTO steam_apps_pic VALUES(null, 569480,
 'img/app/569480/569480_ss_0b6d2395af77542f35371f5fd98b0c6b8630ba1f.600x338.jpg', 
 'img/app/569480/569480_ss_0b6d2395af77542f35371f5fd98b0c6b8630ba1f.1920x1080.jpg');
 
+INSERT INTO steam_apps_pic VALUES(null, 322330, 'img/app/322330/322330_capsule_184x69.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 322330, 'img/app/322330/322330_capsule_sm_120.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 322330, 'img/app/322330/322330_header.jpg', null, null);
 INSERT INTO steam_apps_pic VALUES(null, 322330, 
