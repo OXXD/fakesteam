@@ -8,7 +8,7 @@ var svgCaptcha = require('svg-captcha');
 // server
 var app = express();
 var server = http.createServer(app);
-server.listen(process.env.PORT || 5050);
+server.listen(process.env.PORT || 80);
 
 app.use(express.static("public"));
 app.use(bobyParser.urlencoded({

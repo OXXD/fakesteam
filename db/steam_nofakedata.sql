@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `steam_apps` (
   `publisher` varchar(1000) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
   `release_date` bigint(20) NOT NULL,
   `desc` varchar(1000) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
-  `desc_full` TEXT CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
+  `desc_full` TEXT CHARACTER SET utf8mb4,
   `genres` varchar(1000) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
   `supported_systems` varchar(1000) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
   `tag_list` varchar(1000) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
@@ -301,10 +301,9 @@ INSERT INTO `steam_apps` VALUES('322330',
 -- ----------------------------
 
 CREATE TABLE IF NOT EXISTS `steam_apps_type` (
-  `app_type` tinyint(2) unsigned NOT NULL AUTO_INCREMENT,
+  `app_type` tinyint(2) unsigned NOT NULL,
   `name` varchar(15) NOT NULL DEFAULT '',
-  `display_name` varchar(30) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY  (`app_type`)
+  `display_name` varchar(30) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 INSERT INTO `steam_apps_type` (`app_type`, `name`, `display_name`) VALUES
