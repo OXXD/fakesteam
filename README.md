@@ -9,7 +9,7 @@ In app.js
 server.listen(process.env.PORT || 80);
 ```
 
-In poo.js 
+In pool.js 
 
 ``` javascript
 const mysql = require("mysql");
