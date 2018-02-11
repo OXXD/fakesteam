@@ -6,7 +6,7 @@ A fake Steam Store website built with jQuery and Node.js for learing purpose
 In app.js
 
 ``` javascript
-server.listen(process.env.PORT || 80);
+server.listen(process.env.PORT || 5050);
 ```
 
 In pool.js 
@@ -33,7 +33,7 @@ npm install
 npm start
 ```
 
-Open http://localhost:80
+Open http://localhost:5050
 
 ## Deploy
 
