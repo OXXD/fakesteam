@@ -1,4 +1,4 @@
-# project_steam
+# faketeam
 A fake Steam Store website built with jQuery and Node.js for learing purpose
 
 ## Config Port and MySQL connection
