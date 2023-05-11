@@ -2,6 +2,7 @@ const express = require("express");
 const http = require("http");
 const bobyParser = require("body-parser");
 const session = require("express-session");
+const MemoryStore = require('memorystore')(session)
 const cookieParser = require("cookie-parser");
 var svgCaptcha = require('svg-captcha');
 
@@ -19,7 +20,10 @@ app.use(bobyParser.urlencoded({
 app.use(session({
     secret: 'sessiontest',
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    store: new MemoryStore({
+      checkPeriod: 86400000 // prune expired entries every 24h
+    }),
 }));
 
 //captcha
