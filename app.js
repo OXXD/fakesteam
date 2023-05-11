@@ -45,3 +45,5 @@ app.use('/user', routerUser);
 app.use('/cart', routerCart);
 app.use('/search', routerSearch);
 app.use('/index', routerIndex);
+
+module.exports = app;
