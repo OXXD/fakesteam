@@ -50,4 +50,9 @@ app.use('/cart', routerCart);
 app.use('/search', routerSearch);
 app.use('/index', routerIndex);
 
+app.use((err, req, res, next) => {
+    console.error('error in the server: \n', err);
+    res.status(500).send(err.message || 'error in the server');
+})
+
 module.exports = app;
